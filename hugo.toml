@@ -1,0 +1,4 @@
+baseURL = "http://localhost:1313/"
+languageCode = "zh-cn"
+title = "北京大学经济学会 EconS"
+theme = "ananke"
