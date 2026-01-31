@@ -1,0 +1,145 @@
+:root {
+  --members-ink: #161616;
+  --members-muted: #4b4b4b;
+  --members-accent: #b06a2a;
+  --members-accent-2: #1d4f91;
+  --members-card: #fff7ef;
+  --members-card-2: #f0f6ff;
+  --members-border: rgba(0, 0, 0, 0.08);
+  --members-shadow: 0 18px 40px rgba(16, 24, 40, 0.12);
+}
+
+.members-page {
+  color: var(--members-ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255, 204, 153, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(165, 205, 255, 0.35), transparent 60%),
+    linear-gradient(180deg, #fffaf5 0%, #ffffff 38%, #f7f9ff 100%);
+  margin: -1.5rem -1.5rem 0;
+  padding-bottom: 0;
+}
+
+.members-body {
+  padding: 1.6rem 1.5rem 2.5rem;
+}
+
+.members-intro {
+  max-width: 920px;
+  margin: 0 auto 2rem;
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  color: var(--members-muted);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.members-cohort {
+  max-width: 1100px;
+  margin: 2.2rem auto;
+  padding: 1.8rem 1.6rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--members-shadow);
+  border: 1px solid var(--members-border);
+}
+
+.members-cohort:nth-of-type(2n) {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.members-cohort-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.4rem;
+}
+
+.members-cohort-title {
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Noto Serif SC", serif;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--members-ink);
+}
+
+.members-count {
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  font-size: 0.95rem;
+  color: var(--members-accent);
+  background: rgba(255, 217, 189, 0.5);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.9rem;
+}
+
+.member-card {
+  background: linear-gradient(135deg, var(--members-card) 0%, #ffffff 60%);
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 18px rgba(176, 106, 42, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:nth-child(3n) {
+  background: linear-gradient(135deg, var(--members-card-2) 0%, #ffffff 60%);
+  box-shadow: 0 10px 18px rgba(29, 79, 145, 0.1);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(16, 24, 40, 0.18);
+}
+
+.member-name {
+  display: block;
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  font-weight: 600;
+  color: var(--members-ink);
+  letter-spacing: 0.04em;
+}
+
+.member-link {
+  color: var(--members-ink);
+  text-decoration: none;
+  position: relative;
+}
+
+.member-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--members-accent), var(--members-accent-2));
+  transition: width 0.2s ease;
+}
+
+.member-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .members-page {
+    margin: -1rem -1rem 0;
+  }
+
+  .members-cohort {
+    padding: 1.4rem 1.1rem;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+body.page-members main {
+  padding-bottom: 0;
+}

@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article class="moments-page">
+  <section class="moments-body">
+    {{ if .Content }}
+      <div class="moments-intro">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    {{ $dailyRoot := "static/daily" }}
+    {{ $yearDirs := sort (readDir $dailyRoot) "Name" "desc" }}
+    {{ range $yearDirs }}
+      {{ if .IsDir }}
+        {{ $year := .Name }}
+        {{ $files := sort (readDir (printf "%s/%s" $dailyRoot $year)) "Name" "desc" }}
+        {{ $docs := slice }}
+        {{ range $files }}
+          {{ if (findRE "(?i)\\.(pdf|pptx)$" .Name) }}
+            {{ $docs = $docs | append . }}
+          {{ end }}
+        {{ end }}
+        <section class="moments-year">
+          <div class="moments-year-head">
+            <h2 class="moments-year-title">{{ $year }} 年</h2>
+            <span class="moments-year-count">{{ len $docs }} 份</span>
+          </div>
+          <div class="moments-grid">
+            {{ range $docs }}
+              {{ $sizeMB := div (float .Size) 1048576.0 }}
+              {{ $ext := lower (replaceRE "^.*\\." "" .Name) }}
+              <a class="moments-card" href="{{ printf "/daily/%s/%s" $year (urls.PathEscape .Name) }}" download>
+                <div class="moments-card-title">{{ .Name | replaceRE "(?i)\\.(pdf|pptx)$" "" }}</div>
+                <div class="moments-card-meta">{{ upper $ext }} · {{ printf "%.1f" $sizeMB }} MB</div>
+              </a>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    {{ end }}
+  </section>
+</article>
+{{ end }}

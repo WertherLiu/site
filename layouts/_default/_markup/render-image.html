@@ -1,0 +1,11 @@
+<figure class="image-bundle">
+  <img src="{{ .Destination | safeURL }}" 
+       alt="{{ .Text }}" 
+       {{ with .Title }} title="{{ . }}" {{ end }} 
+       loading="lazy">
+  {{ with .Text }}
+    <figcaption style="text-align: center; font-size: 0.8em; color: gray; margin-top: 0.5em;">
+      {{ . }}
+    </figcaption>
+  {{ end }}
+</figure>

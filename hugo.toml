@@ -1,4 +1,43 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://pkuecons.org/"
 languageCode = "zh-cn"
 title = "北京大学经济学会 EconS"
 theme = "ananke"
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+[menu]
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 1  
+  [[menu.main]]
+    name = "活动"
+    url = "/events/"
+    weight = 2
+  [[menu.main]]
+    name = "贴文"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "成员"
+    url = "/people/"
+    weight = 4    
+  [[menu.main]]
+    name = "月度回顾"
+    url = "/moments/"
+    weight = 5
+
+[params]
+  [params.ananke.social.share]
+    networks = ["weixin"]
+    icons = true
+    sharetext = true
+
+  [params.ananke.social.networks.weixin]
+    slug = "weixin"
+    label = "微信"
+    color = "#07C160"
+    icon = "weixin"
+    link = "https://api.qrserver.com/v1/create-qr-code/"
+    [params.ananke.social.networks.weixin.particles]
+      data = "permalink"
+      params = "size=200x200"

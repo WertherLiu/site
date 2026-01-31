@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 北京大学经济学会 EconS</title>
+    <title>贴文 on 北京大学经济学会 EconS</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on 北京大学经济学会 EconS</description>
+    <description>Recent content in 贴文 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 27 Jan 2026 17:39:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Tue, 27 Jan 2026 17:39:36 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
-      <description></description>
+      <title>爱尔兰国家介绍</title>
+      <link>http://localhost:1313/posts/2026-01-04-ireland/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-01-04-ireland/</guid>
+      <description>一句话概括：本篇记录了什么活动、结论或要点。</description>
+    </item>
+    <item>
+      <title>现代性的“铁笼”——《新教伦理与资本主义精神》</title>
+      <link>http://localhost:1313/posts/2022-07-18-weber/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2022-07-18-weber/</guid>
+      <description>一句话概括：本篇记录了什么活动、结论或要点。</description>
     </item>
   </channel>
 </rss>

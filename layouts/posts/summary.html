@@ -1,0 +1,37 @@
+<div class="list-card">
+  <div class="list-card-body">
+    {{ $tags := slice }}
+    {{ with .Params.categories }}
+      {{ range . }}
+        {{ if ne . "" }}
+          {{ $tags = $tags | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with .Params.tags }}
+      {{ range . }}
+        {{ if ne . "" }}
+          {{ $tags = $tags | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <div class="list-card-meta">
+      {{ with .Date }}
+        <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
+      {{ end }}
+      {{ if gt (len $tags) 0 }}
+        <div class="list-card-tags">
+          {{ range $tags }}
+            <span class="list-card-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    <h2 class="list-card-title">
+      <a href="{{ .RelPermalink }}" class="list-card-link">{{ .Title }}</a>
+    </h2>
+    <div class="list-card-summary">
+      {{ .Summary }}
+    </div>
+  </div>
+</div>

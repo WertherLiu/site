@@ -1,0 +1,124 @@
+{{ define "main" }}
+  <section class="mw8 center ph3 pv4">
+    <header class="mb4">
+      <h1 class="f2 f1-ns athelas mt0 mb3">站内搜索</h1>
+      <form action="{{ "/search/" | relURL }}" method="get" class="flex flex-column flex-row-l items-stretch">
+        <label for="search-input" class="dn">搜索关键词</label>
+        <input
+          id="search-input"
+          name="q"
+          type="search"
+          class="input-reset ba b--moon-gray br2 pa3 f4 w-100 w-70-l"
+          placeholder="输入关键词搜索文章、活动或成员"
+          autocomplete="off"
+        />
+        <button class="button-reset bn bg-black white pv3 ph4 f4 mt3 mt0-l ml0 ml3-l br2" type="submit">
+          搜索
+        </button>
+      </form>
+      <p id="search-status" class="f6 gray mt3 mb0">输入关键词开始搜索。</p>
+    </header>
+
+    <div id="search-results" class="mt4"></div>
+  </section>
+
+  <script>
+    (function () {
+      var input = document.getElementById("search-input");
+      var results = document.getElementById("search-results");
+      var status = document.getElementById("search-status");
+      var index = [];
+      var maxResults = 20;
+
+      function normalize(text) {
+        return (text || "").toLowerCase().replace(/\s+/g, " ").trim();
+      }
+
+      function render(items, query) {
+        if (!query) {
+          results.innerHTML = "";
+          status.textContent = "输入关键词开始搜索。";
+          return;
+        }
+
+        if (!items.length) {
+          results.innerHTML = "";
+          status.textContent = "未找到匹配结果。";
+          return;
+        }
+
+        status.textContent = "找到 " + items.length + " 条结果。";
+
+        var html = '<ul class="list pl0">';
+        items.forEach(function (item) {
+          html +=
+            '<li class="mb4 pb3 bb b--near-white">' +
+            '<a class="f4 fw6 link near-black hover-black" href="' +
+            item.url +
+            '">' +
+            item.title +
+            "</a>" +
+            (item.date ? '<div class="f6 gray mt1">' + item.date + "</div>" : "") +
+            (item.summary ? '<p class="f5 gray mt2 mb0">' + item.summary + "</p>" : "") +
+            "</li>";
+        });
+        html += "</ul>";
+        results.innerHTML = html;
+      }
+
+      function search(query) {
+        var tokens = normalize(query).split(" ").filter(Boolean);
+        if (!tokens.length) {
+          render([], "");
+          return;
+        }
+
+        var matches = index.filter(function (page) {
+          var haystack = normalize(
+            [
+              page.title,
+              page.summary,
+              page.content,
+              (page.tags || []).join(" "),
+              page.section,
+            ].join(" ")
+          );
+
+          return tokens.every(function (token) {
+            return haystack.indexOf(token) !== -1;
+          });
+        });
+
+        render(matches.slice(0, maxResults), query);
+      }
+
+      function initFromQuery() {
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get("q") || "";
+        if (q) {
+          input.value = q;
+          search(q);
+        }
+      }
+
+      fetch('{{ "index.json" | relURL }}')
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("加载索引失败");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          index = data || [];
+          initFromQuery();
+        })
+        .catch(function () {
+          status.textContent = "搜索索引加载失败，请稍后再试。";
+        });
+
+      input.addEventListener("input", function (event) {
+        search(event.target.value);
+      });
+    })();
+  </script>
+{{ end }}

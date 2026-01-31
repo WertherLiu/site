@@ -1,0 +1,93 @@
+{{ define "main" }}
+
+  {{- $text_alignment := "tc-l" -}}
+  {{- if eq site.Params.ananke.home.content_alignment "left" -}}
+    {{- $text_alignment = "tl-l" -}}
+  {{- else if eq site.Params.ananke.home.content_alignment "right" -}}
+    {{- $text_alignment = "tr-l" -}}
+  {{- end -}}
+
+  <div id="home-content"></div>
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+    {{ .Content }}
+  </article>
+
+  {{ $eventsSection := site.GetPage "section" "events" }}
+  {{ if $eventsSection }}
+    {{ $events := collections.First 6 (collections.Sort $eventsSection.RegularPages "Date" "desc") }}
+    {{ if gt (len $events) 0 }}
+      <section class="home-events">
+        <div class="home-events-head">
+          <h2 class="home-events-title">活动回顾</h2>
+          <a class="home-events-link" href="/events/">查看全部</a>
+        </div>
+        <div class="home-events-grid">
+          {{ range $events }}
+            {{ $image := partials.Include "func/GetFeaturedImage.html" . }}
+            <article class="home-event-card">
+              {{ if $image }}
+                <a class="home-event-media" href="{{ .RelPermalink }}" style="background-image: url('{{ $image }}');"></a>
+              {{ end }}
+              <div class="home-event-body">
+                <div class="home-event-meta">
+                  {{ with .Date }}
+                    <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
+                  {{ end }}
+                  {{ with .Params.tags }}
+                    <div class="home-event-tags">
+                      {{ range first 2 . }}
+                        {{ if ne . "" }}
+                          <span class="home-event-tag">{{ . }}</span>
+                        {{ end }}
+                      {{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+                <h3 class="home-event-title">
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                <p class="home-event-summary">{{ .Summary | plainify | truncate 120 }}</p>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  {{ $postsSection := site.GetPage "section" "posts" }}
+  {{ if $postsSection }}
+    {{ $posts := collections.First 4 (collections.Sort $postsSection.RegularPages "Date" "desc") }}
+    {{ if gt (len $posts) 0 }}
+      <section class="home-posts">
+        <div class="home-events-head">
+          <h2 class="home-events-title">最新贴文</h2>
+          <a class="home-events-link" href="/posts/">查看全部</a>
+        </div>
+        <div class="home-posts-list">
+          {{ range $posts }}
+            <article class="home-post-item">
+              <div class="home-post-meta">
+                {{ with .Date }}
+                  <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
+                {{ end }}
+              </div>
+              <h3 class="home-post-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+              <p class="home-post-summary">{{ .Summary | plainify | truncate 120 }}</p>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  <section class="home-moments">
+    <div class="home-events-head">
+      <h2 class="home-events-title">月度回顾</h2>
+      <a class="home-events-link" href="/moments/">进入下载</a>
+    </div>
+    <p class="home-moments-text">查看学会的日常记录与合辑 PDF，支持直接下载与分享。</p>
+  </section>
+{{ end }}

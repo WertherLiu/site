@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article class="members-page">
+  <section class="members-body">
+    {{ if .Content }}
+      <div class="members-intro">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    {{ $data := site.Data.members }}
+    {{ $years := slice "2025" "2024" }}
+    {{ $personPages := where site.RegularPages "Section" "people" }}
+    {{ $scratch := newScratch }}
+    {{ range $personPages }}
+      {{ $scratch.Set .Title .RelPermalink }}
+    {{ end }}
+
+    {{ range $years }}
+      {{ $names := index $data . }}
+      {{ if $names }}
+        <section class="members-cohort">
+          <div class="members-cohort-head">
+            <h2 class="members-cohort-title">{{ . }}级</h2>
+            <span class="members-count">{{ len $names }} 人</span>
+          </div>
+          <div class="members-grid">
+            {{ range $names }}
+              {{ $link := $scratch.Get . }}
+              <div class="member-card">
+                {{ if $link }}
+                  <a class="member-name member-link" href="{{ $link }}">{{ . }}</a>
+                {{ else }}
+                  <span class="member-name">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    {{ end }}
+  </section>
+</article>
+{{ end }}

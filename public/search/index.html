@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>搜索 | 北京大学经济学会 EconS</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="站内搜索">
+    <meta name="generator" content="Hugo 0.154.5">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+    
+      <link href="/search/index.xml" rel="alternate" type="application/rss+xml" title="北京大学经济学会 EconS" />
+      <link href="/search/index.xml" rel="feed" type="application/rss+xml" title="北京大学经济学会 EconS" />
+      
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/search/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/search/">
+  <meta property="og:site_name" content="北京大学经济学会 EconS">
+  <meta property="og:title" content="搜索">
+  <meta property="og:description" content="站内搜索">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="搜索">
+  <meta itemprop="description" content="站内搜索">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="搜索">
+  <meta name="twitter:description" content="站内搜索">
+
+	<link rel="stylesheet" href="/css/site.css">
+
+
+  </head><body class="ma0 avenir bg-near-white development is-section is-section">
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        北京大学经济学会 EconS
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/about/" title="关于 page">
+              关于
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/events/" title="活动 page">
+              活动
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="贴文 page">
+              贴文
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/people/" title="成员 page">
+              成员
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/moments/" title="月度回顾 page">
+              月度回顾
+            </a>
+          </li>
+          
+        </ul>
+      
+      <form action="/search/" method="get" class="dn db-l">
+        <label for="nav-search" class="dn">站内搜索</label>
+        <input
+          id="nav-search"
+          name="q"
+          type="search"
+          placeholder="搜索"
+          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+        />
+      </form>
+      <a href="/search/" class="dib dn-l link white-90 ml3 f6">搜索</a>
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          搜索
+        </h1>
+        
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            站内搜索
+          </h2>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <section class="mw8 center ph3 pv4">
+    <header class="mb4">
+      <h1 class="f2 f1-ns athelas mt0 mb3">站内搜索</h1>
+      <form action="/search/" method="get" class="flex flex-column flex-row-l items-stretch">
+        <label for="search-input" class="dn">搜索关键词</label>
+        <input
+          id="search-input"
+          name="q"
+          type="search"
+          class="input-reset ba b--moon-gray br2 pa3 f4 w-100 w-70-l"
+          placeholder="输入关键词搜索文章、活动或成员"
+          autocomplete="off"
+        />
+        <button class="button-reset bn bg-black white pv3 ph4 f4 mt3 mt0-l ml0 ml3-l br2" type="submit">
+          搜索
+        </button>
+      </form>
+      <p id="search-status" class="f6 gray mt3 mb0">输入关键词开始搜索。</p>
+    </header>
+
+    <div id="search-results" class="mt4"></div>
+  </section>
+
+  <script>
+    (function () {
+      var input = document.getElementById("search-input");
+      var results = document.getElementById("search-results");
+      var status = document.getElementById("search-status");
+      var index = [];
+      var maxResults = 20;
+
+      function normalize(text) {
+        return (text || "").toLowerCase().replace(/\s+/g, " ").trim();
+      }
+
+      function render(items, query) {
+        if (!query) {
+          results.innerHTML = "";
+          status.textContent = "输入关键词开始搜索。";
+          return;
+        }
+
+        if (!items.length) {
+          results.innerHTML = "";
+          status.textContent = "未找到匹配结果。";
+          return;
+        }
+
+        status.textContent = "找到 " + items.length + " 条结果。";
+
+        var html = '<ul class="list pl0">';
+        items.forEach(function (item) {
+          html +=
+            '<li class="mb4 pb3 bb b--near-white">' +
+            '<a class="f4 fw6 link near-black hover-black" href="' +
+            item.url +
+            '">' +
+            item.title +
+            "</a>" +
+            (item.date ? '<div class="f6 gray mt1">' + item.date + "</div>" : "") +
+            (item.summary ? '<p class="f5 gray mt2 mb0">' + item.summary + "</p>" : "") +
+            "</li>";
+        });
+        html += "</ul>";
+        results.innerHTML = html;
+      }
+
+      function search(query) {
+        var tokens = normalize(query).split(" ").filter(Boolean);
+        if (!tokens.length) {
+          render([], "");
+          return;
+        }
+
+        var matches = index.filter(function (page) {
+          var haystack = normalize(
+            [
+              page.title,
+              page.summary,
+              page.content,
+              (page.tags || []).join(" "),
+              page.section,
+            ].join(" ")
+          );
+
+          return tokens.every(function (token) {
+            return haystack.indexOf(token) !== -1;
+          });
+        });
+
+        render(matches.slice(0, maxResults), query);
+      }
+
+      function initFromQuery() {
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get("q") || "";
+        if (q) {
+          input.value = q;
+          search(q);
+        }
+      }
+
+      fetch('\/index.json')
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("加载索引失败");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          index = data || [];
+          initFromQuery();
+        })
+        .catch(function () {
+          status.textContent = "搜索索引加载失败，请稍后再试。";
+        });
+
+      input.addEventListener("input", function (event) {
+        search(event.target.value);
+      });
+    })();
+  </script>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  北京大学经济学会 EconS 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
