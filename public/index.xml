@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>北京大学经济学会 EconS</title>
-    <link>https://pkuecons.org/</link>
+    <link>/</link>
     <description>Recent content on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://pkuecons.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>爱尔兰国家介绍</title>
-      <link>https://pkuecons.org/posts/2026-01-04-ireland/</link>
+      <link>/posts/2026-01-04-ireland/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/posts/2026-01-04-ireland/</guid>
+      <guid>/posts/2026-01-04-ireland/</guid>
       <description>一句话概括：本篇记录了什么活动、结论或要点。</description>
     </item>
     <item>
       <title>现代性的“铁笼”——《新教伦理与资本主义精神》</title>
-      <link>https://pkuecons.org/posts/2022-07-18-weber/</link>
+      <link>/posts/2022-07-18-weber/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/posts/2022-07-18-weber/</guid>
+      <guid>/posts/2022-07-18-weber/</guid>
       <description>一句话概括：本篇记录了什么活动、结论或要点。</description>
     </item>
     <item>
       <title>2025级换届选举与会长团公示</title>
-      <link>https://pkuecons.org/events/2025/2025-12-13-election/</link>
+      <link>/events/2025/2025-12-13-election/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/events/2025/2025-12-13-election/</guid>
+      <guid>/events/2025/2025-12-13-election/</guid>
       <description>北京大学经济学会 2025 级换届选举记录与新会长团介绍。</description>
     </item>
     <item>
       <title>每月一吵：无用之用与人与AI</title>
-      <link>https://pkuecons.org/events/2025/2025-11-18-seminar/</link>
+      <link>/events/2025/2025-11-18-seminar/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/events/2025/2025-11-18-seminar/</guid>
+      <guid>/events/2025/2025-11-18-seminar/</guid>
       <description>围绕高校功利化与AI共生的双主题讨论会。</description>
     </item>
     <item>
       <title>非典型写作分享会</title>
-      <link>https://pkuecons.org/events/2025/2025-10-22-workshop-writing/</link>
+      <link>/events/2025/2025-10-22-workshop-writing/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/events/2025/2025-10-22-workshop-writing/</guid>
+      <guid>/events/2025/2025-10-22-workshop-writing/</guid>
       <description>解构现实之下的抽象表达，写作与创作分享交流。</description>
     </item>
     <item>
       <title>人生切片实验室 · 首期观影</title>
-      <link>https://pkuecons.org/events/2025/2025-03-21-movie/</link>
+      <link>/events/2025/2025-03-21-movie/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/events/2025/2025-03-21-movie/</guid>
+      <guid>/events/2025/2025-03-21-movie/</guid>
       <description>以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。</description>
     </item>
     <item>
       <title>关于我们</title>
-      <link>https://pkuecons.org/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/about/</guid>
+      <guid>/about/</guid>
       <description>北京大学经济学会的使命、定位与主要活动。</description>
     </item>
     <item>
       <title>刘亚林</title>
-      <link>https://pkuecons.org/people/yalin/</link>
+      <link>/people/yalin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/people/yalin/</guid>
+      <guid>/people/yalin/</guid>
       <description>&lt;p&gt;个人简介写这里（100–150 字）。&lt;/p&gt;</description>
     </item>
   </channel>

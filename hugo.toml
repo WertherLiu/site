@@ -1,4 +1,4 @@
-baseURL = "https://pkuecons.org/"
+baseURL = "/"
 languageCode = "zh-cn"
 title = "北京大学经济学会 EconS"
 theme = "ananke"

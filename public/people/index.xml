@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>成员 on 北京大学经济学会 EconS</title>
-    <link>https://pkuecons.org/people/</link>
+    <link>/people/</link>
     <description>Recent content in 成员 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="https://pkuecons.org/people/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/people/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>刘亚林</title>
-      <link>https://pkuecons.org/people/yalin/</link>
+      <link>/people/yalin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pkuecons.org/people/yalin/</guid>
+      <guid>/people/yalin/</guid>
       <description>&lt;p&gt;个人简介写这里（100–150 字）。&lt;/p&gt;</description>
     </item>
   </channel>
