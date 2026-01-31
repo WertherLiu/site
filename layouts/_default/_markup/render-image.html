@@ -1,8 +1,47 @@
+{{- $dest := .Destination -}}
+{{- $page := .Page -}}
+{{- $isRemote := or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") -}}
+{{- $isData := strings.HasPrefix $dest "data:" -}}
+{{- $res := false -}}
+{{- if and (not $isRemote) (not $isData) -}}
+  {{- with $page.Resources.GetMatch $dest -}}
+    {{- $res = . -}}
+  {{- end -}}
+  {{- if not $res -}}
+    {{- with $page.Resources.GetMatch (printf "**/%s" (path.Base $dest)) -}}
+      {{- $res = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $src := $dest | safeURL -}}
+{{- if $res -}}
+  {{- $src = $res.RelPermalink -}}
+{{- end -}}
+{{- $srcset := "" -}}
+{{- if $res -}}
+  {{- $sizes := slice 600 1000 1600 -}}
+  {{- $items := slice -}}
+  {{- range $sizes -}}
+    {{- $size := . -}}
+    {{- if gt $res.Width $size -}}
+      {{- $variant := $res.Resize (printf "%dx" $size) -}}
+      {{- $items = $items | append (printf "%s %dw" $variant.RelPermalink $size) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $items) 0 -}}
+    {{- $items = $items | append (printf "%s %dw" $res.RelPermalink $res.Width) -}}
+    {{- $srcset = delimit $items ", " -}}
+  {{- end -}}
+{{- end -}}
+
 <figure class="image-bundle">
-  <img src="{{ .Destination | safeURL }}" 
-       alt="{{ .Text }}" 
-       {{ with .Title }} title="{{ . }}" {{ end }} 
-       loading="lazy">
+  <img
+    src="{{ $src }}"
+    {{- if $srcset }} srcset="{{ $srcset }}" sizes="(max-width: 720px) 92vw, (max-width: 1200px) 80vw, 1200px"{{ end }}
+    alt="{{ .Text }}"
+    {{- with .Title }} title="{{ . }}"{{ end }}
+    loading="lazy"
+  >
   {{ with .Text }}
     <figcaption style="text-align: center; font-size: 0.8em; color: gray; margin-top: 0.5em;">
       {{ . }}
