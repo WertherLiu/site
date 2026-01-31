@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>月度回顾 on 北京大学经济学会 EconS</title>
+    <link>https://pkuecons.org/moments/</link>
+    <description>Recent content in 月度回顾 on 北京大学经济学会 EconS</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://pkuecons.org/moments/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
