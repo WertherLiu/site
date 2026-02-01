@@ -21,34 +21,11 @@
           <h2 class="home-events-title">活动回顾</h2>
           <a class="home-events-link" href="/events/">查看全部</a>
         </div>
-        <div class="home-events-grid">
+        <div class="list-grid">
           {{ range $events }}
-            {{ $image := partials.Include "func/GetFeaturedImage.html" . }}
-            <article class="home-event-card">
-              {{ if $image }}
-                <a class="home-event-media" href="{{ .RelPermalink }}" style="background-image: url('{{ $image }}');"></a>
-              {{ end }}
-              <div class="home-event-body">
-                <div class="home-event-meta">
-                  {{ with .Date }}
-                    <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
-                  {{ end }}
-                  {{ with .Params.tags }}
-                    <div class="home-event-tags">
-                      {{ range first 2 . }}
-                        {{ if ne . "" }}
-                          <span class="home-event-tag">{{ . }}</span>
-                        {{ end }}
-                      {{ end }}
-                    </div>
-                  {{ end }}
-                </div>
-                <h3 class="home-event-title">
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h3>
-                <p class="home-event-summary">{{ .Summary | plainify | truncate 120 }}</p>
-              </div>
-            </article>
+            <div class="list-grid-item">
+              {{ .Render "summary" }}
+            </div>
           {{ end }}
         </div>
       </section>
@@ -64,19 +41,11 @@
           <h2 class="home-events-title">最新贴文</h2>
           <a class="home-events-link" href="/posts/">查看全部</a>
         </div>
-        <div class="home-posts-list">
+        <div class="list-grid">
           {{ range $posts }}
-            <article class="home-post-item">
-              <div class="home-post-meta">
-                {{ with .Date }}
-                  <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
-                {{ end }}
-              </div>
-              <h3 class="home-post-title">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
-              <p class="home-post-summary">{{ .Summary | plainify | truncate 120 }}</p>
-            </article>
+            <div class="list-grid-item">
+              {{ .Render "summary" }}
+            </div>
           {{ end }}
         </div>
       </section>

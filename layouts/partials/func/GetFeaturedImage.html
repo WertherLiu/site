@@ -8,7 +8,8 @@
 {{ $linkToCover := "" }}
 {{ $matches := "feature,cover" }}
 
-{{ with .Params.featured_image }}
+{{ $featured := .Params.featured_image | default .Params.featuredImage }}
+{{ with $featured }}
   {{ $raw := . }}
   {{ $isRemote := or (strings.HasPrefix $raw "http://") (strings.HasPrefix $raw "https://") }}
   {{ if $isRemote }}
