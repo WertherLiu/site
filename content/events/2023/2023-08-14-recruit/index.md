@@ -2,7 +2,7 @@
 title = "学会招新｜经济学会投递开启"
 date = "2023-08-14"
 draft = false
-tags = [“招新”]
+tags = ["招新"]
 
 +++
 

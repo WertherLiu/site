@@ -2,7 +2,7 @@
 title = "预告丨史帆：资本主义顽疾——需求不足的内在原因和当代解决模式丨北大汇丰金融云书会第16期"
 date = "2025-06-18"
 draft = false
-tags = [“分享会”]
+tags = ["分享会"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2025-06-18-capital/640.webp"
 
 +++

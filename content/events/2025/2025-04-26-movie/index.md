@@ -2,7 +2,7 @@
 title = "人生切片实验室第二场| 最佳动画电影带你重温感动"
 date = "2025-05-16"
 draft = false
-tags = [“Movie Night”]
+tags = ["Movie Night"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2025-04-26-movie/640.webp"
 
 +++

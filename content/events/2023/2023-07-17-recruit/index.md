@@ -2,7 +2,7 @@
 title = "招新|2023北京大学经济学会招新启动"
 date = "2023-07-17"
 draft = false
-tags = [“招新”]
+tags = ["招新"]
 featuredImage = "https://assets.pkuecons.org/image/events/2023/2023-07-17-recruit/640.3.webp"
 
 +++

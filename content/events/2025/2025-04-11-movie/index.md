@@ -2,7 +2,7 @@
 title = "活动影评篇 | 人性本就是流动的迷雾"
 date = "2025-04-11"
 draft = false
-tags = [“Movie Night”]
+tags = ["Movie Night"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2025-04-11-movie/640.webp"
 
 +++

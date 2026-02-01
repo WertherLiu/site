@@ -2,7 +2,7 @@
 title = "学会招新｜经济学会投递开启，欢迎你来！"
 date = "2024-08-16"
 draft = false
-tags = [“招新”]
+tags = ["招新"]
 featuredImage = "https://assets.pkuecons.org/image/events/2024/2024-08-16-recruit/640.webp"
 
 +++

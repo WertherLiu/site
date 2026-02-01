@@ -2,7 +2,7 @@
 title = "【换届公示，人日快乐】"
 date = "2024-12-11"
 draft = false
-tags = [“换届”]
+tags = ["换届"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2024-12-11-election/640.webp"
 
 +++
