@@ -30,8 +30,11 @@
     <h2 class="list-card-title">
       <a href="{{ .RelPermalink }}" class="list-card-link">{{ .Title }}</a>
     </h2>
-    <div class="list-card-summary">
-      {{ .Summary }}
-    </div>
+    {{ $desc := .Params.description | default .Description }}
+    {{ with $desc }}
+      <div class="list-card-summary">
+        {{ . | plainify | truncate 140 }}
+      </div>
+    {{ end }}
   </div>
 </div>

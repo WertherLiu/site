@@ -8,30 +8,80 @@
     {{ end }}
 
     {{ $items := site.Data.moments.items | default (slice) }}
-    {{ $currentYear := "" }}
+    {{ $years := slice }}
     {{ range $items }}
-      {{ if ne .year $currentYear }}
-        {{ if ne $currentYear "" }}
-          </div>
-        </section>
-        {{ end }}
-        {{ $currentYear = .year }}
-        {{ $yearDocs := where $items "year" .year }}
-        <section class="moments-year">
-          <div class="moments-year-head">
-            <h2 class="moments-year-title">{{ .year }} 年</h2>
-            <span class="moments-year-count">{{ len $yearDocs }} 份</span>
-          </div>
-          <div class="moments-grid">
+      {{ if not (in $years .year) }}
+        {{ $years = $years | append .year }}
       {{ end }}
-            <a class="moments-card" href="{{ .url }}" download>
-              <div class="moments-card-title">{{ .title }}</div>
-              <div class="moments-card-meta">{{ upper .ext }} · {{ printf "%.1f" .size_mb }} MB</div>
-            </a>
     {{ end }}
-    {{ if ne $currentYear "" }}
+    {{ $years = sort $years "value" "desc" }}
+    {{ range $years }}
+      {{ $yearItems := where $items "year" . }}
+      {{ $monthMap := dict }}
+      {{ $monthMeta := dict }}
+      {{ range $yearItems }}
+        {{ $title := .title | default "" }}
+        {{ $monthMatches := findRE "(\\d{1,2})\\s*月" $title }}
+        {{ $monthNums := slice }}
+        {{ range $monthMatches }}
+          {{ $num := int (replaceRE "\\D" "" .) }}
+          {{ $monthNums = $monthNums | append $num }}
+        {{ end }}
+        {{ if eq (len $monthNums) 0 }}
+          {{ $fallbackNums := slice }}
+          {{ range (findRE "\\d{1,2}" $title) }}
+            {{ $num := int . }}
+            {{ if and (ge $num 1) (le $num 12) }}
+              {{ $fallbackNums = $fallbackNums | append $num }}
+            {{ end }}
+          {{ end }}
+          {{ if gt (len $fallbackNums) 0 }}
+            {{ $monthNums = $fallbackNums }}
+          {{ end }}
+        {{ end }}
+        {{ $label := "其他" }}
+        {{ $sortKey := 0 }}
+        {{ if gt (len $monthNums) 0 }}
+          {{ $monthNums = sort $monthNums }}
+          {{ $label = printf "%s月" (delimit $monthNums "-") }}
+          {{ $idx := math.Sub (len $monthNums) 1 }}
+          {{ $sortKey = index $monthNums $idx }}
+        {{ end }}
+        {{ $existing := index $monthMap $label | default (slice) }}
+        {{ $monthMap = merge $monthMap (dict $label (append $existing .)) }}
+        {{ if not (isset $monthMeta $label) }}
+          {{ $monthMeta = merge $monthMeta (dict $label $sortKey) }}
+        {{ end }}
+      {{ end }}
+      {{ $monthEntries := slice }}
+      {{ range $label, $sort := $monthMeta }}
+        {{ $monthEntries = $monthEntries | append (dict "label" $label "sort" $sort) }}
+      {{ end }}
+      {{ $monthEntries = sort $monthEntries "sort" "desc" }}
+
+      <section class="moments-year">
+        <div class="moments-year-head">
+          <h2 class="moments-year-title">{{ . }} 年</h2>
+          <span class="moments-year-count">{{ len $yearItems }} 份</span>
+        </div>
+        {{ range $monthEntries }}
+          {{ $monthItems := index $monthMap .label }}
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">{{ .label }}</h3>
+              <span class="moments-month-count">{{ len $monthItems }} 份</span>
+            </div>
+            <div class="moments-grid">
+              {{ range $monthItems }}
+                <a class="moments-card" href="{{ .url }}" download>
+                  <div class="moments-card-title">{{ .title }}</div>
+                  <div class="moments-card-meta">{{ upper .ext }} · {{ printf "%.1f" .size_mb }} MB</div>
+                </a>
+              {{ end }}
+            </div>
           </div>
-        </section>
+        {{ end }}
+      </section>
     {{ end }}
   </section>
 </article>

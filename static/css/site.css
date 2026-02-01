@@ -186,6 +186,42 @@ body.page-moments header .tc-l {
   border-radius: 999px;
 }
 
+.moments-month {
+  margin-top: 1.4rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.moments-month:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.moments-month-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.moments-month-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.moments-month-count {
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  font-size: 0.85rem;
+  color: #6d6d6d;
+  background: rgba(15, 23, 42, 0.06);
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+}
+
 .moments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -252,6 +288,10 @@ body.page-posts .nested-copy-line-height {
 
 body.page-events .list-card,
 body.page-posts .list-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 240px;
   border-radius: 14px;
   border: 1px solid rgba(15, 23, 42, 0.08);
   background: #ffffff;
@@ -266,6 +306,9 @@ body.page-posts .list-card:hover {
 
 body.page-events .list-card-body,
 body.page-posts .list-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.4rem 1.5rem;
 }
 
@@ -312,9 +355,27 @@ body.page-posts .list-card-link {
 
 body.page-events .list-card-summary,
 body.page-posts .list-card-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 5.1em;
   font-size: 1rem;
   line-height: 1.7;
   color: #4b4b4b;
+}
+
+.list-grid {
+  max-width: 1180px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.list-grid-item {
+  height: 100%;
 }
 
 .home-events {
