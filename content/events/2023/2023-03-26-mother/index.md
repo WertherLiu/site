@@ -1,9 +1,11 @@
 +++
+
 title = "学会读书｜《妈妈走后》"
 date = "2023-03-26"
 draft = false
 tags = ["读书会"]
 featuredImage = "https://assets.pkuecons.org/image/events/2023/2023-03-26-mother/640.1.webp"
+description = '主讲人：张乐康 北大汇丰商学院学生'
 +++
 
 

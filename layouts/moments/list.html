@@ -17,8 +17,9 @@
     {{ $years = sort $years "value" "desc" }}
     {{ range $years }}
       {{ $yearItems := where $items "year" . }}
-      {{ $monthMap := dict }}
       {{ $monthMeta := dict }}
+      {{ $monthLabels := slice }}
+      {{ $monthScratch := newScratch }}
       {{ range $yearItems }}
         {{ $title := .title | default "" }}
         {{ $monthMatches := findRE "(\\d{1,2})\\s*月" $title }}
@@ -47,8 +48,13 @@
           {{ $idx := math.Sub (len $monthNums) 1 }}
           {{ $sortKey = index $monthNums $idx }}
         {{ end }}
-        {{ $existing := index $monthMap $label | default (slice) }}
-        {{ $monthMap = merge $monthMap (dict $label (append $existing .)) }}
+        {{ if not (in $monthLabels $label) }}
+          {{ $monthLabels = $monthLabels | append $label }}
+        {{ end }}
+        {{ if not ($monthScratch.Get $label) }}
+          {{ $monthScratch.Set $label (slice) }}
+        {{ end }}
+        {{ $monthScratch.Add $label (slice .) }}
         {{ if not (isset $monthMeta $label) }}
           {{ $monthMeta = merge $monthMeta (dict $label $sortKey) }}
         {{ end }}
@@ -65,7 +71,7 @@
           <span class="moments-year-count">{{ len $yearItems }} 份</span>
         </div>
         {{ range $monthEntries }}
-          {{ $monthItems := index $monthMap .label }}
+          {{ $monthItems := $monthScratch.Get .label }}
           <div class="moments-month">
             <div class="moments-month-head">
               <h3 class="moments-month-title">{{ .label }}</h3>

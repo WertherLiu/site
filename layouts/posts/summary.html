@@ -1,5 +1,8 @@
-<div class="list-card">
-  <div class="list-card-body">
+{{ $image := partials.Include "func/GetFeaturedImage.html" . }}
+{{ $desc := .Params.description | default .Description | default (.Summary | plainify) }}
+<article class="home-event-card list-event-card">
+  <a class="home-event-media {{ if not $image }}home-event-media--empty{{ end }}" href="{{ .RelPermalink }}"{{ if $image }} style="background-image: url('{{ $image }}');"{{ end }}></a>
+  <div class="home-event-body">
     {{ $tags := slice }}
     {{ with .Params.categories }}
       {{ range . }}
@@ -15,26 +18,23 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    <div class="list-card-meta">
+    <div class="home-event-meta">
       {{ with .Date }}
         <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>
       {{ end }}
       {{ if gt (len $tags) 0 }}
-        <div class="list-card-tags">
+        <div class="home-event-tags">
           {{ range $tags }}
-            <span class="list-card-tag">{{ . }}</span>
+            <span class="home-event-tag">{{ . }}</span>
           {{ end }}
         </div>
       {{ end }}
     </div>
-    <h2 class="list-card-title">
-      <a href="{{ .RelPermalink }}" class="list-card-link">{{ .Title }}</a>
-    </h2>
-    {{ $desc := .Params.description | default .Description }}
-    {{ with $desc }}
-      <div class="list-card-summary">
-        {{ . | plainify | truncate 140 }}
-      </div>
+    <h3 class="home-event-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+    {{ if $desc }}
+      <p class="home-event-summary">{{ $desc | plainify | truncate 140 }}</p>
     {{ end }}
   </div>
-</div>
+</article>

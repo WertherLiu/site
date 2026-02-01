@@ -1,10 +1,11 @@
 +++
+
 title = "学会招新丨经济学会投递开启，欢迎你来！"
 date = "2025-08-17"
 draft = false
 tags = ["招新"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2025-08-17-recruit/640.webp"
-
+description = '学弟学妹们好呀！恭喜你们即将迈入汇丰，解锁研究生新阶段的精彩，我们正满心欢喜地盼着开学时与大家碰面！'
 +++
 
 学弟学妹们好呀！恭喜你们即将迈入汇丰，解锁研究生新阶段的精彩，我们正满心欢喜地盼着开学时与大家碰面！

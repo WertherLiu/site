@@ -1,4 +1,5 @@
 +++
+
 title = "非典型写作分享会"
 date = 2025-10-22
 draft = false
@@ -6,7 +7,7 @@ summary = "解构现实之下的抽象表达，写作与创作分享交流。"
 location = "汇丰大楼321教室"
 featured_image = "https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.webp"
 tags = ["分享会"]
-
+description = '分享人(笔名）：嘉陵江、Rosetta、一乔'
 +++
 
 

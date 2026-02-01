@@ -298,6 +298,35 @@ body.page-posts .list-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.list-event-card {
+  height: 100%;
+}
+
+.list-grid .home-event-card {
+  height: 100%;
+}
+
+.list-grid .home-event-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.list-grid .home-event-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 5.1em;
+}
+
+.home-event-media--empty {
+  background:
+    radial-gradient(180px 120px at 18% 20%, rgba(120, 195, 255, 0.45), transparent 60%),
+    radial-gradient(200px 140px at 85% 10%, rgba(255, 196, 140, 0.5), transparent 60%),
+    linear-gradient(135deg, #e8edf6 0%, #f7f9fd 55%, #eef3fb 100%);
+}
+
 body.page-events .list-card:hover,
 body.page-posts .list-card:hover {
   transform: translateY(-4px);
