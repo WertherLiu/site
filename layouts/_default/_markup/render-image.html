@@ -16,6 +16,10 @@
 {{- $src := $dest | safeURL -}}
 {{- if $res -}}
   {{- $src = $res.RelPermalink -}}
+{{- else -}}
+  {{- with site.Params.assets_base -}}
+    {{- $src = partials.Include "func/asset-url.html" (dict "src" $dest "page" $page) -}}
+  {{- end -}}
 {{- end -}}
 {{- $srcset := "" -}}
 {{- if $res -}}

@@ -4,7 +4,7 @@ date = 2025-11-20
 draft = false
 summary = "围绕高校功利化与AI共生的双主题讨论会。"
 location = "汇丰大楼321教室"
-featured_image = "640.webp"
+featured_image = "https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.webp"
 tags = ["讨论会", "AI", "校园话题"]
 +++
 
@@ -22,7 +22,7 @@ tags = ["讨论会", "AI", "校园话题"]
 
 高校、社会该如何共同营造更包容的成长环境？个人应该怎样选择？
 
-![图片](640.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.webp)
 
 
 
@@ -40,7 +40,7 @@ AI对高校生的能力到底是“削弱”还是“赋能”？“去能力化
 
 智能时代，个人差异化竞争力的核心是什么？如何在AI辅助下展现独特价值？
 
-![图片](640.1.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.1.webp)
 
 时间：本周四（11月20日）19:30-21:30
 

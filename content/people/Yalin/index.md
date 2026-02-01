@@ -4,7 +4,7 @@ draft = false
 interests = ["宏观","计量"]
 email = "2501212269@stu.pku.edu.cn"
 
-featured_image = "cover.webp"
+featured_image = "https://assets.pkuecons.org/image/people//Yalin/cover.webp"
 
 +++
 

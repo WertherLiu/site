@@ -1,0 +1,7 @@
+{{ if .Site.Params.favicon }}
+  {{ $faviconSrc := urls.RelURL ($.Site.Params.favicon) }}
+  {{ with $.Site.Params.assets_base }}
+    {{ $faviconSrc = partials.Include "func/asset-url.html" (dict "src" $faviconSrc "page" $) }}
+  {{ end }}
+  <link rel="shortcut icon" href="{{ $faviconSrc }}" type="image/x-icon" />
+{{ end }}

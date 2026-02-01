@@ -4,7 +4,7 @@ date = 2025-03-21
 draft = false
 summary = "以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。"
 location = "燕园公寓六号楼学生活动中心多媒体室"
-featured_image = "640.webp"
+featured_image = "https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp"
 tags = ["观影", "讨论会", "社团活动"]
 +++
 
@@ -16,7 +16,7 @@ tags = ["观影", "讨论会", "社团活动"]
 
 作为《人生切片实验室》的首期栏目，我们在社员内部发起了一场“想看什么，由你决定”的片单征集活动。最终《坠落的审判》以高票胜出，成为我们实验室的第一片“人生切片”。欢迎大家一起来品味这第一片！
 
-![图片](640.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp)
 
 片名：《坠落的审判》（Anatomie d'une chute）  
 导演：茄斯汀·特里叶  
@@ -25,7 +25,7 @@ tags = ["观影", "讨论会", "社团活动"]
 
 该片2023年上映后好评如潮，获得第81届金球奖：最佳外语片、最佳剧本，第96届奥斯卡金像奖：最佳原创剧本等多个大奖。
 
-![图片](640.1.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.1.webp)
 
 精彩抢先一瞥
 
@@ -33,13 +33,13 @@ tags = ["观影", "讨论会", "社团活动"]
 
 “没有哪一种生活能经受得住抽丝剥茧的审问与反刍。”
 
-![图片](640.2.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.2.webp)
 
-![图片](640.3.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.3.webp)
 
-![图片](640.4.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.4.webp)
 
-![图片](640.5.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.5.webp)
 
 _**观影时间：**_
 
@@ -71,4 +71,4 @@ _（欢迎社团外同学共同参与！）_
 
 经济学会是一个自由、包容、真诚、舒适的家园，我们是会探讨书&电影、政治历史、生活哲学等等兴趣话题的社群，我们希望提供给大家一个思维碰撞的平台、迷茫时休憩的驿站。在这里，你的个性会被珍视，“无用”的话题可以随地开启，真实的内心将彼此连接。经济学会已经是很多汇丰人的温暖老家，我们也无比期待你的加入。
 
-![图片](640.9.webp)
+![图片](https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.9.webp)

@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "http://localhost:1313/"
 languageCode = "zh-cn"
 title = "北京大学经济学会 EconS"
 theme = "ananke"
@@ -25,8 +25,12 @@ theme = "ananke"
     name = "月度回顾"
     url = "/moments/"
     weight = 5
-
+  [[menu.main]]
+    name = "资料下载"
+    url = "/downloads/"
+    weight = 6
 [params]
+  assets_base = "https://assets.pkuecons.org"
   [params.ananke.social.share]
     networks = ["weixin"]
     icons = true

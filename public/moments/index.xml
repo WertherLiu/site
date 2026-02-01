@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>月度回顾 on 北京大学经济学会 EconS</title>
-    <link>/moments/</link>
+    <link>http://localhost:1313/moments/</link>
     <description>Recent content in 月度回顾 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="/moments/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/moments/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

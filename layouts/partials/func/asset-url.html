@@ -1,0 +1,57 @@
+{{- /*
+  asset-url
+
+  Build a full asset URL when assets_base is configured.
+  - Keep remote/data URLs unchanged.
+  - Map legacy absolute paths like /images/* and /cover/* to R2 layout.
+  - For relative image paths, build /image/<section>/<year>/<bundle>/<file>.
+*/ -}}
+
+{{- $src := .src -}}
+{{- $page := .page -}}
+{{- $base := site.Params.assets_base | default "" -}}
+{{- $result := $src -}}
+
+{{- if $base -}}
+  {{- $isRemote := or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://") -}}
+  {{- $isData := strings.HasPrefix $src "data:" -}}
+  {{- if and (not $isRemote) (not $isData) -}}
+    {{- $normalized := $src -}}
+    {{- if strings.HasPrefix $normalized "/images/" -}}
+      {{- $normalized = printf "/image/%s" (strings.TrimPrefix "/images/" $normalized) -}}
+    {{- else if strings.HasPrefix $normalized "/image/" -}}
+      {{- /* keep */ -}}
+    {{- else if strings.HasPrefix $normalized "/cover/" -}}
+      {{- $normalized = printf "/image/cover/%s" (strings.TrimPrefix "/cover/" $normalized) -}}
+    {{- else if strings.HasPrefix $normalized "/doc/" -}}
+      {{- $normalized = printf "/doc/%s" (strings.TrimPrefix "/doc/" $normalized) -}}
+    {{- else if strings.HasPrefix $normalized "/" -}}
+      {{- $result = $src -}}
+      {{- $normalized = "" -}}
+    {{- else -}}
+      {{- $section := $page.Section -}}
+      {{- $bundle := "" -}}
+      {{- if and $page.File $page.File.Dir -}}
+        {{- $bundle = path.Base (strings.TrimSuffix "/" $page.File.Dir) -}}
+      {{- end -}}
+      {{- $year := "" -}}
+      {{- if $page.Params.eventDate -}}
+        {{- $year = (time.AsTime $page.Params.eventDate).Format "2006" -}}
+      {{- else if $page.Date -}}
+        {{- $year = $page.Date.Format "2006" -}}
+      {{- end -}}
+      {{- $file := path.Base $src -}}
+      {{- if and $section $bundle $year -}}
+        {{- $normalized = printf "/image/%s/%s/%s/%s" $section $year $bundle $file -}}
+      {{- else -}}
+        {{- $normalized = printf "/image/%s" $file -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if $normalized -}}
+      {{- $result = printf "%s%s" (strings.TrimRight "/" $base) $normalized -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $result -}}

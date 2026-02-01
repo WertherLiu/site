@@ -7,35 +7,31 @@
       </div>
     {{ end }}
 
-    {{ $dailyRoot := "static/daily" }}
-    {{ $yearDirs := sort (readDir $dailyRoot) "Name" "desc" }}
-    {{ range $yearDirs }}
-      {{ if .IsDir }}
-        {{ $year := .Name }}
-        {{ $files := sort (readDir (printf "%s/%s" $dailyRoot $year)) "Name" "desc" }}
-        {{ $docs := slice }}
-        {{ range $files }}
-          {{ if (findRE "(?i)\\.(pdf|pptx)$" .Name) }}
-            {{ $docs = $docs | append . }}
-          {{ end }}
-        {{ end }}
-        <section class="moments-year">
-          <div class="moments-year-head">
-            <h2 class="moments-year-title">{{ $year }} 年</h2>
-            <span class="moments-year-count">{{ len $docs }} 份</span>
-          </div>
-          <div class="moments-grid">
-            {{ range $docs }}
-              {{ $sizeMB := div (float .Size) 1048576.0 }}
-              {{ $ext := lower (replaceRE "^.*\\." "" .Name) }}
-              <a class="moments-card" href="{{ printf "/daily/%s/%s" $year (urls.PathEscape .Name) }}" download>
-                <div class="moments-card-title">{{ .Name | replaceRE "(?i)\\.(pdf|pptx)$" "" }}</div>
-                <div class="moments-card-meta">{{ upper $ext }} · {{ printf "%.1f" $sizeMB }} MB</div>
-              </a>
-            {{ end }}
+    {{ $items := site.Data.moments.items | default (slice) }}
+    {{ $currentYear := "" }}
+    {{ range $items }}
+      {{ if ne .year $currentYear }}
+        {{ if ne $currentYear "" }}
           </div>
         </section>
+        {{ end }}
+        {{ $currentYear = .year }}
+        {{ $yearDocs := where $items "year" .year }}
+        <section class="moments-year">
+          <div class="moments-year-head">
+            <h2 class="moments-year-title">{{ .year }} 年</h2>
+            <span class="moments-year-count">{{ len $yearDocs }} 份</span>
+          </div>
+          <div class="moments-grid">
       {{ end }}
+            <a class="moments-card" href="{{ .url }}" download>
+              <div class="moments-card-title">{{ .title }}</div>
+              <div class="moments-card-meta">{{ upper .ext }} · {{ printf "%.1f" .size_mb }} MB</div>
+            </a>
+    {{ end }}
+    {{ if ne $currentYear "" }}
+          </div>
+        </section>
     {{ end }}
   </section>
 </article>

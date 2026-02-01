@@ -1,0 +1,34 @@
+{{/*
+	GetFeaturedImage (site override)
+
+	This partial gets the url for featured image for a given page.
+	Adds optional assets_base support for Cloudflare R2.
+*/}}
+
+{{ $linkToCover := "" }}
+{{ $matches := "feature,cover" }}
+
+{{ with .Params.featured_image }}
+  {{ $raw := . }}
+  {{ $isRemote := or (strings.HasPrefix $raw "http://") (strings.HasPrefix $raw "https://") }}
+  {{ if $isRemote }}
+    {{ $linkToCover = $raw }}
+  {{ else }}
+    {{ $linkToCover = strings.Trim $raw "/" | urls.AbsURL }}
+    {{ with $.Resources.GetMatch $raw }}
+      {{ $linkToCover = .RelPermalink }}
+    {{ else }}
+      {{ with $.Site.Params.assets_base }}
+        {{ $linkToCover = partials.Include "func/asset-url.html" (dict "src" $raw "page" $) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ with .Resources.ByType "image" }}
+    {{ with .GetMatch (fmt.Printf "**{%s}*" $matches) }}
+      {{ $linkToCover = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $linkToCover }}

@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/posts/</loc>
+    <loc>http://localhost:1313/categories/posts/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/2026-01-04-ireland/</loc>
+    <loc>http://localhost:1313/posts/2026-01-04-ireland/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/2022-07-18-weber/</loc>
+    <loc>http://localhost:1313/posts/2022-07-18-weber/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E7%A4%BE%E5%9B%A2/</loc>
+    <loc>http://localhost:1313/tags/%E7%A4%BE%E5%9B%A2/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/events/2025/2025-12-13-election/</loc>
+    <loc>http://localhost:1313/events/2025/2025-12-13-election/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E6%8D%A2%E5%B1%8A/</loc>
+    <loc>http://localhost:1313/tags/%E6%8D%A2%E5%B1%8A/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/events/</loc>
+    <loc>http://localhost:1313/events/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2025-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E6%A0%A1%E5%9B%AD%E8%AF%9D%E9%A2%98/</loc>
+    <loc>http://localhost:1313/tags/%E6%A0%A1%E5%9B%AD%E8%AF%9D%E9%A2%98/</loc>
     <lastmod>2025-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/events/2025/2025-11-18-seminar/</loc>
+    <loc>http://localhost:1313/events/2025/2025-11-18-seminar/</loc>
     <lastmod>2025-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E8%AE%A8%E8%AE%BA%E4%BC%9A/</loc>
+    <loc>http://localhost:1313/tags/%E8%AE%A8%E8%AE%BA%E4%BC%9A/</loc>
     <lastmod>2025-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E5%86%99%E4%BD%9C/</loc>
+    <loc>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E5%88%86%E4%BA%AB%E4%BC%9A/</loc>
+    <loc>http://localhost:1313/tags/%E5%88%86%E4%BA%AB%E4%BC%9A/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E7%A4%BE%E5%9B%A2%E6%B4%BB%E5%8A%A8/</loc>
+    <loc>http://localhost:1313/tags/%E7%A4%BE%E5%9B%A2%E6%B4%BB%E5%8A%A8/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/events/2025/2025-10-22-workshop-writing/</loc>
+    <loc>http://localhost:1313/events/2025/2025-10-22-workshop-writing/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/events/2025/2025-03-21-movie/</loc>
+    <loc>http://localhost:1313/events/2025/2025-03-21-movie/</loc>
     <lastmod>2025-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E8%A7%82%E5%BD%B1/</loc>
+    <loc>http://localhost:1313/tags/%E8%A7%82%E5%BD%B1/</loc>
     <lastmod>2025-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>/people/yalin/</loc>
+    <loc>http://localhost:1313/people/yalin/</loc>
   </url><url>
-    <loc>/people/</loc>
+    <loc>http://localhost:1313/people/</loc>
   </url><url>
-    <loc>/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>/moments/</loc>
+    <loc>http://localhost:1313/moments/</loc>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>换届 on 北京大学经济学会 EconS</title>
-    <link>/tags/%E6%8D%A2%E5%B1%8A/</link>
+    <link>http://localhost:1313/tags/%E6%8D%A2%E5%B1%8A/</link>
     <description>Recent content in 换届 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/%E6%8D%A2%E5%B1%8A/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%8D%A2%E5%B1%8A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025级换届选举与会长团公示</title>
-      <link>/events/2025/2025-12-13-election/</link>
+      <link>http://localhost:1313/events/2025/2025-12-13-election/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-12-13-election/</guid>
+      <guid>http://localhost:1313/events/2025/2025-12-13-election/</guid>
       <description>北京大学经济学会 2025 级换届选举记录与新会长团介绍。</description>
     </item>
   </channel>

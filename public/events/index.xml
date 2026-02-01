@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>活动 on 北京大学经济学会 EconS</title>
-    <link>/events/</link>
+    <link>http://localhost:1313/events/</link>
     <description>Recent content in 活动 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/events/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/events/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025级换届选举与会长团公示</title>
-      <link>/events/2025/2025-12-13-election/</link>
+      <link>http://localhost:1313/events/2025/2025-12-13-election/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-12-13-election/</guid>
+      <guid>http://localhost:1313/events/2025/2025-12-13-election/</guid>
       <description>北京大学经济学会 2025 级换届选举记录与新会长团介绍。</description>
     </item>
     <item>
       <title>每月一吵：无用之用与人与AI</title>
-      <link>/events/2025/2025-11-18-seminar/</link>
+      <link>http://localhost:1313/events/2025/2025-11-18-seminar/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-11-18-seminar/</guid>
+      <guid>http://localhost:1313/events/2025/2025-11-18-seminar/</guid>
       <description>围绕高校功利化与AI共生的双主题讨论会。</description>
     </item>
     <item>
       <title>非典型写作分享会</title>
-      <link>/events/2025/2025-10-22-workshop-writing/</link>
+      <link>http://localhost:1313/events/2025/2025-10-22-workshop-writing/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-10-22-workshop-writing/</guid>
+      <guid>http://localhost:1313/events/2025/2025-10-22-workshop-writing/</guid>
       <description>解构现实之下的抽象表达，写作与创作分享交流。</description>
     </item>
     <item>
       <title>人生切片实验室 · 首期观影</title>
-      <link>/events/2025/2025-03-21-movie/</link>
+      <link>http://localhost:1313/events/2025/2025-03-21-movie/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-03-21-movie/</guid>
+      <guid>http://localhost:1313/events/2025/2025-03-21-movie/</guid>
       <description>以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。</description>
     </item>
   </channel>

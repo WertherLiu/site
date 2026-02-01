@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>观影 on 北京大学经济学会 EconS</title>
-    <link>/tags/%E8%A7%82%E5%BD%B1/</link>
+    <link>http://localhost:1313/tags/%E8%A7%82%E5%BD%B1/</link>
     <description>Recent content in 观影 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 21 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/%E8%A7%82%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%A7%82%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>人生切片实验室 · 首期观影</title>
-      <link>/events/2025/2025-03-21-movie/</link>
+      <link>http://localhost:1313/events/2025/2025-03-21-movie/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>/events/2025/2025-03-21-movie/</guid>
+      <guid>http://localhost:1313/events/2025/2025-03-21-movie/</guid>
       <description>以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。</description>
     </item>
   </channel>
