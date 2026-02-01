@@ -5,7 +5,7 @@ draft = false
 summary = "以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。"
 location = "燕园公寓六号楼学生活动中心多媒体室"
 featured_image = "https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp"
-tags = ["观影", "讨论会", "社团活动"]
+tags = ["Movie Night"]
 +++
 
 # **人生切片**实验室 /Life Movie Lab

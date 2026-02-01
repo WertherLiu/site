@@ -5,14 +5,13 @@ draft = false
 summary = "解构现实之下的抽象表达，写作与创作分享交流。"
 location = "汇丰大楼321教室"
 featured_image = "https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.webp"
-tags = ["分享会", "写作", "社团活动"]
+tags = ["分享会"]
+
 +++
 
-**分享会**
 
-北京大学经济学会
 
-解构现实之下的抽象表达——非典型写作分享会
+## 解构现实之下的抽象表达——非典型写作分享会
 
 分享人(笔名）：嘉陵江、Rosetta、一乔  
 
@@ -34,7 +33,5 @@ tags = ["分享会", "写作", "社团活动"]
 2025年10月22日19:00，汇丰大楼321教室，经济学会欢迎您来！
 
 **END**
-
-关注我们！
 
 ![图片](https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.3.webp)
