@@ -5,7 +5,7 @@ date = "2025-02-18"
 draft = false
 tags = ["分享会"]
 featuredImage = "https://assets.pkuecons.org/image/events/2025/2025-02-28-history/640.webp"
-description = '分享人：陈少肯'
+description = '循善与留名——从<伯夷列传>看司马迁的写作目的'
 +++
 
 ## 《循善与留名——从<伯夷列传>看司马迁的写作目的》

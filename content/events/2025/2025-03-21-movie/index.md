@@ -3,11 +3,10 @@
 title = "人生切片实验室 · 首期观影"
 date = 2025-03-21
 draft = false
-summary = "以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。"
+description = "以电影《坠落的审判》为切片的社团新栏目首场观影与讨论"
 location = "燕园公寓六号楼学生活动中心多媒体室"
 featured_image = "https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp"
 tags = ["Movie Night"]
-description = '作为2025年我们的全新栏目，在大学城的角落里，我们这样开辟了一个小小的“实验室”，用电影作为切片，带你体验不同的人生故事。无论是哲学家的沉思、追梦者的执着，还是直面生活的勇气，每一部电影都是一次全新的探索实验。在光影中一次次穿梭时空，我们'
 +++
 
 # **人生切片**实验室 /Life Movie Lab

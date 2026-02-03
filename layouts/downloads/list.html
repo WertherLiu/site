@@ -1,0 +1,103 @@
+{{ define "main" }}
+  <article class="downloads-page">
+    <section class="downloads-intro">
+      <div class="downloads-intro-inner">
+        {{ if .Content }}
+          <div class="downloads-lead nested-copy-line-height nested-links">
+            {{ .Content }}
+          </div>
+        {{ end }}
+
+        {{ with .Params.download_groups }}
+          <nav class="downloads-jump" aria-label="下载分区导航">
+            {{ range . }}
+              {{ $id := .title | default "" | urlize }}
+              {{ if $id }}
+                <a class="downloads-jump-link" href="#{{ $id }}">{{ .title }}</a>
+              {{ end }}
+            {{ end }}
+          </nav>
+        {{ end }}
+      </div>
+    </section>
+
+    {{ with .Params.download_groups }}
+      <section class="downloads-groups">
+        {{ range . }}
+          {{ $groupTitle := .title | default "" }}
+          {{ $id := $groupTitle | urlize }}
+          <section id="{{ $id }}" class="downloads-group">
+            <header class="downloads-group-head">
+              <div class="downloads-group-titles">
+                <h2 class="downloads-group-title">{{ $groupTitle }}</h2>
+                {{ with .description }}
+                  <p class="downloads-group-desc">{{ . }}</p>
+                {{ end }}
+              </div>
+              {{ with .items }}
+                <span class="downloads-group-count">{{ len . }} 个文件</span>
+              {{ end }}
+            </header>
+
+            <div class="downloads-grid">
+              {{ range .items }}
+                {{ $name := .name | default .title | default "未命名文件" }}
+                {{ $url := .url | default "" }}
+                {{ $kind := .kind | default .type | default "" }}
+                {{ $meta := slice }}
+                {{ with .size }}{{ $meta = $meta | append (printf "%v" .) }}{{ end }}
+                {{ with .updated }}{{ $meta = $meta | append (printf "%v" .) }}{{ end }}
+
+                {{ if $url }}
+                  <a class="download-card" href="{{ $url }}" target="_blank" rel="noopener">
+                    <div class="download-card-icon" aria-hidden="true">
+                      {{ if $kind }}{{ $kind }}{{ else }}FILE{{ end }}
+                    </div>
+                    <div class="download-card-main">
+                      <div class="download-card-title">{{ $name }}</div>
+                      <div class="download-card-meta">
+                        {{ if $kind }}<span class="download-badge">{{ $kind }}</span>{{ end }}
+                        {{ range $meta }}<span class="download-meta">{{ . }}</span>{{ end }}
+                      </div>
+                      {{ with .hint }}
+                        <div class="download-card-hint">{{ . }}</div>
+                      {{ end }}
+                    </div>
+                    <div class="download-card-cta">下载</div>
+                  </a>
+                {{ else }}
+                  <div class="download-card download-card--placeholder" aria-disabled="true">
+                    <div class="download-card-icon" aria-hidden="true">
+                      {{ if $kind }}{{ $kind }}{{ else }}FILE{{ end }}
+                    </div>
+                    <div class="download-card-main">
+                      <div class="download-card-title">{{ $name }}</div>
+                      <div class="download-card-meta">
+                        {{ if $kind }}<span class="download-badge">{{ $kind }}</span>{{ end }}
+                        <span class="download-meta">待填写链接</span>
+                      </div>
+                      {{ with .hint }}
+                        <div class="download-card-hint">{{ . }}</div>
+                      {{ end }}
+                    </div>
+                    <div class="download-card-cta">待填</div>
+                  </div>
+                {{ end }}
+              {{ end }}
+            </div>
+          </section>
+        {{ end }}
+      </section>
+    {{ else }}
+      <section class="downloads-empty">
+        <div class="downloads-empty-inner">
+          <h2 class="downloads-empty-title">还没有配置下载文件</h2>
+          <p class="downloads-empty-text">
+            请在 <code>site/content/downloads/_index.md</code> 的 front matter 中添加 <code>download_groups</code>。
+          </p>
+        </div>
+      </section>
+    {{ end }}
+  </article>
+{{ end }}
+

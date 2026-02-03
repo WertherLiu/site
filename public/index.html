@@ -51,9 +51,9 @@
 
   <meta itemprop="name" content="北京大学经济学会">
   <meta itemprop="description" content="Economics Society of Peking University">
-  <meta itemprop="datePublished" content="2026-01-30T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2026-01-30T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1">
+  <meta itemprop="datePublished" content="2026-01-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-01-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="22">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="北京大学经济学会">
   <meta name="twitter:description" content="Economics Society of Peking University">
@@ -64,29 +64,36 @@
   </head><body class="ma0 avenir bg-near-white development is-home">
     
 
+
   
   
-  <header class="cover bg-center parallax-hero" style="background-image: url('https://assets.pkuecons.org/image/hero.jpg');">
+  
     
-    <div class="bg-black-45">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
+    
+    
+    
+    
+    
+    <header class="cover bg-center parallax-hero" style="background-image: url('https://assets.pkuecons.org/image/hero.jpg'); --hero-image-mobile: url('https://assets.pkuecons.org/image/mobile_hero.jpg');">
+      <div class="bg-transparent">
+        <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         北京大学经济学会 EconS
       
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       
 
       
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/about/" title="关于 page">
-              关于
-            </a>
-          </li>
+        <ul class="pl0 mr2">
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/events/" title="活动 page">
@@ -118,181 +125,252 @@
             </a>
           </li>
           
+          <li class="list dib nav-search-item">
+            <form action="/search/" method="get" class="nav-search">
+              <label for="nav-search" class="dn">站内搜索</label>
+              <input
+                id="nav-search"
+                name="q"
+                type="search"
+                placeholder="搜索"
+                class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+              />
+            </form>
+          </li>
         </ul>
       
-      <form action="/search/" method="get" class="dn db-l">
-        <label for="nav-search" class="dn">站内搜索</label>
-        <input
-          id="nav-search"
-          name="q"
-          type="search"
-          placeholder="搜索"
-          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
-        />
-      </form>
-      <a href="/search/" class="dib dn-l link white-90 ml3 f6">搜索</a>
-      <div class="ananke-socials"></div>
+      
+        <div class="ananke-socials"></div>
 
+      
     </div>
+
+    <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+      var links = document.querySelectorAll(".nav-menu a");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+    });
+  </script>
 </nav>
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          北京大学经济学会
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            Economics Society of Peking University
-          </h2>
-        
-        
-          <a class="home-scroll" href="#home-content" aria-label="向下滚动">
-            <span aria-hidden="true">↓</span>
-          </a>
-        
+        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+            北京大学经济学会
+          </h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+              Economics Society of Peking University
+            </h2>
+          
+          
+            <a class="home-scroll" href="#home-content">
+              <span class="home-scroll-text">向下了解我们</span>
+              <span class="home-scroll-arrow" aria-hidden="true">↓</span>
+            </a>
+          
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  
 
 
     <main class="pb7" role="main">
       <div id="home-content"></div>
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray">
-    <p>北京大学经济学会欢迎您！下边是一些往期活动回顾。</p>
+  <div class="home-layout">
+    <aside class="home-sidenav" aria-label="首页分区导航">
+      <nav>
+        <a href="#home-about">关于我们</a>
+        <a href="#home-events">活动回顾</a>
+        <a href="#home-posts">最新贴文</a>
+        <a href="#home-moments">月度回顾</a>
+      </nav>
+    </aside>
+    <div class="home-main">
+      <section class="home-events home-about" id="home-about">
+    <div class="home-events-head">
+      <h2 class="home-events-title">关于我们</h2>
+    </div>
+    <div class="home-events-text cf f4 tl-l lh-copy nested-links mid-gray">
+      <p>北京大学<a href="https://www.pkusz.edu.cn/">深圳研究生院</a>学生经济学会（经济学会），成立于2014年1月，前身为北京大学中国经济改革协会，是<a href="https://www.phbs.pku.edu.cn/">北京大学汇丰商学院</a>下设的学生社团。在忙碌的校园生活中，经济学会希望提供给大家一个思想碰撞、互相联结的平台，通过研读经典、互相讨论、举办讲座等形式，加深大家对于经济和人生的思考，守住“博学、审问、慎思、明辨、笃行”的特质，在事业之外，怀抱对社会的冷静思考和美好事物的热爱。</p>
+<p>学会现任指导老师为：<a href="https://www.phbs.pku.edu.cn/info/1291/101531.htm">王小愚</a>老师</p>
+<p>现任会长团成员：</p>
+<ul>
+<li>
+<p>会长：<a href="https://pkuecons.org/people/yalin/">刘亚林</a></p>
+</li>
+<li>
+<p>副会长：施语非  杜翎菲  傅乐思渝</p>
+</li>
+</ul>
+<h3 id="我们在做什么">我们在做什么</h3>
+<ul>
+<li>组织学术讲座、读书会与工作坊</li>
+<li>邀请校内外嘉宾分享研究与实践经验</li>
+<li>支持成员的学术成长与能力提升</li>
+</ul>
+<p>在分享会中，学生们自发分享或邀请学院教授参与讨论，内容包括经管大势、文学历史等。在读书与电影讨论会中，大家就一部作品展开交流，在思想碰撞中了解彼此，也加深对自我的认识，以更多视角窥见世界与人生的样貌。在“每月一吵”讨论会中，大家对当下热点问题各抒己见，通过洞察热点锻炼批判性思维，形成对宏观经济、行业热点、社会结构等独到的见解。</p>
+<p>学会成立至今，研读并讨论的著作有：《伟大的博弈》（约翰·S·戈登），《聪明的投资者》（格雷厄姆），《战胜华尔街》（彼得·林奇），《光环效应》（罗森维），《从0到1》（彼得·蒂尔，布莱克·马斯特斯），《支付战争》（埃里克·杰克逊），《城乡中国》（周其仁），《中国历代经济变革得失》（吴晓波），《人类行为的经济分析》（贝克尔），《中国的奇迹》（林毅夫），《货币的教训》（周其仁），《激荡三十年》（吴晓波）等。</p>
+<h3 id="我们的定位">我们的定位</h3>
+<p>北京大学经济学会（EconS）致力于搭建学术交流与社群成长的平台，关注经济学前沿、公共议题与跨学科对话。面向北京大学经济学与相关专业同学，兼具学术性与公共性，鼓励多元观点与开放讨论。</p>
+<h3 id="联系我们">联系我们</h3>
+<p>欢迎对经济学与公共议题感兴趣的同学加入。如需合作、活动报名或加入咨询，欢迎通过以下方式联系我们：</p>
+<ul>
+<li>
+<p>邮箱 <a href="mailto:pkuecons@pku.edu.cn">pkuecons@pku.edu.cn</a></p>
+</li>
+<li>
+<p>公众号 北京大学经济学会（EconS）</p>
+</li>
+</ul>
+<p><figure class="image-bundle">
+  <img
+    src="https://assets.pkuecons.org/image/contact/wechat-qr.jpg"
+    alt="北京大学经济学会公众号二维码"
+    loading="lazy"
+  >
+  
+    <figcaption style="text-align: center; font-size: 0.8em; color: gray; margin-top: 0.5em;">
+      北京大学经济学会公众号二维码
+    </figcaption>
+  
+</figure>
+</p>
 
-  </article>
+    </div>
+      </section>
 
   
   
     
     
-      <section class="home-events">
+      <section class="home-events" id="home-events">
         <div class="home-events-head">
           <h2 class="home-events-title">活动回顾</h2>
           <a class="home-events-link" href="/events/">查看全部</a>
         </div>
-        <div class="home-events-grid">
+        <div class="list-grid">
           
-            
-            <article class="home-event-card">
+            <div class="list-grid-item">
               
-                <a class="home-event-media" href="/events/2025/2025-12-13-election/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-12-13-election/640.webp');"></a>
-              
-              <div class="home-event-body">
-                <div class="home-event-meta">
-                  
-                    <time datetime="2025-12-13">2025-12-13</time>
-                  
-                  
-                    <div class="home-event-tags">
-                      
-                        
-                          <span class="home-event-tag">换届</span>
-                        
-                      
-                    </div>
-                  
-                </div>
-                <h3 class="home-event-title">
-                  <a href="/events/2025/2025-12-13-election/">2025级换届选举与会长团公示</a>
-                </h3>
-                <p class="home-event-summary">北京大学经济学会 2025 级换届选举记录与新会长团介绍。</p>
-              </div>
-            </article>
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-12-13-election/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-12-13-election/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
           
-            
-            <article class="home-event-card">
-              
-                <a class="home-event-media" href="/events/2025/2025-11-18-seminar/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.webp');"></a>
-              
-              <div class="home-event-body">
-                <div class="home-event-meta">
-                  
-                    <time datetime="2025-11-20">2025-11-20</time>
-                  
-                  
-                    <div class="home-event-tags">
-                      
-                        
-                          <span class="home-event-tag">讨论会</span>
-                        
-                      
-                        
-                          <span class="home-event-tag">AI</span>
-                        
-                      
-                    </div>
-                  
-                </div>
-                <h3 class="home-event-title">
-                  <a href="/events/2025/2025-11-18-seminar/">每月一吵：无用之用与人与AI</a>
-                </h3>
-                <p class="home-event-summary">围绕高校功利化与AI共生的双主题讨论会。</p>
-              </div>
-            </article>
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-12-13">2025-12-13</time>
+      
+      
+        <div class="home-event-tags">
           
-            
-            <article class="home-event-card">
-              
-                <a class="home-event-media" href="/events/2025/2025-10-22-workshop-writing/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.webp');"></a>
-              
-              <div class="home-event-body">
-                <div class="home-event-meta">
-                  
-                    <time datetime="2025-10-22">2025-10-22</time>
-                  
-                  
-                    <div class="home-event-tags">
-                      
-                        
-                          <span class="home-event-tag">分享会</span>
-                        
-                      
-                        
-                          <span class="home-event-tag">写作</span>
-                        
-                      
-                    </div>
-                  
-                </div>
-                <h3 class="home-event-title">
-                  <a href="/events/2025/2025-10-22-workshop-writing/">非典型写作分享会</a>
-                </h3>
-                <p class="home-event-summary">解构现实之下的抽象表达，写作与创作分享交流。</p>
-              </div>
-            </article>
+            <span class="home-event-tag">换届</span>
           
-            
-            <article class="home-event-card">
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-12-13-election/">2025级换届选举与会长团公示</a>
+    </h3>
+    
+      <p class="home-event-summary">北京大学经济学会 2025 级换届选举记录与新会长团介绍。</p>
+    
+  </div>
+</article>
+
+            </div>
+          
+            <div class="list-grid-item">
               
-                <a class="home-event-media" href="/events/2025/2025-03-21-movie/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp');"></a>
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-11-18-seminar/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-11-20">2025-11-20</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">每月一吵</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-11-18-seminar/">每月一吵：无用之用与人与AI</a>
+    </h3>
+    
+      <p class="home-event-summary">围绕高校功利化与AI共生的双主题讨论会。</p>
+    
+  </div>
+</article>
+
+            </div>
+          
+            <div class="list-grid-item">
               
-              <div class="home-event-body">
-                <div class="home-event-meta">
-                  
-                    <time datetime="2025-03-21">2025-03-21</time>
-                  
-                  
-                    <div class="home-event-tags">
-                      
-                        
-                          <span class="home-event-tag">观影</span>
-                        
-                      
-                        
-                          <span class="home-event-tag">讨论会</span>
-                        
-                      
-                    </div>
-                  
-                </div>
-                <h3 class="home-event-title">
-                  <a href="/events/2025/2025-03-21-movie/">人生切片实验室 · 首期观影</a>
-                </h3>
-                <p class="home-event-summary">以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。</p>
-              </div>
-            </article>
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-10-22-workshop-writing/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-10-22">2025-10-22</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">分享会</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-10-22-workshop-writing/">非典型写作分享会</a>
+    </h3>
+    
+      <p class="home-event-summary">解构现实之下的抽象表达，写作与创作分享交流。</p>
+    
+  </div>
+</article>
+
+            </div>
           
         </div>
       </section>
@@ -303,49 +381,103 @@
   
     
     
-      <section class="home-posts">
+      <section class="home-posts" id="home-posts">
         <div class="home-events-head">
           <h2 class="home-events-title">最新贴文</h2>
           <a class="home-events-link" href="/posts/">查看全部</a>
         </div>
-        <div class="home-posts-list">
+        <div class="list-grid">
           
-            <article class="home-post-item">
-              <div class="home-post-meta">
-                
-                  <time datetime="2026-01-30">2026-01-30</time>
-                
-              </div>
-              <h3 class="home-post-title">
-                <a href="/posts/2026-01-04-ireland/">爱尔兰国家介绍</a>
-              </h3>
-              <p class="home-post-summary">一句话概括：本篇记录了什么活动、结论或要点。</p>
-            </article>
+            <div class="list-grid-item">
+              
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/posts/2026-01-04-ireland/" style="background-image: url('https://assets.pkuecons.org/image/posts/2026/2026-01-04-Ireland/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
           
-            <article class="home-post-item">
-              <div class="home-post-meta">
-                
-                  <time datetime="2026-01-30">2026-01-30</time>
-                
-              </div>
-              <h3 class="home-post-title">
-                <a href="/posts/2022-07-18-weber/">现代性的“铁笼”——《新教伦理与资本主义精神》</a>
-              </h3>
-              <p class="home-post-summary">一句话概括：本篇记录了什么活动、结论或要点。</p>
-            </article>
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2026-01-04">2026-01-04</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">随笔</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/posts/2026-01-04-ireland/">爱尔兰国家介绍</a>
+    </h3>
+    
+      <p class="home-event-summary">对爱尔兰历史、文化、音乐的入门介绍</p>
+    
+  </div>
+</article>
+
+            </div>
+          
+            <div class="list-grid-item">
+              
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/posts/2022-07-18-weber/" style="background-image: url('https://assets.pkuecons.org/image/posts/2022/2022-07-18-weber/640.2.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2022-07-18">2022-07-18</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">阅读</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/posts/2022-07-18-weber/">现代性的“铁笼”——《新教伦理与资本主义精神》</a>
+    </h3>
+    
+      <p class="home-event-summary">《新教伦理与资本主义精神》读书总结</p>
+    
+  </div>
+</article>
+
+            </div>
           
         </div>
       </section>
     
   
 
-  <section class="home-moments">
+      <section class="home-moments" id="home-moments">
     <div class="home-events-head">
       <h2 class="home-events-title">月度回顾</h2>
       <a class="home-events-link" href="/moments/">进入下载</a>
     </div>
     <p class="home-moments-text">查看学会的日常记录与合辑 PDF，支持直接下载与分享。</p>
-  </section>
+      </section>
+    </div>
+  </div>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

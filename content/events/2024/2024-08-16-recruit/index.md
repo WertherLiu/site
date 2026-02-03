@@ -5,7 +5,7 @@ date = "2024-08-16"
 draft = false
 tags = ["招新"]
 featuredImage = "https://assets.pkuecons.org/image/events/2024/2024-08-16-recruit/640.webp"
-description = '学弟学妹们好哇！首先恭喜你们即将来到汇丰开启新一段学习生活，特别期待开学后有机会与你们相见！'
+description = '学弟学妹们好哇！特别期待开学后有机会与你们相见！'
 +++
 
 学弟学妹们好哇！首先恭喜你们即将来到汇丰开启新一段学习生活，特别期待开学后有机会与你们相见！  

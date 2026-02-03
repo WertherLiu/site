@@ -1,19 +1,13 @@
 +++
 title = '现代性的“铁笼”——《新教伦理与资本主义精神》'
 
-date = 2026-01-30
-
-eventDate = 2022-07-18
+date = 2022-07-18
 
 draft = false
 
-summary = "一句话概括：本篇记录了什么活动、结论或要点。"
+description = "《新教伦理与资本主义精神》读书总结"
 
-description = "更完整的描述（可选）。"
-
-categories = ["Posts"]
-
-tags = ["", "社团"]
+tags = ["阅读"]
 
 authors = ["夏洛克  北大汇丰商学院学生"]
 

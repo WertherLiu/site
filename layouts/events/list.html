@@ -3,8 +3,12 @@
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
       {{- .Content -}}
     </section>
-    <section class="list-grid">
-      {{ range .Paginator.Pages }}
+    {{/* 3 rows x 3 cards per row on desktop = 9 per page.
+       Keep this configurable via section front matter (pagerSize or paginate). */}}
+    {{ $pageSize := .Params.pagerSize | default (.Params.paginate | default 9) }}
+    {{ $p := .Paginate .Pages $pageSize }}
+    <section class="list-grid list-grid--events">
+      {{ range $p.Pages }}
         <div class="list-grid-item">
           {{ .Render "summary" }}
         </div>

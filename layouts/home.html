@@ -8,15 +8,30 @@
   {{- end -}}
 
   <div id="home-content"></div>
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
-    {{ .Content }}
-  </article>
+  <div class="home-layout">
+    <aside class="home-sidenav" aria-label="首页分区导航">
+      <nav>
+        <a href="#home-about">关于我们</a>
+        <a href="#home-events">活动回顾</a>
+        <a href="#home-posts">最新贴文</a>
+        <a href="#home-moments">月度回顾</a>
+      </nav>
+    </aside>
+    <div class="home-main">
+      <section class="home-events home-about" id="home-about">
+    <div class="home-events-head">
+      <h2 class="home-events-title">关于我们</h2>
+    </div>
+    <div class="home-events-text cf f4 tl-l lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+      {{ .Content }}
+    </div>
+      </section>
 
   {{ $eventsSection := site.GetPage "section" "events" }}
   {{ if $eventsSection }}
-    {{ $events := collections.First 6 (collections.Sort $eventsSection.RegularPages "Date" "desc") }}
+    {{ $events := collections.First 3 (collections.Sort $eventsSection.RegularPages "Date" "desc") }}
     {{ if gt (len $events) 0 }}
-      <section class="home-events">
+      <section class="home-events" id="home-events">
         <div class="home-events-head">
           <h2 class="home-events-title">活动回顾</h2>
           <a class="home-events-link" href="/events/">查看全部</a>
@@ -36,7 +51,7 @@
   {{ if $postsSection }}
     {{ $posts := collections.First 4 (collections.Sort $postsSection.RegularPages "Date" "desc") }}
     {{ if gt (len $posts) 0 }}
-      <section class="home-posts">
+      <section class="home-posts" id="home-posts">
         <div class="home-events-head">
           <h2 class="home-events-title">最新贴文</h2>
           <a class="home-events-link" href="/posts/">查看全部</a>
@@ -52,11 +67,13 @@
     {{ end }}
   {{ end }}
 
-  <section class="home-moments">
+      <section class="home-moments" id="home-moments">
     <div class="home-events-head">
       <h2 class="home-events-title">月度回顾</h2>
       <a class="home-events-link" href="/moments/">进入下载</a>
     </div>
     <p class="home-moments-text">查看学会的日常记录与合辑 PDF，支持直接下载与分享。</p>
-  </section>
+      </section>
+    </div>
+  </div>
 {{ end }}

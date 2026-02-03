@@ -5,7 +5,7 @@ date = "2024-12-26"
 draft = false
 tags = ["分享会"]
 featuredImage = "https://assets.pkuecons.org/image/events/2024/2024-12-26-macro/640.png"
-description = '分享人：陈相宇'
+description = '国际政治的现实主义理论与拉姆齐模型'
 +++
 
 ## “什么是国际政治的现实主义理论”

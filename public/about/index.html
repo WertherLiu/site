@@ -65,17 +65,17 @@
         北京大学经济学会 EconS
       
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       
 
       
         <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/about/" title="关于 page">
-              关于
-            </a>
-          </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/events/" title="活动 page">
@@ -109,21 +109,33 @@
           
         </ul>
       
-      <form action="/search/" method="get" class="dn db-l">
+      <form action="/search/" method="get" class="nav-search">
         <label for="nav-search" class="dn">站内搜索</label>
         <input
           id="nav-search"
           name="q"
           type="search"
           placeholder="搜索"
-          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+          class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
         />
       </form>
-      <a href="/search/" class="dib dn-l link white-90 ml3 f6">搜索</a>
       <div class="ananke-socials"></div>
 
     </div>
+    <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+      var links = document.querySelectorAll(".nav-menu a");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+    });
+  </script>
 </nav>
 
     </div>

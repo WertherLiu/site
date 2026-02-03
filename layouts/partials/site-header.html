@@ -1,0 +1,80 @@
+{{/* Hide the large hero/banner only on tag taxonomy pages (/tags/ and /tags/<term>/). */}}
+{{ $isTax := or (eq .Kind "taxonomy") (eq .Kind "term") (eq .Kind "taxonomyTerm") }}
+{{ if and $isTax (eq .Data.Plural "tags") }}
+  <header class="single-nav">
+    {{ partials.Include "site-navigation.html" . }}
+  </header>
+{{ else }}
+  {{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+  {{ if and .IsPage .Section }}
+    {{ with .Site.GetPage "section" .Section }}
+      {{ $section_featured := partials.Include "func/GetFeaturedImage.html" . }}
+      {{ if $section_featured }}
+        {{ $featured_image = $section_featured }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if $featured_image }}
+    {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+    {{ $featured_image_class := .Params.featured_image_class | compare.Default (site.Params.featured_image_class | compare.Default "cover bg-bottom") }}
+    {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-45" }}
+    {{ if and .IsPage .Section }}
+      {{ with .Site.GetPage "section" .Section }}
+        {{ $section_class := .Params.featured_image_class }}
+        {{ if $section_class }}
+          {{ $featured_image_class = $section_class }}
+        {{ end }}
+        {{ $section_dimming := .Params.cover_dimming_class }}
+        {{ if $section_dimming }}
+          {{ $cover_dimming_class = $section_dimming }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $featured_image_mobile := .Params.featured_image_mobile | compare.Default (site.Params.featured_image_mobile | compare.Default "") }}
+    {{ if and .IsPage .Section }}
+      {{ with .Site.GetPage "section" .Section }}
+        {{ $section_mobile := .Params.featured_image_mobile | compare.Default (site.Params.featured_image_mobile | compare.Default "") }}
+        {{ if $section_mobile }}
+          {{ $featured_image_mobile = $section_mobile }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');{{ if $featured_image_mobile }} --hero-image-mobile: url('{{ $featured_image_mobile }}');{{ end }}">
+      <div class="{{ $cover_dimming_class }}">
+        {{ partials.Include "site-navigation.html" .}}
+        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+            {{ .Title | compare.Default .Site.Title }}
+          </h1>
+          {{ with .Params.description }}
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+              {{ . }}
+            </h2>
+          {{ end }}
+          {{ if .IsHome }}
+            <a class="home-scroll" href="#home-content">
+              <span class="home-scroll-text">向下了解我们</span>
+              <span class="home-scroll-arrow" aria-hidden="true">↓</span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </header>
+  {{ else }}
+    <header>
+      <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
+        {{ partials.Include "site-navigation.html" . }}
+        <div class="tc-l pv3 ph3 ph4-ns">
+          <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+            {{ .Title | compare.Default .Site.Title }}
+          </h1>
+          {{ with .Params.description }}
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              {{ . }}
+            </h2>
+          {{ end }}
+        </div>
+      </div>
+    </header>
+  {{ end }}
+{{ end }}

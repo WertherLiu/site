@@ -4,8 +4,11 @@ title = "【换届公示，人日快乐】"
 date = "2024-12-11"
 draft = false
 tags = ["换届"]
-featuredImage = "https://assets.pkuecons.org/image/events/2025/2024-12-11-election/640.webp"
-description = '（理论上换届结果公示应该在12月就发出来的，但在汇丰，懂的都懂。不过还是要对负责公众号的同学表示强烈批评。）'
+
+featuredImage = "https://assets.pkuecons.org/image/events/2024/2024-12-11-election/640.webp"
+
+description = '2024级经济学会会长团换届'
+
 +++
 
 ## **写在正文前面**

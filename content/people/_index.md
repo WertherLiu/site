@@ -1,7 +1,7 @@
 +++
 title = "成员"
 description = "按入学年份展示学会成员名单"
-featured_image = "https://assets.pkuecons.org/image/cover/2.webp"
+featured_image = "https://assets.pkuecons.org/image/cover/4.webp"
 featured_image_class = "cover bg-center"
 body_classes = "page-members"
 +++

@@ -7,7 +7,13 @@
         {{ .Site.Title }}
       {{ end }}
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">

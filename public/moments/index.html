@@ -62,29 +62,36 @@
   </head><body class="ma0 page-moments development is-section is-section">
     
 
+
   
   
-  <header class="cover bg-center" style="background-image: url('https://assets.pkuecons.org/image/cover/4.webp');">
+  
     
-    <div class="bg-black-45">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
+    
+    
+    
+    
+    
+    <header class="cover bg-bottom" style="background-image: url('https://assets.pkuecons.org/image/cover/5.webp'); --hero-image-mobile: url('https://assets.pkuecons.org/image/mobile_hero.jpg');">
+      <div class="bg-transparent">
+        <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         北京大学经济学会 EconS
       
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       
 
       
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/about/" title="关于 page">
-              关于
-            </a>
-          </li>
+        <ul class="pl0 mr2">
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/events/" title="活动 page">
@@ -116,38 +123,56 @@
             </a>
           </li>
           
+          <li class="list dib nav-search-item">
+            <form action="/search/" method="get" class="nav-search">
+              <label for="nav-search" class="dn">站内搜索</label>
+              <input
+                id="nav-search"
+                name="q"
+                type="search"
+                placeholder="搜索"
+                class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+              />
+            </form>
+          </li>
         </ul>
       
-      <form action="/search/" method="get" class="dn db-l">
-        <label for="nav-search" class="dn">站内搜索</label>
-        <input
-          id="nav-search"
-          name="q"
-          type="search"
-          placeholder="搜索"
-          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
-        />
-      </form>
-      <a href="/search/" class="dib dn-l link white-90 ml3 f6">搜索</a>
-      <div class="ananke-socials"></div>
+      
+        <div class="ananke-socials"></div>
 
+      
     </div>
+
+    <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+      var links = document.querySelectorAll(".nav-menu a");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+    });
+  </script>
 </nav>
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          月度回顾
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            记录学会日常活动与生活点滴，可下载 PDF 合集。
-          </h2>
-        
-        
+        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+            月度回顾
+          </h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+              记录学会日常活动与生活点滴，可下载 PDF 合集。
+            </h2>
+          
+          
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  
 
 
     <main class="pb7" role="main">
@@ -166,90 +191,693 @@
     
       
         
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      
+      
+      
+      
         
         
-        <section class="moments-year">
-          <div class="moments-year-head">
-            <h2 class="moments-year-title">2025 年</h2>
-            <span class="moments-year-count">1 份</span>
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+
+      <section class="moments-year">
+        <div class="moments-year-head">
+          <h2 class="moments-year-title">2025 年</h2>
+          <span class="moments-year-count">5 份</span>
+        </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">12月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/12%E6%9C%88Moments.pdf" download>
+                  <div class="moments-card-title">12月Moments</div>
+                  <div class="moments-card-meta">PDF · 1.2 MB</div>
+                </a>
+              
+            </div>
           </div>
-          <div class="moments-grid">
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/12%E6%9C%88Moments.pdf" download>
-              <div class="moments-card-title">12月Moments</div>
-              <div class="moments-card-meta">PDF · 1.2 MB</div>
-            </a>
-    
-      
         
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">10月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/10%E6%9C%88Moments.pdf" download>
+                  <div class="moments-card-title">10月Moments</div>
+                  <div class="moments-card-meta">PDF · 0.3 MB</div>
+                </a>
+              
+            </div>
           </div>
-        </section>
         
-        
-        
-        <section class="moments-year">
-          <div class="moments-year-head">
-            <h2 class="moments-year-title">2024 年</h2>
-            <span class="moments-year-count">9 份</span>
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">9月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/9%E6%9C%88Moments.pdf" download>
+                  <div class="moments-card-title">9月Moments</div>
+                  <div class="moments-card-meta">PDF · 0.6 MB</div>
+                </a>
+              
+            </div>
           </div>
-          <div class="moments-grid">
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E4%BC%9A-The%20Moment-%E5%86%AC%E6%97%A5%E7%89%B9%E8%BE%91%EF%BC%8811%2612%EF%BC%89.pdf" download>
-              <div class="moments-card-title">经济学会-The Moment-冬日特辑（11&amp;12）</div>
-              <div class="moments-card-meta">PDF · 1.4 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/The%20Moments%202024%E5%B9%B4%E5%BA%A6%E5%90%88%E8%BE%91.pdf" download>
-              <div class="moments-card-title">The Moments 2024年度合辑</div>
-              <div class="moments-card-meta">PDF · 4.2 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/moment%20%E7%89%B9%E8%BE%91%E5%B0%81%E9%9D%A2%2B%E7%BB%93%E5%B0%BE.pptx" download>
-              <div class="moments-card-title">moment 特辑封面&#43;结尾</div>
-              <div class="moments-card-meta">PPTX · 1.4 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/7%E6%9C%88Moments%E8%AF%B7%E6%9F%A5%E6%94%B6.pdf" download>
-              <div class="moments-card-title">7月Moments请查收</div>
-              <div class="moments-card-meta">PDF · 0.2 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/6%E6%9C%88Moments%E6%9D%A5%E4%B9%9F%EF%BC%81%E6%9A%91%E5%81%87%E5%BF%AB%E4%B9%90.pdf" download>
-              <div class="moments-card-title">6月Moments来也！暑假快乐</div>
-              <div class="moments-card-meta">PDF · 0.4 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/5%E6%9C%88Moments.pdf" download>
-              <div class="moments-card-title">5月Moments</div>
-              <div class="moments-card-meta">PDF · 0.3 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/4%E6%9C%88Moments%E5%87%BA%E9%94%85.pdf" download>
-              <div class="moments-card-title">4月Moments出锅</div>
-              <div class="moments-card-meta">PDF · 0.2 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/3%E6%9C%88moments%E8%AF%B7%E6%9F%A5%E6%94%B6.pdf" download>
-              <div class="moments-card-title">3月moments请查收</div>
-              <div class="moments-card-meta">PDF · 0.4 MB</div>
-            </a>
-    
-      
-            <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/10%E6%9C%88Moments%2B%E6%97%85%E8%A1%8C%E7%AF%87.pdf" download>
-              <div class="moments-card-title">10月Moments&#43;旅行篇</div>
-              <div class="moments-card-meta">PDF · 1.0 MB</div>
-            </a>
-    
-    
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">7月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E4%BC%9A7%E6%9C%88%26%E5%AF%92%E5%81%87%20Moments.pdf" download>
+                  <div class="moments-card-title">经济学会7月&amp;寒假 Moments</div>
+                  <div class="moments-card-meta">PDF · 0.7 MB</div>
+                </a>
+              
+            </div>
           </div>
-        </section>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">4月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2025/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E4%BC%9A%203%264%E6%9C%88Moments.pdf" download>
+                  <div class="moments-card-title">经济学会 3&amp;4月Moments</div>
+                  <div class="moments-card-meta">PDF · 0.9 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+      </section>
+    
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+          
+          
+            
+            
+              
+            
+          
+            
+            
+              
+            
+          
+          
+            
+          
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+        
+          
+          
+            
+            
+          
+            
+            
+          
+          
+        
+        
+        
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+        
+          
+          
+          
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+        
+        
+        
+        
+          
+          
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        
+        
+          
+        
+        
+          
+        
+        
+        
+          
+        
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+
+      <section class="moments-year">
+        <div class="moments-year-head">
+          <h2 class="moments-year-title">2024 年</h2>
+          <span class="moments-year-count">9 份</span>
+        </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">11-12月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E4%BC%9A-The%20Moment-%E5%86%AC%E6%97%A5%E7%89%B9%E8%BE%91%EF%BC%8811%2612%EF%BC%89.pdf" download>
+                  <div class="moments-card-title">经济学会-The Moment-冬日特辑（11&amp;12）</div>
+                  <div class="moments-card-meta">PDF · 1.4 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">10月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/10%E6%9C%88Moments%2B%E6%97%85%E8%A1%8C%E7%AF%87.pdf" download>
+                  <div class="moments-card-title">10月Moments&#43;旅行篇</div>
+                  <div class="moments-card-meta">PDF · 1.0 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">7月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/7%E6%9C%88Moments%E8%AF%B7%E6%9F%A5%E6%94%B6.pdf" download>
+                  <div class="moments-card-title">7月Moments请查收</div>
+                  <div class="moments-card-meta">PDF · 0.2 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">6月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/6%E6%9C%88Moments%E6%9D%A5%E4%B9%9F%EF%BC%81%E6%9A%91%E5%81%87%E5%BF%AB%E4%B9%90.pdf" download>
+                  <div class="moments-card-title">6月Moments来也！暑假快乐</div>
+                  <div class="moments-card-meta">PDF · 0.4 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">5月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/5%E6%9C%88Moments.pdf" download>
+                  <div class="moments-card-title">5月Moments</div>
+                  <div class="moments-card-meta">PDF · 0.3 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">4月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/4%E6%9C%88Moments%E5%87%BA%E9%94%85.pdf" download>
+                  <div class="moments-card-title">4月Moments出锅</div>
+                  <div class="moments-card-meta">PDF · 0.2 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">3月</h3>
+              <span class="moments-month-count">1 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/3%E6%9C%88moments%E8%AF%B7%E6%9F%A5%E6%94%B6.pdf" download>
+                  <div class="moments-card-title">3月moments请查收</div>
+                  <div class="moments-card-meta">PDF · 0.4 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+          
+          <div class="moments-month">
+            <div class="moments-month-head">
+              <h3 class="moments-month-title">其他</h3>
+              <span class="moments-month-count">2 份</span>
+            </div>
+            <div class="moments-grid">
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/The%20Moments%202024%E5%B9%B4%E5%BA%A6%E5%90%88%E8%BE%91.pdf" download>
+                  <div class="moments-card-title">The Moments 2024年度合辑</div>
+                  <div class="moments-card-meta">PDF · 4.2 MB</div>
+                </a>
+              
+                <a class="moments-card" href="https://assets.pkuecons.org/doc/daily/2024/moment%20%E7%89%B9%E8%BE%91%E5%B0%81%E9%9D%A2%2B%E7%BB%93%E5%B0%BE.pptx" download>
+                  <div class="moments-card-title">moment 特辑封面&#43;结尾</div>
+                  <div class="moments-card-meta">PPTX · 1.4 MB</div>
+                </a>
+              
+            </div>
+          </div>
+        
+      </section>
     
   </section>
 </article>

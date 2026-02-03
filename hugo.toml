@@ -7,33 +7,37 @@ theme = "ananke"
   pagerSize = 12
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[[cascade]]
+  layout = "single"
+  [cascade._target]
+    kind = "page"
+    section = ["events", "posts", "people", "moments", "downloads"]
 [menu]
-  [[menu.main]]
-    name = "关于"
-    url = "/about/"
-    weight = 1  
   [[menu.main]]
     name = "活动"
     url = "/events/"
-    weight = 2
+    weight = 1
   [[menu.main]]
     name = "贴文"
     url = "/posts/"
-    weight = 3
+    weight = 2
   [[menu.main]]
     name = "成员"
     url = "/people/"
-    weight = 4    
+    weight = 3
   [[menu.main]]
     name = "月度回顾"
     url = "/moments/"
-    weight = 5
+    weight = 4
   [[menu.main]]
     name = "资料下载"
     url = "/downloads/"
-    weight = 6
+    weight = 5
 [params]
   assets_base = "https://assets.pkuecons.org"
+  featured_image_mobile = "https://assets.pkuecons.org/image/mobile_hero.jpg"
+  cover_dimming_class = "bg-transparent"
   [params.ananke.social.share]
     networks = ["weixin"]
     icons = true

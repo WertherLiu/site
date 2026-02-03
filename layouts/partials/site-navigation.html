@@ -11,10 +11,16 @@
         {{ .Site.Title }}
       {{ end }}
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
-        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml2" "pl0 mr2" }}">
           {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
             <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
@@ -22,20 +28,48 @@
             </a>
           </li>
           {{ end }}
+          <li class="list dib nav-search-item">
+            <form action="{{ "/search/" | relURL }}" method="get" class="nav-search">
+              <label for="nav-search" class="dn">站内搜索</label>
+              <input
+                id="nav-search"
+                name="q"
+                type="search"
+                placeholder="搜索"
+                class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+              />
+            </form>
+          </li>
         </ul>
+      {{ else }}
+        <form action="{{ "/search/" | relURL }}" method="get" class="nav-search">
+          <label for="nav-search" class="dn">站内搜索</label>
+          <input
+            id="nav-search"
+            name="q"
+            type="search"
+            placeholder="搜索"
+            class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+          />
+        </form>
       {{ end }}
-      <form action="{{ "/search/" | relURL }}" method="get" class="dn db-l">
-        <label for="nav-search" class="dn">站内搜索</label>
-        <input
-          id="nav-search"
-          name="q"
-          type="search"
-          placeholder="搜索"
-          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
-        />
-      </form>
-      <a href="{{ "/search/" | relURL }}" class="dib dn-l link white-90 ml3 f6">搜索</a>
-      {{ partials.IncludeCached "social/follow.html" . }}
+      {{ if not .IsPage }}
+        {{ partials.IncludeCached "social/follow.html" . }}
+      {{ end }}
     </div>
+
+    <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+      var links = document.querySelectorAll(".nav-menu a");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+    });
+  </script>
 </nav>

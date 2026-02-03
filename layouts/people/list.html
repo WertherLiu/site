@@ -8,7 +8,7 @@
     {{ end }}
 
     {{ $data := site.Data.members }}
-    {{ $years := slice "2025" "2024" }}
+    {{ $years := slice "2025" "2024" "2023" "2022" }}
     {{ $personPages := where site.RegularPages "Section" "people" }}
     {{ $scratch := newScratch }}
     {{ range $personPages }}

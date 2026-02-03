@@ -6,7 +6,7 @@
     
     <title>活动 | 北京大学经济学会 EconS</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="学会讲座、读书会与工作坊活动记录。">
+    <meta name="description" content="在这里汇总学会的活动动态与回顾。">
     <meta name="generator" content="Hugo 0.154.5">
     
     
@@ -45,18 +45,17 @@
     <meta property="og:url" content="http://localhost:1313/events/">
   <meta property="og:site_name" content="北京大学经济学会 EconS">
   <meta property="og:title" content="活动">
-  <meta property="og:description" content="学会讲座、读书会与工作坊活动记录。">
+  <meta property="og:description" content="在这里汇总学会的活动动态与回顾。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="活动">
-  <meta itemprop="description" content="学会讲座、读书会与工作坊活动记录。">
+  <meta itemprop="description" content="在这里汇总学会的活动动态与回顾。">
   <meta itemprop="datePublished" content="2025-12-13T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-12-13T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="活动">
-  <meta name="twitter:description" content="学会讲座、读书会与工作坊活动记录。">
+  <meta name="twitter:description" content="在这里汇总学会的活动动态与回顾。">
 
 	<link rel="stylesheet" href="/css/site.css">
 
@@ -64,29 +63,36 @@
   </head><body class="ma0 page-events development is-section is-section">
     
 
+
   
   
-  <header class="cover bg-bottom" style="background-image: url('https://assets.pkuecons.org/image/cover/1.webp');">
+  
     
-    <div class="bg-black-45">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
+    
+    
+    
+    
+    
+    <header class="cover bg-bottom" style="background-image: url('https://assets.pkuecons.org/image/cover/9.webp'); --hero-image-mobile: url('https://assets.pkuecons.org/image/mobile_hero.jpg');">
+      <div class="bg-transparent">
+        <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
     <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         北京大学经济学会 EconS
       
     </a>
-    <div class="flex-l items-center">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="切换菜单" />
+    <label class="nav-toggle-btn" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-menu flex-l items-center">
       
 
       
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/about/" title="关于 page">
-              关于
-            </a>
-          </li>
+        <ul class="pl0 mr2">
           
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white white-90 no-underline" href="/events/" title="活动 page">
@@ -118,50 +124,73 @@
             </a>
           </li>
           
+          <li class="list dib nav-search-item">
+            <form action="/search/" method="get" class="nav-search">
+              <label for="nav-search" class="dn">站内搜索</label>
+              <input
+                id="nav-search"
+                name="q"
+                type="search"
+                placeholder="搜索"
+                class="nav-search-input input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
+              />
+            </form>
+          </li>
         </ul>
       
-      <form action="/search/" method="get" class="dn db-l">
-        <label for="nav-search" class="dn">站内搜索</label>
-        <input
-          id="nav-search"
-          name="q"
-          type="search"
-          placeholder="搜索"
-          class="input-reset ba b--white-30 bg-transparent white-90 pa2 br2 f6 w4"
-        />
-      </form>
-      <a href="/search/" class="dib dn-l link white-90 ml3 f6">搜索</a>
-      <div class="ananke-socials"></div>
+      
+        <div class="ananke-socials"></div>
 
+      
     </div>
+
+    <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+      var links = document.querySelectorAll(".nav-menu a");
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+    });
+  </script>
 </nav>
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          活动
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            学会讲座、读书会与工作坊活动记录。
-          </h2>
-        
-        
+        <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+          <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+            活动
+          </h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
+              在这里汇总学会的活动动态与回顾。
+            </h2>
+          
+          
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  
 
 
     <main class="pb7" role="main">
       
   <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"><p>在这里汇总学会的活动动态与回顾。</p>
-</section>
-    <section class="flex-ns mt5 flex-wrap justify-around">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
+    
+    
+    
+    <section class="list-grid list-grid--events">
       
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="list-card">
-  <div class="list-card-body">
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-12-13-election/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-12-13-election/640.webp');"></a>
+  <div class="home-event-body">
     
     
     
@@ -171,32 +200,35 @@
         
       
     
-    <div class="list-card-meta">
+    <div class="home-event-meta">
       
         <time datetime="2025-12-13">2025-12-13</time>
       
       
-        <div class="list-card-tags">
+        <div class="home-event-tags">
           
-            <span class="list-card-tag">换届</span>
+            <span class="home-event-tag">换届</span>
           
         </div>
       
     </div>
-    <h2 class="list-card-title">
-      <a href="/events/2025/2025-12-13-election/" class="list-card-link">2025级换届选举与会长团公示</a>
-    </h2>
-    <div class="list-card-summary">
-      北京大学经济学会 2025 级换届选举记录与新会长团介绍。
-    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-12-13-election/">2025级换届选举与会长团公示</a>
+    </h3>
+    
+      <p class="home-event-summary">北京大学经济学会 2025 级换届选举记录与新会长团介绍。</p>
+    
   </div>
-</div>
+</article>
 
         </div>
       
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="list-card">
-  <div class="list-card-body">
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-11-18-seminar/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-11-18-seminar/640.webp');"></a>
+  <div class="home-event-body">
     
     
     
@@ -205,45 +237,36 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
     
-    <div class="list-card-meta">
+    <div class="home-event-meta">
       
         <time datetime="2025-11-20">2025-11-20</time>
       
       
-        <div class="list-card-tags">
+        <div class="home-event-tags">
           
-            <span class="list-card-tag">讨论会</span>
-          
-            <span class="list-card-tag">AI</span>
-          
-            <span class="list-card-tag">校园话题</span>
+            <span class="home-event-tag">每月一吵</span>
           
         </div>
       
     </div>
-    <h2 class="list-card-title">
-      <a href="/events/2025/2025-11-18-seminar/" class="list-card-link">每月一吵：无用之用与人与AI</a>
-    </h2>
-    <div class="list-card-summary">
-      围绕高校功利化与AI共生的双主题讨论会。
-    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-11-18-seminar/">每月一吵：无用之用与人与AI</a>
+    </h3>
+    
+      <p class="home-event-summary">围绕高校功利化与AI共生的双主题讨论会。</p>
+    
   </div>
-</div>
+</article>
 
         </div>
       
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="list-card">
-  <div class="list-card-body">
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-10-22-workshop-writing/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-10-22-workshop-writing/640.webp');"></a>
+  <div class="home-event-body">
     
     
     
@@ -252,45 +275,36 @@
           
         
       
-        
-          
-        
-      
-        
-          
-        
-      
     
-    <div class="list-card-meta">
+    <div class="home-event-meta">
       
         <time datetime="2025-10-22">2025-10-22</time>
       
       
-        <div class="list-card-tags">
+        <div class="home-event-tags">
           
-            <span class="list-card-tag">分享会</span>
-          
-            <span class="list-card-tag">写作</span>
-          
-            <span class="list-card-tag">社团活动</span>
+            <span class="home-event-tag">分享会</span>
           
         </div>
       
     </div>
-    <h2 class="list-card-title">
-      <a href="/events/2025/2025-10-22-workshop-writing/" class="list-card-link">非典型写作分享会</a>
-    </h2>
-    <div class="list-card-summary">
-      解构现实之下的抽象表达，写作与创作分享交流。
-    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-10-22-workshop-writing/">非典型写作分享会</a>
+    </h3>
+    
+      <p class="home-event-summary">解构现实之下的抽象表达，写作与创作分享交流。</p>
+    
   </div>
-</div>
+</article>
 
         </div>
       
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="list-card">
-  <div class="list-card-body">
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-08-17-recruit/" style="background-image: url('https://assets.pkuecons.org/image/cover/6.webp');"></a>
+  <div class="home-event-body">
     
     
     
@@ -299,44 +313,242 @@
           
         
       
-        
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-08-17">2025-08-17</time>
+      
+      
+        <div class="home-event-tags">
           
-        
+            <span class="home-event-tag">招新</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-08-17-recruit/">学会招新丨经济学会投递开启，欢迎你来！</a>
+    </h3>
+    
+      <p class="home-event-summary">学弟学妹们好呀！恭喜你们解锁研究生的新阶段，我们正满心欢喜地盼着与大家碰面！</p>
+    
+  </div>
+</article>
+
+        </div>
+      
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-06-18-capital/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-06-18-capital/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
       
         
           
         
       
     
-    <div class="list-card-meta">
+    <div class="home-event-meta">
+      
+        <time datetime="2025-06-18">2025-06-18</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">分享会</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-06-18-capital/">预告丨史帆：资本主义顽疾——需求不足的内在原因和当代解决模式</a>
+    </h3>
+    
+      <p class="home-event-summary">北大汇丰金融云书会第16期</p>
+    
+  </div>
+</article>
+
+        </div>
+      
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-04-26-movie/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-04-26-movie/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-05-16">2025-05-16</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">Movie Night</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-04-26-movie/">人生切片实验室第二场</a>
+    </h3>
+    
+      <p class="home-event-summary">最佳动画电影带你重温感动</p>
+    
+  </div>
+</article>
+
+        </div>
+      
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-04-11-movie/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-04-11-movie/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-04-11">2025-04-11</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">Movie Night</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-04-11-movie/">活动影评篇 | 人性本就是流动的迷雾</a>
+    </h3>
+    
+      <p class="home-event-summary">一部电影，带你进入一个全新的人生场景。</p>
+    
+  </div>
+</article>
+
+        </div>
+      
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-04-09-hesse/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-04-09-Hesse/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
+      
+        <time datetime="2025-04-09">2025-04-09</time>
+      
+      
+        <div class="home-event-tags">
+          
+            <span class="home-event-tag">分享会</span>
+          
+        </div>
+      
+    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-04-09-hesse/">重建巴别塔与再读黑塞</a>
+    </h3>
+    
+      <p class="home-event-summary">小说<巴别塔>的白银魔法到大语言模型——语言的馈赠与藩篱</p>
+    
+  </div>
+</article>
+
+        </div>
+      
+        <div class="list-grid-item">
+          
+
+<article class="home-event-card list-event-card">
+  <a class="home-event-media " href="/events/2025/2025-03-21-movie/" style="background-image: url('https://assets.pkuecons.org/image/events/2025/2025-03-21-movie/640.webp');"></a>
+  <div class="home-event-body">
+    
+    
+    
+      
+        
+          
+        
+      
+    
+    <div class="home-event-meta">
       
         <time datetime="2025-03-21">2025-03-21</time>
       
       
-        <div class="list-card-tags">
+        <div class="home-event-tags">
           
-            <span class="list-card-tag">观影</span>
-          
-            <span class="list-card-tag">讨论会</span>
-          
-            <span class="list-card-tag">社团活动</span>
+            <span class="home-event-tag">Movie Night</span>
           
         </div>
       
     </div>
-    <h2 class="list-card-title">
-      <a href="/events/2025/2025-03-21-movie/" class="list-card-link">人生切片实验室 · 首期观影</a>
-    </h2>
-    <div class="list-card-summary">
-      以电影为切片的社团新栏目首场观影与讨论，《坠落的审判》。
-    </div>
+    <h3 class="home-event-title">
+      <a href="/events/2025/2025-03-21-movie/">人生切片实验室 · 首期观影</a>
+    </h3>
+    
+      <p class="home-event-summary">以电影《坠落的审判》为切片的社团新栏目首场观影与讨论</p>
+    
   </div>
-</div>
+</article>
 
         </div>
       
     </section>
-    </article>
+    
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/events/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/events/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/events/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

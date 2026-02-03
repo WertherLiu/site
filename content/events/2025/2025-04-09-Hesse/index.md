@@ -1,14 +1,13 @@
 +++
 
-
 title = "重建巴别塔与再读黑塞"
 date = 2025-04-09
 draft = false
-summary = "小说<巴别塔>的白银魔法到大语言模型——语言的馈赠与藩篱"
 location = "汇丰大楼321教室"
 featured_image = "https://assets.pkuecons.org/image/events/2025/2025-04-09-Hesse/640.webp"
 tags = ["分享会"]
-description = '分享人：丁林韵'
+description = '小说<巴别塔>的白银魔法到大语言模型——语言的馈赠与藩篱'
+
 +++
 
 

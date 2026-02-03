@@ -1,0 +1,31 @@
+{{ define "header" }}
+  {{ if eq .Data.Plural "tags" }}
+    <header class="single-nav">
+      {{ partials.Include "site-navigation.html" . }}
+    </header>
+  {{ else }}
+    {{ partials.Include "site-header.html" . }}
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    {{ if eq .Data.Plural "tags" }}
+      <section class="mw8 center ph4 pt3">
+        <h1 class="f2 fw2 mt0 mb3">{{ .Title }}</h1>
+      </section>
+    {{ end }}
+    {{ with .Content }}
+      <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+        {{ . }}
+      </section>
+    {{ end }}
+    <section class="list-grid">
+      {{ range .Pages }}
+        <div class="list-grid-item">
+          {{ .Render "summary" }}
+        </div>
+      {{ end }}
+    </section>
+  </article>
+{{ end }}
