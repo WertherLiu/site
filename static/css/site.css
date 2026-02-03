@@ -1,5 +1,4 @@
-body.page-about > header > div,
-body.page-moments > header > div {
+body.page-about > header > div {
   background:
     radial-gradient(900px 420px at 12% 0%, rgba(255, 211, 153, 0.18), transparent 60%),
     radial-gradient(700px 380px at 90% 10%, rgba(120, 195, 255, 0.2), transparent 60%),
@@ -1030,23 +1029,51 @@ body.is-home main {
   min-width: 0;
 }
 
-/* When viewport narrows (or browser zoom increases), keep the sidebar nav inside the canvas. */
-@media (max-width: 1024px) {
+/* When viewport narrows (or browser zoom increases), switch to a horizontal scroll nav. */
+@media (max-width: 1400px) {
   .home-layout {
     padding: 0 1.25rem;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     gap: 1rem;
   }
 
   .home-sidenav {
+    position: static;
+    top: auto;
+    align-self: stretch;
     margin-left: 0;
-    padding-right: 1rem;
+    padding: 0 0 0.5rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   }
 
   .home-sidenav nav {
-    width: auto;
+    flex-direction: row;
+    width: 100%;
     transform: none;
-    margin-top: 0.75rem;
+    margin-top: 0;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.25rem 0.25rem 0.5rem;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-sidenav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border-left: 0;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    scroll-snap-align: start;
+  }
+
+  .home-sidenav a:hover {
+    border-left-color: transparent;
+    background: rgba(29, 79, 145, 0.12);
   }
 }
 
@@ -1354,5 +1381,9 @@ body.page-downloads header h2 {
 
   body.is-home header.parallax-hero h2 {
     font-size: 1rem;
+  }
+
+  header.cover {
+    background-position: center !important;
   }
 }

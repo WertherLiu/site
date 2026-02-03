@@ -1,0 +1,62 @@
+{{ define "header" }}
+  <header>
+    <div class="single-nav">
+      {{ partials.Include "site-navigation.html" . }}
+    </div>
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  {{ $photo := .Params.featured_image }}
+  {{ $photoSrc := "" }}
+  {{ if $photo }}
+    {{ $isAbs := or (hasPrefix $photo "http://") (hasPrefix $photo "https://") }}
+    {{ $photoSrc = $photo }}
+    {{ if not $isAbs }}
+      {{ $photoSrc = urls.RelURL $photo }}
+      {{ with $.Site.Params.assets_base }}
+        {{ $photoSrc = partials.Include "func/asset-url.html" (dict "src" $photoSrc "page" $) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <article class="people-profile">
+    <div class="people-hero">
+      {{ if $photoSrc }}
+      <div class="people-photo">
+        <img src="{{ $photoSrc }}" alt="{{ .Title }}" loading="lazy" />
+      </div>
+      {{ end }}
+      <div class="people-meta">
+        <p class="people-eyebrow">成员介绍</p>
+        <h1 class="people-name">{{ .Title }}</h1>
+        {{ with .Params.role }}
+        <p class="people-role">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.interests }}
+        <div class="people-tags">
+          <span class="people-tags-label">兴趣爱好：</span>
+          {{ range . }}
+          <span class="people-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ with .Params.email }}
+        <div class="people-contact">
+          <span>邮箱：</span>
+          <a href="mailto:{{ . }}">{{ . }}</a>
+        </div>
+        {{ end }}
+        {{ with .Params.resume_url }}
+        <div class="people-links">
+          <a class="people-link" href="{{ . }}" target="_blank" rel="noopener">个人简历</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="people-content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

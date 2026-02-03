@@ -30,15 +30,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    {{ $featured_image_mobile := .Params.featured_image_mobile | compare.Default (site.Params.featured_image_mobile | compare.Default "") }}
-    {{ if and .IsPage .Section }}
-      {{ with .Site.GetPage "section" .Section }}
-        {{ $section_mobile := .Params.featured_image_mobile | compare.Default (site.Params.featured_image_mobile | compare.Default "") }}
-        {{ if $section_mobile }}
-          {{ $featured_image_mobile = $section_mobile }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
+    {{ $featured_image_mobile := site.Params.featured_image_mobile | compare.Default "" }}
     <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');{{ if $featured_image_mobile }} --hero-image-mobile: url('{{ $featured_image_mobile }}');{{ end }}">
       <div class="{{ $cover_dimming_class }}">
         {{ partials.Include "site-navigation.html" .}}

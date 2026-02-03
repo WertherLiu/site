@@ -143,3 +143,171 @@
 body.page-members main {
   padding-bottom: 0;
 }
+
+/* People single (self-intro) page */
+.people-profile {
+  max-width: 960px;
+  margin: 2.5rem auto 4rem;
+  padding: 0 1.5rem;
+  color: var(--members-ink);
+  font-family: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+}
+
+.people-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--members-border);
+  box-shadow: var(--members-shadow);
+}
+
+.people-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.18);
+  background: #fff;
+}
+
+.people-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.people-eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  color: var(--members-accent);
+}
+
+.people-name {
+  margin: 0 0 0.8rem;
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Noto Serif SC", serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+}
+
+.people-role {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+  color: var(--members-muted);
+}
+
+.people-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+  align-items: center;
+}
+
+.people-tags-label {
+  font-size: 0.95rem;
+  color: var(--members-muted);
+  letter-spacing: 0.04em;
+}
+
+.people-tag {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 217, 189, 0.6);
+  color: #7d4a1f;
+  font-size: 0.9rem;
+}
+
+.people-contact {
+  font-size: 0.98rem;
+  color: var(--members-muted);
+}
+
+.people-contact a {
+  color: var(--members-accent-2);
+  text-decoration: none;
+}
+
+.people-contact a:hover {
+  text-decoration: underline;
+}
+
+.people-links {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.people-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(29, 79, 145, 0.12);
+  color: var(--members-accent-2);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.people-link:hover {
+  background: rgba(29, 79, 145, 0.2);
+}
+
+.people-content {
+  margin-top: 2rem;
+  padding: 1.8rem 2rem;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--members-border);
+  box-shadow: 0 12px 26px rgba(16, 24, 40, 0.08);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--members-ink);
+}
+
+.people-content p {
+  margin: 0 0 1rem;
+}
+
+.people-content a {
+  color: var(--members-accent-2);
+}
+
+@media (max-width: 900px) {
+  .people-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .people-photo {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .people-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .people-profile {
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+  }
+
+  .people-hero {
+    padding: 1.5rem;
+  }
+
+  .people-content {
+    padding: 1.4rem;
+  }
+}
