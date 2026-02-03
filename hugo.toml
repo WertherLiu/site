@@ -36,6 +36,7 @@ theme = "ananke"
     weight = 5
 [params]
   assets_base = "https://assets.pkuecons.org"
+  favicon = "https://assets.pkuecons.org/image/logo.jpg"
   featured_image_mobile = "https://assets.pkuecons.org/image/mobile_hero.jpg"
   cover_dimming_class = "bg-transparent"
   [params.ananke.social.share]

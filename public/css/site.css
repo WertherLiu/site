@@ -1030,6 +1030,26 @@ body.is-home main {
   min-width: 0;
 }
 
+/* When viewport narrows (or browser zoom increases), keep the sidebar nav inside the canvas. */
+@media (max-width: 1024px) {
+  .home-layout {
+    padding: 0 1.25rem;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+  }
+
+  .home-sidenav {
+    margin-left: 0;
+    padding-right: 1rem;
+  }
+
+  .home-sidenav nav {
+    width: auto;
+    transform: none;
+    margin-top: 0.75rem;
+  }
+}
+
 .nav-toggle,
 .nav-toggle-btn,
 .nav-overlay {
@@ -1182,6 +1202,8 @@ body.page-downloads header h2 {
     cursor: pointer;
     align-self: center;
     order: 2;
+    position: relative;
+    z-index: 11;
   }
 
   .nav-toggle-btn span {
@@ -1198,6 +1220,7 @@ body.page-downloads header h2 {
     width: 100%;
     order: 3;
     position: absolute;
+    z-index: 10;
     left: 0;
     right: 0;
     top: 100%;
@@ -1228,6 +1251,7 @@ body.page-downloads header h2 {
     inset: 0;
     background: transparent;
     z-index: 1;
+    pointer-events: none;
   }
 
   .nav-toggle:checked + .nav-toggle-btn span:nth-child(1) {

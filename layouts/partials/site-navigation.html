@@ -2,10 +2,17 @@
   <div class="flex-l center items-center justify-between">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
-        {{ $logoSrc := urls.RelURL . }}
-        {{ with $.Site.Params.assets_base }}
-          {{ $logoSrc = partials.Include "func/asset-url.html" (dict "src" $logoSrc "page" $) }}
+        {{ $logo := . }}
+        {{ $isAbs := or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
+        {{ $logoSrc := $logo }}
+
+        {{ if not $isAbs }}
+          {{ $logoSrc = urls.RelURL $logo }}
+          {{ with $.Site.Params.assets_base }}
+            {{ $logoSrc = partials.Include "func/asset-url.html" (dict "src" $logoSrc "page" $) }}
+          {{ end }}
         {{ end }}
+
         <img src="{{ $logoSrc }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
         {{ .Site.Title }}

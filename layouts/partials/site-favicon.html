@@ -1,7 +1,15 @@
 {{ if .Site.Params.favicon }}
-  {{ $faviconSrc := urls.RelURL ($.Site.Params.favicon) }}
-  {{ with $.Site.Params.assets_base }}
-    {{ $faviconSrc = partials.Include "func/asset-url.html" (dict "src" $faviconSrc "page" $) }}
+  {{ $favicon := $.Site.Params.favicon }}
+  {{ $isAbs := or (hasPrefix $favicon "http://") (hasPrefix $favicon "https://") }}
+  {{ $faviconSrc := $favicon }}
+
+  {{ if not $isAbs }}
+    {{ $faviconSrc = urls.RelURL $favicon }}
+    {{ with $.Site.Params.assets_base }}
+      {{ $faviconSrc = partials.Include "func/asset-url.html" (dict "src" $faviconSrc "page" $) }}
+    {{ end }}
   {{ end }}
-  <link rel="shortcut icon" href="{{ $faviconSrc }}" type="image/x-icon" />
+
+  <link rel="icon" href="{{ $faviconSrc }}" type="image/jpeg" />
+  <link rel="shortcut icon" href="{{ $faviconSrc }}" type="image/jpeg" />
 {{ end }}
