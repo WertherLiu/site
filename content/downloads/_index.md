@@ -20,7 +20,8 @@ description = "课程资料、经验贴、交换项目等汇总。"
   [[download_groups.items]]
   name = "海外交换项目分享"
   kind = "PDF"
-  url = "https://assets.pkuecons.org/doc/downloads/%E6%B5%B7%E5%A4%96%E4%BA%A4%E6%8D%A2%E9%A1%B9%E7%9B%AE%E5%88%86%E4%BA%AB.pdf"
+  url = "https://pan.quark.cn/s/6511969cf9bd"
+
   [[download_groups.items]]
   name = "军训+体适能+入学考试分享"
   kind = "PDF"
