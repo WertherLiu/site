@@ -21,6 +21,12 @@ description = "课程资料、经验贴、交换项目等汇总。"
   name = "海外交换项目分享"
   kind = "PDF"
   url = "https://pan.quark.cn/s/6511969cf9bd"
+  [[download_groups.items]]
+  name = "PKU–NUS 指北"
+  kind = "HTML"
+  url = "/NUS.html"
+  hint = "NUS 双学位项目非官方经验整理，可直接在线阅读。"
+  action = "阅读"
 
   [[download_groups.items]]
   name = "军训+体适能+入学考试分享"

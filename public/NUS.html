@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PKU–NUS 指北｜如果你觉得新加坡两个月会过得太舒服，就先看看这个攻略</title>
+  <style>
+    :root{
+      --bg:#f7f4ee; --paper:#fffdf8; --ink:#1f2933; --muted:#687385;
+      --line:#e5ded2; --primary:#17324d; --primary2:#2d5b7c; --accent:#b85c38;
+      --green:#1f7a5b; --yellow:#a76b00; --red:#a63737; --blue:#2f5d8c;
+      --soft-blue:#edf5fb; --soft-green:#eef8f2; --soft-yellow:#fff7e6; --soft-red:#fff0ef;
+      --shadow:0 18px 50px rgba(31,41,51,.10);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#f7f4ee 0%,#faf7f1 50%,#f2eee6 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.75}
+    a{color:var(--primary2);text-decoration:none;border-bottom:1px solid rgba(45,91,124,.25)}
+    a:hover{border-bottom-color:var(--primary2)}
+    .shell{max-width:1240px;margin:0 auto;padding:0 22px}
+    header.hero{padding:72px 0 36px;background:radial-gradient(circle at 20% 20%,rgba(184,92,56,.16),transparent 34%),radial-gradient(circle at 86% 0%,rgba(23,50,77,.14),transparent 38%)}
+    .hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:28px;align-items:center}
+    .kicker{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--accent);font-size:13px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+    h1{font-size:clamp(34px,5vw,64px);line-height:1.08;margin:20px 0 18px;letter-spacing:-.04em;color:var(--primary)}
+    h2{font-size:clamp(26px,3.5vw,38px);line-height:1.22;margin:54px 0 16px;color:var(--primary);letter-spacing:-.02em}
+    h3{font-size:22px;margin:32px 0 10px;color:#20364c}
+    h4{font-size:17px;margin:22px 0 8px;color:#263849}
+    p{margin:10px 0}.lead{font-size:19px;color:#3d4b5c;max-width:850px}.small{font-size:13px;color:var(--muted)}
+    .hero-card{background:rgba(255,253,248,.88);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+    .hero-stat{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px}.stat b{display:block;font-size:24px;color:var(--primary)}.stat span{font-size:13px;color:var(--muted)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--primary);background:var(--primary);color:#fff!important;border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;box-shadow:0 10px 24px rgba(23,50,77,.18);border-bottom:none}.btn.secondary{background:#fff;color:var(--primary)!important;border-color:var(--line);box-shadow:none}
+    nav.top{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}.brand{font-weight:900;color:var(--primary);white-space:nowrap}.links{display:flex;gap:12px;overflow:auto;padding:10px 0}.links a{font-size:14px;color:#36495f;white-space:nowrap;border:0;padding:6px 9px;border-radius:999px}.links a:hover{background:#f0ece4}.search{display:flex;align-items:center;gap:8px}.search input{width:210px;border:1px solid var(--line);border-radius:999px;padding:9px 12px;background:#fff;color:var(--ink)}
+    main{padding:26px 0 80px}.section{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin:22px 0;box-shadow:0 10px 30px rgba(31,41,51,.045)}
+    .toc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.toc a{display:block;border:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:16px;padding:14px;background:#fff;color:var(--ink)}.toc a b{display:block;color:var(--primary)}.toc a span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+    .grid{display:grid;gap:16px}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.card h3,.card h4{margin-top:0}.tag{display:inline-flex;align-items:center;border-radius:999px;background:#f0ece4;color:#4e5b68;padding:4px 9px;font-size:12px;font-weight:700;margin:2px}.tag.blue{background:var(--soft-blue);color:var(--blue)}.tag.green{background:var(--soft-green);color:var(--green)}.tag.yellow{background:var(--soft-yellow);color:var(--yellow)}.tag.red{background:var(--soft-red);color:var(--red)}
+    .callout{border-radius:18px;padding:16px 18px;margin:16px 0;border:1px solid var(--line);background:#fff}.callout b{display:block;margin-bottom:4px}.official{background:var(--soft-blue);border-color:#cfe1f0}.experience{background:var(--soft-green);border-color:#cfe9dc}.warning{background:var(--soft-red);border-color:#f2c9c6}.tip{background:var(--soft-yellow);border-color:#f3dfb2}
+    table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:table}th,td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:#f3efe6;color:#23364a;font-size:14px}tr:last-child td{border-bottom:0}td{font-size:14px}.table-wrap{overflow-x:auto;border-radius:14px}.table-wrap table{min-width:760px}
+    ul,ol{padding-left:1.25em}li{margin:6px 0}.compact li{margin:3px 0}
+    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.check{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}.check input{margin-top:6px;transform:scale(1.1)}.check label{cursor:pointer}.check small{display:block;color:var(--muted);font-size:12px;line-height:1.45}
+    .timeline{position:relative;margin:20px 0}.timeline:before{content:"";position:absolute;left:17px;top:0;bottom:0;width:2px;background:var(--line)}.tl-item{position:relative;padding-left:52px;margin:18px 0}.tl-dot{position:absolute;left:7px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--accent);border:4px solid #fff;box-shadow:0 0 0 1px var(--line)}.tl-item b{display:block;color:var(--primary)}
+    details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px 14px;margin:10px 0}summary{cursor:pointer;font-weight:800;color:#263849}details p{margin:8px 0 0}
+    .destination{display:grid;grid-template-columns:1fr 1fr;gap:14px}.dest-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.dest-card h3{display:flex;align-items:center;justify-content:space-between;gap:10px}.dest-card .one{font-size:14px;color:#51606f;border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
+    .source-list li{font-size:14px}.muted-box{background:#f3efe6;border:1px dashed #d8cfc0;border-radius:16px;padding:14px;color:#4b5868}
+    .section-intro{font-size:15px;color:#51606f;background:#fff8ee;border-left:4px solid var(--accent);padding:12px 14px;border-radius:12px;margin:8px 0 18px}
+    .micro-joke{font-size:13px;color:#7a5a3a;background:#fffdf8;border:1px dashed #e3d3bd;border-radius:999px;padding:4px 10px;display:inline-block;margin:4px 0 12px}
+    .print-note{display:none}
+    footer{padding:32px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:960px){.hero-grid,.grid.two,.grid.three,.grid.four,.destination,.toc{grid-template-columns:1fr}.search{display:none}.section{padding:22px}.checklist{grid-template-columns:1fr}.hero-stat{grid-template-columns:1fr}.links{gap:4px}.nav-inner{align-items:flex-start;flex-direction:column}.brand{padding-top:10px}}
+    @media print{nav.top,.cta-row,.search{display:none}.section{break-inside:avoid;box-shadow:none}.print-note{display:block}.btn{display:none}body{background:white}.hero-card,.section{border-color:#ccc}}
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="shell hero-grid">
+    <div>
+      <span class="kicker">非官方 · 不训话 · 但很可能救你一命 · 也可能把你带进新的坑</span>
+      <h1>PKU–NUS 指北</h1>
+      <p class="lead">如果你觉得去新加坡两个月会过得太舒服，就先看看这份攻略。它不负责制造焦虑，只负责把上一届踩过的坑、薅到的羊毛、吃到的免费饭、以及被湿热天气教育过的瞬间，尽量用一种不抽象的方式标出来。</p>
+      <div class="cta-row">
+        <a class="btn" href="#checklist-before">先救命：出发前 Checklist</a>
+        <a class="btn secondary" href="#faq">直接看灵魂拷问 FAQ</a>
+        <a class="btn secondary" href="#policy">签证别乱来：核验表</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>这份指南怎么用：按需救急</h3>
+      <p>适合即将去 NUS 双学位项目的 PHBS 同学，尤其适合第一次长期在海外学习、又想兼顾课程、生活、旅行、手续、免费饭和体面生存的人。</p>
+      <div class="callout warning"><b>先说清楚</b>这不是官方文件。课程、住宿、缴费、IPA、Student’s Pass、SG Arrival Card、第三国签证与入境政策，必须以 PHBS、NUS、ICA、各国移民局和使领馆最新通知为准。</div>
+      <div class="hero-stat">
+        <div class="stat"><b>4–7 月</b><span>从选课、体检、IPA 到抵达、STP、期末</span></div>
+        <div class="stat"><b>3 类信息</b><span>官方规则｜个人经验｜出发前需核验</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="top">
+  <div class="shell nav-inner">
+    <div class="brand">PKU–NUS 指北</div>
+    <div class="links">
+      <a href="#hello">开场白</a><a href="#overview">总览</a><a href="#timeline">时间线</a><a href="#checklist-before">出发前</a><a href="#first-week">第一周</a><a href="#courses">学业</a><a href="#admin">手续</a><a href="#life">生活</a><a href="#transport">交通</a><a href="#health">健康</a><a href="#travel">旅行</a><a href="#policy">政策表</a><a href="#faq">FAQ</a>
+    </div>
+    <div class="search"><input id="searchBox" placeholder="搜索：电话卡 / STP / Oxford" /></div>
+  </div>
+</nav>
+
+<main class="shell">
+  <section id="hello" class="section searchable">
+    <h2>开场白：这份 NUS 指北终于从草稿箱里活过来了</h2>
+    <p class="section-intro">先别紧张，这不是一份会要求你“必须怎样”的训话稿。它更像是一位被新加坡太阳晒过、被教室空调冻过、被价格教育过、又被免费学术自助餐治愈过的人，留下的一份熟人备忘录。</p>
+    <div class="grid two">
+      <div class="card">
+        <h3>这份指南为什么现在才出现</h3>
+        <p>去年在 NUS 的时候，本来想早点整理给大家，但当时身体出了点小问题，再加上新加坡的湿热天气把人腌得有点失去语言能力，所以它一直安静地躺在草稿箱里。现在终于把它捞出来，是希望大家少踩一点坑（以及精准踩进值得踩的新坑），多省一点钱，多吃几顿饭，也多体验一点 NUS 之外的新加坡。</p>
+      </div>
+      <div class="card">
+        <h3>它到底讲什么</h3>
+        <p>里面包括怎么住得舒服一点、怎么吃得不那么痛苦、哪里可以打折、哪里可能有免费学术自助餐、哪些 App 真有用、电话卡/交通/宿舍/课程/签证要注意什么，以及一些本地 group、讲座活动、特殊活动和普通攻略不太会写的奇妙经历。</p>
+      </div>
+    </div>
+    <div class="callout experience"><b>主包设定说明</b>由于主包英语还算能凑合交流，又对非大众地点和奇怪活动有一点不必要但顽固的兴趣，所以旅行和本地活动部分会比普通 NUS 攻略稍微野一点。正常同学完全可以只参考其中安全、签证和交通部分，不必跟着我去挑战冷门地图。</div>
+    <div class="callout tip"><b>祝福先放这里</b>希望大家在 NUS 住得舒服、学得不崩、玩得尽兴、蹭饭自信、出门不迷路、回来看起来像是去交换过，而不是去热带雨林军训过。</div>
+    <div class="callout official"><b>这是一份活文档</b>这份指北不是某一届的私人回忆录，而是一份可以被每年更新的活文档。课程、住宿、电话卡、支付、签证、入境和旅行政策都会变；如果你发现变化，请不要只在心里骂上一届不靠谱，请顺手更新它。</div>
+  </section>
+
+  <section id="overview" class="section searchable">
+    <h2>0. 先把滤镜摘一下：这不是旅游团，也不是荒野求生</h2>
+    <p class="section-intro">NUS 最好的打开方式不是彻底摆烂，也不是卷到忘记自己在新加坡。比较理想的状态是：课能过，饭能蹭，路能认，签证别填错，回来还能讲几个像样的故事。</p>
+    <div class="callout tip"><b>NUS 双学位最重要的经验</b>不要只把它当成“去新加坡玩两个月”，也不要把它想成“必须绷紧的海外求生”。这两个月最值得的地方，是你可以暂时从 PHBS 的惯性里出来：该学的学，该玩的玩，该办的手续别拖，该保护自己的时候不要硬融入。</div>
+    <h3>全文目录</h3>
+    <div class="toc">
+      <a href="#timeline"><b>时间线</b><span>4 月到 7 月要做什么</span></a>
+      <a href="#checklist-before"><b>出发前 Checklist</b><span>证件、材料、行李、App</span></a>
+      <a href="#first-week"><b>第一周 Checklist</b><span>机场、电话卡、入住、STP</span></a>
+      <a href="#courses"><b>学业篇</b><span>课程、选课、考试、Oxford</span></a>
+      <a href="#admin"><b>行政手续</b><span>PHBS、IPA、STP、SGAC</span></a>
+      <a href="#housing"><b>住宿篇</b><span>UTown、清洁、维修、防虫</span></a>
+      <a href="#life"><b>生活篇</b><span>饮食、支付、洗衣、打印</span></a>
+      <a href="#transport"><b>交通篇</b><span>机场、地铁、公交、校车</span></a>
+      <a href="#apps"><b>App 与网络</b><span>电话卡、华为、Grab、uNivUS</span></a>
+      <a href="#health"><b>健康与天气</b><span>湿热、空调、皮肤、防晒</span></a>
+      <a href="#travel"><b>旅行篇</b><span>新加坡内外、周边国家</span></a>
+      <a href="#faq"><b>FAQ</b><span>最常问的问题</span></a>
+    </div>
+  </section>
+
+  <section id="timeline" class="section searchable">
+    <h2>1. 总时间线：别等邮件把你追着跑</h2>
+    <p class="section-intro">很多事情不是难，是散；不是不会做，是你以为还有时间。时间线的意义就是：让你在还没被各种 deadline 围攻之前，先知道它们大概会从哪里出现。</p>
+    <div class="timeline">
+      <div class="tl-item"><span class="tl-dot"></span><b>4 月：选课、信用卡、签证预案</b><p>关注 NUS/PHBS 邮件，确认是否申请 Oxford 选修。若家里没有 Visa/Master，尽早办主卡和副卡；部分跨境缴费、IPA 或英国签证相关支付可能用得上国际卡。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>五一前：PHBS 出国申报与线下材料</b><p>上一届经验中涉及出访申报表、邀请函、导师知情同意书、家长知情同意书、授权书等。若本人不在深圳，可能要委托同学线下提交。以当年学院通知为准。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>M3 结束后：体检、MSF、IPA、学生卡照片</b><p>体检上一届可在深圳完成；女生注意避开生理期，体检可能要求空腹，不建议穿有金属线的衣服。学生卡照片提前拍好并按规格提交。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>出发前 1–2 周：机票、住宿、电话卡、App、行李</b><p>确认住宿开放时间是否晚于课程开始。提前测试手机能否安装 Google Maps、Grab、uNivUS、NUS NextBus 等 App。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>抵达前 3 天内：SG Arrival Card</b><p>SGAC 必须通过官方渠道提交；它不是签证，官方 e-service 免费。不要被收费代填网站误导。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>抵达当天：电话卡、打车、入住</b><p>建议几位同学一起行动。拿大箱子从机场坐地铁会很累；两人一辆 Grab/出租通常更稳，四人大箱子可能装不下。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>抵达后 1 周：熟悉生活系统</b><p>搞清食堂、校车、洗衣房、打印机、垃圾房、健身房、泳池、NUS 邮箱和 uNivUS。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>抵达后按预约：Student’s Pass formalities</b><p>按 IPA / NUS / ICA 要求预约并携带材料办理。上一届经验是可适当提前到，但不能迟到。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>中后期：复习、打印、毕业照、旅行</b><p>需要 cheat sheet 的课要提前打印；打印远不如国内方便。期末后可考虑租毕业服拍照，毕业典礼季可能难约。</p></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>回国前：伴手礼与余额处理</b><p>樟宜机场星耀和出关后都有伴手礼；Ezlink 剩余余额可在可用商店尽量花掉，卡留作纪念。</p></div>
+    </div>
+  </section>
+
+  <section id="checklist-before" class="section searchable">
+    <h2>2. 出发前 Checklist：箱子可以乱，护照不能丢</h2>
+    <p class="section-intro">行李少带一件衣服通常不会怎样；护照、IPA、转换插头、排插、电话卡这些东西忘了，抵达第一天就会很有参与感。</p>
+    <p>下面的勾选状态会保存在本机浏览器里，方便反复检查。</p>
+    <div class="checklist" data-list="before">
+      <div class="check"><input type="checkbox" id="b1"><label for="b1"><b>护照原件 + 复印件 + 扫描件</b><small>护照不能丢。第三国签证、STP、酒店入住、电话卡都可能用到。</small></label></div>
+      <div class="check"><input type="checkbox" id="b2"><label for="b2"><b>IPA / NUS admission / 注册材料</b><small>纸质版和电子版都保存。现场临时找文件非常折磨。</small></label></div>
+      <div class="check"><input type="checkbox" id="b3"><label for="b3"><b>PHBS 出国申报相关材料</b><small>如出访申报表、邀请函、导师/家长知情同意、授权书等，以当年通知为准。</small></label></div>
+      <div class="check"><input type="checkbox" id="b4"><label for="b4"><b>Visa / Master 信用卡</b><small>可考虑父母副卡。新加坡、英国、签证缴费、住宿押金等都可能用到。</small></label></div>
+      <div class="check"><input type="checkbox" id="b5"><label for="b5"><b>500–800 新币现金</b><small>部分食堂、餐厅或突发场景需要现金。机场换汇通常不划算。</small></label></div>
+      <div class="check"><input type="checkbox" id="b6"><label for="b6"><b>英标转换插头 + 排插</b><small>新加坡、香港、英国同属英标体系。宿舍插座少，排插很关键。</small></label></div>
+      <div class="check"><input type="checkbox" id="b7"><label for="b7"><b>小夏凉被 / 枕头 / 可选凉席</b><small>空调强、宿舍被子薄、床垫偏软。睡眠质量直接影响两个月体验。</small></label></div>
+      <div class="check"><input type="checkbox" id="b8"><label for="b8"><b>吹风机、充电线、台灯</b><small>当地买不一定方便，且价格通常不如国内友好。</small></label></div>
+      <div class="check"><input type="checkbox" id="b9"><label for="b9"><b>防晒、防蚊、常用药</b><small>湿热、蚊虫、空调、皮肤状态都要提前考虑。</small></label></div>
+      <div class="check"><input type="checkbox" id="b10"><label for="b10"><b>运动装备、泳衣、运动毛巾</b><small>NUS 健身房和泳池值得好好利用。</small></label></div>
+      <div class="check"><input type="checkbox" id="b11"><label for="b11"><b>A4 纸、文具、必要打印件</b><small>有些课可带 cheat sheet；新加坡打印贵且不如国内方便。</small></label></div>
+      <div class="check"><input type="checkbox" id="b12"><label for="b12"><b>小煮锅/一体锅、碗筷勺</b><small>晚上饿、食堂腻、想吃家乡味时非常有用。注意住宿规定和用电安全。</small></label></div>
+      <div class="check"><input type="checkbox" id="b13"><label for="b13"><b>手机 Google/海外 App 可用性测试</b><small>尤其是部分华为/荣耀机型，出发前务必测试。</small></label></div>
+      <div class="check"><input type="checkbox" id="b14"><label for="b14"><b>下载 App</b><small>NUS NextBus、uNivUS、Grab、Google Maps、Citymapper、Outlook、hi!App、Zoom 等。</small></label></div>
+      <div class="check"><input type="checkbox" id="b17"><label for="b17"><b>完成 RC1000A / SE1000 等线上先修</b><small>关于尊重、多元文化、学生行为规范等；到 NUS 后可能还有线下 workshop 需要预约完成。</small></label></div>
+      <div class="check"><input type="checkbox" id="b18"><label for="b18"><b>确认机票行李额与选座</b><small>上一届建议优先选择含 2 个 23kg 托运行李的机票；部分航司可提前 48 小时左右选座。</small></label></div>
+      <div class="check"><input type="checkbox" id="b15"><label for="b15"><b>确认住宿开放时间</b><small>课程开始、正式开学、宿舍入住可能不是同一天。</small></label></div>
+      <div class="check"><input type="checkbox" id="b16"><label for="b16"><b>SGAC 抵达前 3 天内填写</b><small>不要太早填，也不要落地后才想起来。</small></label></div>
+    </div>
+  </section>
+
+  <section id="first-week" class="section searchable">
+    <h2>3. 抵达第一周：先活下来，再谈诗和远方</h2>
+    <p class="section-intro">落地第一周的目标很朴素：手机有网、房间能进、饭能吃上、课能找到、STP 不错过。至于人生意义，可以等空调温度调好之后再思考（希望燕园宿舍的空调和UTown的空调平均一下）。</p>
+    <div class="grid three">
+      <div class="card"><span class="tag blue">落地 0–6 小时</span><h3>先活下来</h3><ul><li>连樟宜机场 Wi-Fi。</li><li>买/取电话卡，或先用国内漫游兜底。</li><li>检查 SGAC 和入境材料。</li><li>几位同学同行时先集合，不要各走各的。</li><li>注册 Grab，绑定支付宝或可用银行卡。</li><li>拿大箱子优先考虑打车去 UTown/酒店。</li></ul></div>
+      <div class="card"><span class="tag green">落地 1–3 天</span><h3>建立生活系统</h3><ul><li>登录 NUS 邮箱和 uNivUS。</li><li>确认 STP 预约时间和地点。</li><li>熟悉宿舍/酒店周边食堂、便利店、公交站。</li><li>找洗衣房、垃圾房、打印点。</li><li>保存住宿地址和紧急联系电话。</li><li>和熟人建互助群，尤其是电话卡、打车、手续。</li></ul></div>
+      <div class="card"><span class="tag yellow">第一周内</span><h3>把节奏调出来</h3><ul><li>试一次校车，熟悉上课路线。</li><li>找一个稳定自习地点。</li><li>检查课程平台、quiz、pre、考试信息。</li><li>准备清淡饮食和睡眠方案。</li><li>测试健身房/泳池使用流程。</li><li>如果晚到或缺席，务必按项目要求报备。</li></ul></div>
+    </div>
+    <div class="callout experience"><b>上一届真实经验</b>有人因为宿舍开放晚于课程开始，选择先住酒店；也有人向项目老师申请晚到，缺席第一周相对偏 orientation 的内容。但今年不能直接照搬，必须看当年邮件和老师要求。</div>
+    <div class="callout tip"><b>樟宜机场小细节</b>拿行李时如果遇到工作人员推免费饮料/水，可以礼貌多拿一两瓶（也可以不礼貌的再多拿，记得别说中文）。新加坡自来水通常可直接饮用，但酒店热水壶是否放心、是否需要烧水，按个人习惯处理。学校和宿舍一般能接水，带水杯很有用。</div>
+    
+  </section>
+
+  <section id="courses" class="section searchable">
+    <h2>4. 学业篇：可以轻松，但也别忘了学</h2>
+    <p class="section-intro">整体通过压力未必很大，但“不难”和“不用看”是两回事。基础好的同学会很从容；不学就不会的同学，建议至少给期中期末留一周尊严。</p>
+    <div class="callout tip"><b>学习体感总括</b>这个项目通常不是“高压求生”，但也不是完全不用脑。对经济班同学来说，不少知识在 PHBS 已经见过；对本科有金工、数学、计量基础的同学，会更轻松。若你属于“不学就不会”的类型，建议至少保持基本听课和考前复习。</div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>课程</th><th>性质</th><th>上一届经验整理</th><th>建议写法/策略</th></tr></thead>
+      <tbody>
+        <tr><td>FE5101</td><td>必修</td><td>M2；有老师飞来深圳上课；几个 quiz + 期末 presentation；老师指定分组；时间通常不与北大选课冲突。</td><td>按任务节奏走，pre 提前准备。</td></tr>
+        <tr><td>FE5112</td><td>必修</td><td>M4 核心课；quiz、考试密集；难度略大，需要认真复习。</td><td>标为“需要投入精力”的课。</td></tr>
+        <tr><td>FE5209</td><td>必修</td><td>M4；期中期末各 50%；可带一张 cheat sheet；经济班相对轻松；老师会结合 Python 实践。</td><td>提前整理 cheat sheet，别考前临时拼。</td></tr>
+        <tr><td>FE5116</td><td>课程之一</td><td>M4；4 个线上 quiz + 1 个期末 quiz；前几届期末是小组 project。</td><td>以当年 syllabus 为准，关注线上 quiz 截止时间。</td></tr>
+        <tr><td>FE5105</td><td>选修三选一</td><td>大部分同学会选；期末可带 cheat sheet；前期容易，后期难度增加。</td><td>稳妥型选项，但后期别完全放空。</td></tr>
+        <tr><td>FE5216</td><td>选修三选一</td><td>去 Oxford 数学系上课；需要提前办英国签证；最后交报告，可 2 人自由组队。</td><td>体验强，手续重，适合愿意折腾的人。</td></tr>
+        <tr><td>FE5222</td><td>选修三选一</td><td>较高阶，选的人少；老师会关注掌握情况；无 final。</td><td>适合对高阶内容感兴趣且不怕被关注的人。</td></tr>
+        <tr><td>FE5107 风险管理</td><td>后续课程</td><td>M6；NUS 老师飞深圳上课；project + pre，答辩压力较大。</td><td>提醒：新加坡回来不代表 NUS 部分完全结束。</td></tr>
+      </tbody>
+    </table></div>
+    <h3>选课决策逻辑</h3>
+    <div class="grid two">
+      <div class="card"><h4>普通稳妥路线</h4><p>不想额外处理英国签证、机票、住宿、护照占用和跨国行程，可以优先考虑 NUS 本地选修。核心目标是把项目顺利完成，同时保留时间探索新加坡。</p></div>
+      <div class="card"><h4>Oxford 体验路线</h4><p>如果成功选上 FE5216，要尽早启动英国签证。注意 M3 期末、五一假期、护照被签证中心占用、出发新加坡也要护照等时间冲突。</p></div>
+    </div>
+    <div class="callout warning"><b>不要把“上一届容易过”写成保证</b>可以说“上一届体感通过压力不大”，不能说“肯定不挂”。课程考核、老师、项目要求每年可能变化。</div>
+  </section>
+
+  <section id="admin" class="section searchable">
+    <h2>5. 行政手续篇：真正的副本不是环球影城，是 ICA</h2>
+    <p class="section-intro">手续这件事没有审美，只有对错。课程可以补，景点可以下次去，SGAC、IPA、STP、护照和预约时间不要凭感觉。</p>
+    <div class="grid two">
+      <div class="card"><h3>PHBS 侧手续</h3><ul><li>出国申报通常要尽早完成。</li><li>若不在深圳，可能需要授权同学线下提交材料。</li><li>上一届涉及出访申报表、邀请函、导师知情同意书、家长知情同意书等。</li><li>7 月 1 日前可能涉及毕业论文导师双选确认表和 proposal，建议去 NUS 前完成，避免纸质签字麻烦。</li><li>不要忘记 seminar / report 等校内任务。</li></ul></div>
+      <div class="card"><h3>NUS / ICA 侧手续</h3><ul><li>NUS 会通过 SOLAR 系统协助 Student’s Pass 申请。</li><li>学生按邮件提交 eForm 16 并支付处理费。</li><li>通过后下载/打印 IPA letter。</li><li>IPA 可用于入境相关流程，但不等于最终实体/数字 Student’s Pass。</li><li>抵达后按预约完成 STP formalities。</li><li>办理 STP 通常需要新加坡本地电话和地址。</li></ul></div>
+    </div>
+    <h3>SG Arrival Card</h3>
+    <div class="callout official"><b>官方规则摘要</b>SG Arrival Card 应在抵达新加坡前 3 天内提交，包括抵达当天。SGAC 不是签证，官方提交渠道免费。请只使用 ICA 官方网站或 MyICA Mobile。</div>
+    <h3>费用、线上先修与材料细节</h3>
+    <div class="grid two">
+      <div class="card"><h4>住宿费 / MSF / 管理费</h4><ul><li>住宿缴费、MSF 等通常会有后续邮件通知，不必在没有邮件时自行乱操作。</li><li>上一届经验中，支付宝缴费比较省心；若涉及固定交易管理费，多人合并付款后分摊手续费可能更划算。</li><li>合并付款前要提前和负责老师或项目方确认，避免账务归属不清。</li></ul></div>
+      <div class="card"><h4>线上课程与线下 workshop</h4><ul><li>到 NUS 前务必检查是否要求完成 RC1000A A Culture of Respect & Consent、SE1000 Student Essentials 等线上模块。</li><li>到校后可能还要预约并参加线下 workshop。</li><li>这类内容看似琐碎，但属于注册和学生行为规范的一部分，不建议拖到最后。</li></ul></div>
+    </div>
+    <div class="callout tip"><b>SGAC 时间理解</b>“抵达前 3 天内”不是随便提前 72 小时都能填。按 ICA 表述，是包括抵达当天在内的 3 天窗口。举例：若 30 日抵达，通常可从 28 日起提交。每次入境新加坡都要重新注意 SGAC 要求。</div>
+    <h3>照片、行李与随身检查</h3>
+    <ul>
+      <li>新加坡证件照规格常见为 35mm × 45mm 白底；英国等地区也常用类似规格，但不同用途要看具体要求。</li>
+      <li>托运行李通常比随身行李检查宽松，但锂电池、大量酒精类物品、喷雾等要按航司和海关规定处理。花露水喷雾等更适合托运并确认限制。</li>
+      <li>随身背包和小行李可能查得很细，证件、电脑、充电宝、液体要提前整理。</li>
+    </ul>
+    <h3>体检与学生卡</h3>
+    <div class="grid two">
+      <div class="card"><h4>体检</h4><ul><li>上一届经验：M3 结束后可在深圳完成。</li><li>可能需要空腹。</li><li>女生避开生理期。</li><li>不建议穿带金属线的衣服。</li><li>几位同学一起去、一起邮寄结果，成本和精力更低。</li></ul></div>
+      <div class="card"><h4>学生卡 / 照片</h4><ul><li>提前提交符合规格的照片。</li><li>准备身份证件原件、复印件、照片等材料。</li><li>NUS 电子学生卡通常可在 uNivUS 中使用。</li><li>具体规格和流程以当年 Registrar / 项目邮件为准。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="housing" class="section searchable">
+    <h2>6. 住宿篇：UTown，贵，但它确实会哄人</h2>
+    <p class="section-intro">它的缺点很直接：贵。它的优点也很直接：离课近、离食堂近、离泳池健身房近、离同学近。人在异国他乡，近就是生产力；更近一点，就是睡眠生产力。</p>
+    <div class="callout experience"><b>核心建议</b>DDP 同学上一届基本都住在 UTown。四个单人间组成一个套间，大家共用客厅、厨房、卫生间和浴室。贵是贵，但省心、位置好、同学互相照应，且健身房、泳池、食堂、自习室等资源都近。校外租房也不是不行，只是通勤和生活琐事会让人重新理解“近水楼台先得饭”。</div>
+    <div class="grid three">
+      <div class="card"><h3>房间与分配</h3><ul><li>常见形式是 4 个单人间 = 1 个套间。</li><li>每人有自己的单间，共用客厅、厨房、卫生间和浴室。</li><li>房间通常按姓氏首字母分配。</li><li>“原则上”不能换房；如确有需要，建议先走沟通流程。至于民间操作，本文作为可外传文档选择保持沉默（懂的都懂）。</li><li>可能与非 DDP 学生混住；这不是系统出 bug，只是世界本来就不是按项目分区运行。</li></ul></div>
+      <div class="card"><h3>床品与睡眠</h3><ul><li>单间一般有枕头、床单/被单。</li><li>提供的毯子可能很薄，像“被子概念股”。怕冷或重视睡眠的人建议自带小夏凉被。</li><li>上一届有人自带枕头但没拿出来用，因为宿舍提供的枕头也挺舒服，可以带耳塞，虽然是单间，但有时候赤道的凌晨暴雨可能有雷把你打醒。</li><li>空调强，室外热，室内冷；薄外套和夏凉被都很有用。</li><li>床垫偏软，对腰敏感的人可考虑凉席或支撑用品。</li></ul></div>
+      <div class="card"><h3>住校优势</h3><ul><li>离上课地点相对方便。</li><li>跟同学住一起，有事能互相照应。</li><li>食堂、活动中心、健身房、泳池、自习室近。</li><li>每天多睡几分钟是实实在在的幸福。</li><li>上一届部分租房同学后来比较后悔。</li></ul></div>
+    </div>
+    <h3>保洁、洗衣与维修</h3>
+    <div class="grid two">
+      <div class="card"><h4>保洁不是传说，会真的开门</h4><ul><li>每周一次保洁会来打扫卫生，上一届有宿舍基本是上午来。</li><li>建议不要睡得太死、太晚。保洁如果能打开你的房门，发现你还在睡觉（如果房间不锁门的话，睡姿记得优雅，记得穿衣服），通常会默默离开，然后这一周可能就不再来了——你会获得一间保持原生态的房间。</li><li>可以提前在 WhatsApp 里要求换被套、更新沐浴露和洗发露、换毛巾，或提出其他保洁需求。上一届体感是有求必应。</li><li>房间东西坏了可以报修；说明原因、房间号、新加坡号码、E 开头邮箱等信息。</li></ul></div>
+      <div class="card"><h4>洗衣与晾衣</h4><ul><li>二楼通常有洗衣房，也有一个可以晾衣服的小阳台；具体位置以当年宿舍楼为准。</li><li>洗衣和烘干上一届都是 1 新币/次。</li><li>支付可刷 Visa 卡或新加坡本地 Ezlink；Ezlink 同时也能用于公交地铁。</li><li>建议带粗孔洗衣袋，洗完及时取，给自己定闹钟。衣服被遗忘在洗衣房里，会比你更早进入集体生活。</li><li>晾衣架当地不便宜，可从国内带。有人把行李箱横放，用拉杆和晾衣架临时晾衣——民间智慧，不保证优雅，但有时有效。</li></ul></div>
+    </div>
+    <h3>宿舍真实细节</h3>
+    <ul>
+      <li><b>虫子：</b>蚂蚁、飞蚊、不明小虫都可能出现。不建议随意开窗，注意防虫。</li>
+      <li><b>门锁：</b>出去后刷门卡，门锁闪红灯代表已锁上。</li>
+      <li><b>垃圾：</b>每层有垃圾房，垃圾袋扎好再放进去。</li>
+      <li><b>消防按钮：</b>不要拿来挂衣服。这不是创意收纳，也不是衣架转生。</li>
+      <li><b>规则提醒：</b>住宿安排、房型、保洁频率、洗衣支付方式每年可能变，最终以当年 accommodation 邮件和现场规则为准。</li>
+    </ul>
+
+    <div class="callout tip"><b>入住当天建议先做三件事</b>先别急着把箱子炸开。第一，拍一下房间初始状态，尤其是已有损坏、污渍、家具问题；第二，测试门卡、空调、插座、热水和 Wi-Fi；第三，把转换插头、充电线和门卡放到一个不会被自己遗忘的地方。刚到第一天最可怕的不是累，是你明明带了转换头，却把它埋在箱底，像在考古。</div>
+    <div class="grid two">
+      <div class="card"><h4>室友与套间礼仪</h4><ul><li>四人套间不是四个平行宇宙，厨房、卫生间、客厅都需要基本默契。</li><li>尽量不要把洗漱用品、外卖盒、锅、鞋、衣服长期占领公共区域。新加坡已经很小了，不要让套间继续变小。</li><li>如果和非 DDP 同学混住，先保持友好、清楚沟通公共区域使用规则。大家都是来生活的，不是来参加《公共空间争夺战》的。</li><li>夜里煮东西、打电话、开关门尽量轻一点。你以为只是泡面声，隔壁听起来可能是深夜建筑施工。</li></ul></div>
+      <div class="card"><h4>保洁日生存提示</h4><ul><li>保洁常常在白天来，建议前一天稍微收一下桌面和地面。不是为了表演整洁，是为了让保洁阿姨有路可走。</li><li>如果你睡到保洁来敲门甚至刷门卡，场面会非常微妙：你在床上反思人生，阿姨在门口反思职业边界。</li><li>需要换床品、补洗发水沐浴露、换毛巾，提前 WhatsApp 说清楚。礼貌一点，效率通常更高。</li><li>贵重物品、证件、现金不要随手放公共区域。新加坡很安全，但安全不等于可以把护照培养成散养型人格。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="life" class="section searchable">
+    <h2>7. 生活篇：吃饭、洗衣、支付、打印，以及被 711 教育</h2>
+    <p class="section-intro">新加坡会让你重新理解“便利店为什么叫便利店”——它便利，但价格也会提醒你：便利不是慈善。</p>
+    <div class="callout tip"><b>讲座邮件不是只让你去听的</b>注意看 NUS 的讲座邮件和公告。重点不是劝你变成学术苦行僧，而是有些 seminar、workshop、department event 后面真的有免费且相当丰盛的学术自助餐。去的时候最好带姓名牌，穿得稍微正式一点，自信一点。你不是去蹭饭，你是去进行跨文化学术交流，顺便补充碳水、蛋白质和人生信念。</div>
+
+    <h3>饮食：不是没得吃，是要学会自救</h3>
+    <div class="grid three">
+      <div class="card"><h4>UTown 两大饭堂：Fine Food 与 Flavour</h4><ul><li>住 UTown 的同学大概率会高频吃 Fine Food 和 Flavour，混着吃可以延缓味觉系统的崩溃。</li><li>上一届经验：Fine Food 支持刷卡和现金；Flavour 更偏现金，若办了本地银行卡如 DBS，也可用 app 扫码支付。每年支付方式可能变，现场看标识。</li><li>Flavor 和 Techno 的水果性价比相对高。人在热带，水果有时不是享受，是身体发来的补水通知。</li><li>蔬菜、沙拉可能比想象中贵。你会第一次意识到，清淡饮食也是一种经济学问题。</li></ul></div>
+      <div class="card"><h4>隐藏零食与后街餐厅</h4><ul><li>FairPrice 旁边的 Snack 有点墨西哥风味（问号保留，因为主包也没有完全搞懂它的学术分类），1 新币一个的豆乳冰淇淋可冲。</li><li>NUS 后街有几家餐厅可以吃，尤其有一家自选饭菜的店，名字可以忘，味道和价格不能忘；优惠、好吃，出示学生证明可能还有折扣。</li><li>结账前礼貌问一句是否有 NUS student discount，有时会有惊喜。自信一点，最坏结果也只是没有折扣，不会把你逐出学术共同体。</li></ul></div>
+      <div class="card"><h4>早餐与清淡饮食自救</h4><ul><li>Fine Food 有 2 新币多的吐司、生蛋液和咖啡套餐。有人觉得省事，也有人接受不了蛋液味道；这属于味觉兼容性测试。</li><li>后期更省钱的办法：自己买面包和牛奶在宿舍吃。简单、稳定，不需要每天早上和食堂菜单进行精神搏斗。</li><li>也有同学用微波炉加热面包、芝士、火腿片，做简易早餐。主包比较懒，没有亲测，但理论上听起来很像文明生活。</li><li>湿热环境下长期吃炸鸡、披萨、汉堡，容易让身体更疲惫。小锅、鸡蛋、面条、简单蔬菜是夜间自救系统。</li><li>凉茶、清热饮料属于个人体验（但三脚标冰镇荔枝味很好喝），不替代医疗建议。</li></ul></div>
+    </div>
+
+    <div class="callout experience"><b>第一次买 set 的心理建设</b>Fine Food 的早餐 set 里如果出现吐司、咖啡和一份看起来“还没完全下班”的鸡蛋液，不要立刻怀疑后厨忘记开火。那大概率就是它本来的形态。第一次打出来可能会很懵。（这到底是早餐，还是鸡蛋在向我展示生命的中间状态？）能接受就拌一拌吃，不能接受就把它记入“跨文化体验”作为朋友圈的一部份，然后第二天开始面包牛奶自救。</div>
+    <div class="grid two">
+      <div class="card"><h4>懒人早餐三件套</h4><ul><li><b>面包 + 牛奶：</b>最稳定，不需要每天早上和半熟鸡蛋进行价值观谈判。</li><li><b>面包 + 芝士 + 火腿片：</b>有微波炉就能升级成“看起来像认真生活过”的早餐。</li><li><b>咖啡：</b>可以食堂买，也可以自己解决。早八人的精神状态不一定需要精致，但需要启动。</li><li><b>鸡蛋：</b>如果你带煮蛋器或小锅，请先确认住宿用电和安全规定。不要为了一个水煮蛋写进事故通报。</li></ul></div>
+      <div class="card"><h4>水果与小零食策略</h4><ul><li>Flavor 和 Techno 的水果相对友好，可以当作湿热天气里的补水外包服务。</li><li>1 新币豆乳冰淇淋属于“路过可以冲”的快乐，不一定能改变人生，但能短暂改变下午的心情。</li><li>如果某天真的很想吃蔬菜，请不要被价格刺痛太久。新加坡会让人明白：绿色食品，真的很绿色，价格也很绿色。</li><li>后街自选饭菜那类店适合改善伙食；记得自然地亮出学生身份。你不是在求折扣，你是在行使学生这个物种的基本权利。</li></ul></div>
+    </div>
+    <h3>洗衣与晾衣：衣服不会自己回来</h3>
+    <ul>
+      <li>洗衣房细节已在住宿篇展开；核心就是：洗衣/烘干各约 1 新币，可能刷 Visa 或 Ezlink，具体以机器现场为准。</li>
+      <li>洗完一定及时取，建议定闹钟。不要让你的衣服在洗衣房独立完成一段新加坡交换经历。</li>
+      <li>晾衣架、洗衣袋、少量衣架从国内带更划算。</li>
+    </ul>
+    <h3>支付与现金</h3>
+    <div class="table-wrap"><table><thead><tr><th>方式</th><th>适用场景</th><th>提醒</th></tr></thead><tbody>
+      <tr><td>Visa/Master 信用卡</td><td>缴费、餐厅、交通、英国/旅行</td><td>建议提前办；父母副卡也可考虑。</td></tr>
+      <tr><td>新币现金</td><td>食堂、小店、突发情况</td><td>建议 500–800 新币。用多少换多少，别全靠机场换汇。</td></tr>
+      <tr><td>DBS 本地卡</td><td>新加坡多数本地支付</td><td>能办则很省心，但是否值得办看停留时间和当年要求。</td></tr>
+      <tr><td>Ezlink / SimplyGo</td><td>公交、地铁、洗衣房等</td><td>交通卡余额临走前尽量花完。</td></tr>
+      <tr><td>微信/支付宝/SGQR+</td><td>部分扫码支付</td><td>接入范围变化快，不能作为唯一支付方式。</td></tr>
+    </tbody></table></div>
+    <h3>医疗、厕所、集运与小物价</h3>
+    <ul>
+      <li>学校通常会有医保安排，去 NUS 相关医疗机构可能可报销一部分；具体报销比例、范围和流程要看当年保险说明。</li>
+      <li>主包去过校医院看病：记得认真听叫号，提前准备好症状描述、过敏药品和常用药名的英文翻译。挂号处未必理解很多中文专业词；如果能排队，可以委托安排会中文的医生（通常比较火）。诊室门可能很重，主包当时以为上锁了，结果差点过号——人生有些错过，真的只是因为门太重。</li>
+      <li>NUS 部分厕所男女标识可能不如国内直观，第一次去看清楚再进（这很重要，别问为什么）。</li>
+      <li>Nets FlashPay 在新加坡不少场景可用，但上一届经验是 NUS 洗衣房未必支持；以机器现场标识为准。</li>
+      <li>新加坡 7-Eleven、充电线、打印、转换插头、晾衣架、吹风机等小物价格会让人快速理解“便利”的成本。</li>
+      <li>到新加坡后也可淘宝集运，但速度很慢；上一届有团购凑满运费后等了将近一个月的经历。急用物品不要指望集运救命。</li>
+    </ul>
+    <h3>打印</h3>
+    <p>新加坡打印比国内麻烦，也贵。cheat sheet、材料复印件、签证材料建议能提前准备就提前准备。上一届提到的打印点包括 UTown residence 一楼、PC/MAC commons、星巴克、Central Library、PGP 等，但开放时间和机器状态要现场确认。</p>
+  </section>
+
+  <section id="transport" class="section searchable">
+    <h2>8. 交通篇：你在新加坡补上的十年公交课</h2>
+    <p class="section-intro">公交要招手才停，下车要按铃，上下车都要刷卡（不然可能按更长路程扣钱）。不要问为什么，问就是它真的会开走，而且走得很有原则。</p>
+    <div class="grid two">
+      <div class="card"><h3>机场到 UTown / 酒店</h3><ul><li>拿大行李时，优先考虑打车。</li><li>两个人一辆车较稳；四个人加大箱子可能装不下。</li><li>提前注册 Grab 并绑定可用支付方式。</li><li>如果坐地铁，体力消耗和换乘复杂度都要预期到。</li><li>樟宜机场地铁进城方向，坐两站后两侧门可能都开，通常要从左侧门换乘；跟着人流更稳。</li></ul></div>
+      <div class="card"><h3>校外公交与地铁</h3><ul><li>EZlink 可在机场地铁站或 7-Eleven 等处购买，上一届常见价格约 10 新币：5 新手续费 + 5 新可消费余额。</li><li>也可以直接刷 Visa 卡，但可能有跨境/交通结算费用。</li><li>公交上车刷卡，下车也刷卡；公交要招手才停，下车前要按铃。</li><li>不熟路时盯地图，否则容易坐过站。</li><li>地铁车厢内不要吃喝，也不要带榴莲。</li><li>地铁里 GPS 不稳定，不要完全依赖实时定位。</li></ul></div>
+    </div>
+    <div class="grid two">
+      <div class="card"><h3>导航软件：双保险比较稳</h3><ul><li>Google Maps + Citymapper 是比较稳的组合。</li><li>Google Maps 适合基础路线；Citymapper 在新加坡公共交通规划上常常更顺手。</li><li>校内校车还是优先看 NUS NextBus。不要用意志力等车，车不会被你的眼神召唤。</li></ul></div>
+      <div class="card"><h3>打车：贵，但有时值得</h3><ul><li>Grab 基本最贵，但覆盖广、操作顺。</li><li>Gojek 和 TADA 往往稍微便宜，可以比价。</li><li>总体上都比国内贵很多。打车前先问自己：这趟车是刚需，还是我被热带天气击穿了心智防线？</li></ul></div>
+    </div>
+    <h3>校内交通</h3>
+    <ul>
+      <li>校内主要靠免费校车出行（当然也可以走路，但请先评估太阳是否同意）。下载 NUS NextBus 看时刻和车辆位置。</li>
+      <li>Citymapper 有时可同时看校内校车和公共交通，但站点精度不一定完美。</li>
+      <li>周六早课要提前等车，班次可能 20 分钟一班。</li>
+      <li>NUS 在新加坡植物园附近还有校区，工作日白天可乘 BTC 校车前往。</li>
+      <li>去 NTU 可从 Pioneer 站换 NTU green line；NTU 校内车可用 NTU Omnibus。</li>
+    </ul>
+    <div class="callout tip"><b>一句话提醒</b>不要默认新加坡交通像深圳一样顺手。你可能会在两个月里把过去十年没坐够的公交一次性补上。</div>
+
+    <div class="grid two">
+      <div class="card"><h3>第一次坐公交的现实教育</h3><ul><li>公交车不是每站自动停。你不招手，它可能从你面前优雅路过，像一段没有结果的感情。</li><li>下车要提前按铃。等车已经开过站再站起来，基本就只能和目的地隔窗相望。</li><li>上车下车都要刷卡，别只刷一次。系统不会因为你是交换生就自动脑补你的行程。</li><li>站名有时不直观，地图要盯紧。坐过站不可怕，可怕的是你坐过站后还很自信。</li></ul></div>
+      <div class="card"><h3>机场拖箱路线提醒</h3><ul><li>如果同行人数多、箱子大，别幻想四个人和四个大箱子能体面塞进一辆普通车。司机拒载时，你会重新理解“体积”这个物理概念。</li><li>两人一车通常更现实。钱会多一点，但你会少一点在机场地铁换乘时对人生的怀疑。</li><li>机场地铁换乘时跟着大部分人走通常没错，但不要完全放弃思考。人流是辅助，不是宗教。</li><li>打车时把 UTown / 住宿地址和 postal code 提前复制好。新加坡邮编很有用，有时比你努力描述“那个大学城里面那个楼”更可靠。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="apps" class="section searchable">
+    <h2>9. 电话卡、网络与 App：没有本地号码，很多按钮都不会爱你</h2>
+    <p class="section-intro">新加坡生活的第一层安全感，不是金沙酒店夜景，是手机有网、Grab 能叫车、邮箱能打开、验证码能收到。</p>
+    <h3>电话卡</h3>
+    <div class="grid two">
+      <div class="card"><h4>Singtel / hi!App 路线</h4><ul><li>机场 Cheers 可买 Singtel prepaid。</li><li>hi!App 可用于注册和充值。</li><li>上一届经验：12 新/18 新更像短期游客卡；15 新更适合待 2–3 个月并后续充值。</li><li>注册可能需要护照扫描和自拍视频，等待 5–20 分钟刷新。</li><li>prepaid 足够，不一定需要 postpaid。</li></ul></div>
+      <div class="card"><h4>淘宝/机场取卡路线</h4><ul><li>可以和同学一起买，到樟宜机场统一取卡。</li><li>需确认是邮寄还是机场柜台取货。</li><li>如果买短期卡，可咨询客服是否能在当地延长。</li><li>eSIM 可作为方案，但稳定性需自己评估。</li></ul></div>
+    </div>
+
+    <div class="callout tip"><b>本地号码的意义</b>本地号码不是为了让你显得更 local，而是很多系统、验证码、预约、身份核验都会突然需要它。没有号码的时候，你会发现自己像一个被现代社会暂时踢出群聊的人。</div>
+    <div class="grid two">
+      <div class="card"><h4>落地前的网络兜底</h4><ul><li>建议保留一点国内漫游作为第一天兜底。不要把全部希望押在“机场 Wi-Fi 一定顺利、电话卡一定秒开、App 一定能装”这种童话上。</li><li>如果选择机场取卡，提前确认取卡航站楼、柜台位置、营业时间和是否需要护照。</li><li>如果选择 eSIM，提前确认手机是否支持、是否需要在境外激活、是否影响接收本地短信。</li></ul></div>
+      <div class="card"><h4>验证码与账号</h4><ul><li>Outlook、NUS 系统、电话卡 App、Grab、银行 App，最好在出发前能登录的先登录。</li><li>常用邮箱、手机号、备用验证方式要确认。否则你可能站在机场，网络有了，账号却说“我不认识你”。</li><li>能截图的二维码、预约单、地址、IPA、住宿邮件，提前离线保存一份。真正需要时，手机信号往往最有个性。</li></ul></div>
+    </div>
+    <h3>手机兼容</h3>
+    <div class="callout warning"><b>华为/荣耀用户请提前测试</b>部分 2019–2022 年左右的华为/鸿蒙机型在海外安装 Google Play、Google Maps、Grab、Citymapper 等 App 可能很困难。出发前测试比落地后买手机便宜。若必须换机，新加坡电子产品通常不便宜，可考虑香港或国内提前解决。</div>
+    <h3>App 清单</h3>
+    <div class="table-wrap"><table><thead><tr><th>App</th><th>用途</th><th>备注</th></tr></thead><tbody>
+      <tr><td>NUS NextBus</td><td>NUS 校车时刻</td><td>校内出行高频。</td></tr>
+      <tr><td>uNivUS</td><td>电子学生卡、健身房、泳池、图书馆</td><td>去 gym/泳池/图书馆可能要出示二维码。</td></tr>
+      <tr><td>Grab</td><td>打车、外卖</td><td>提前绑定支付。</td></tr>
+      <tr><td>Google Maps</td><td>基础地图</td><td>地铁里定位不一定稳定。</td></tr>
+      <tr><td>Citymapper</td><td>公共交通规划</td><td>在新加坡较好用，可结合校车信息。</td></tr>
+      <tr><td>Singabus / UX NextBus</td><td>公交到站时间</td><td>适合规划公交等待时间。</td></tr>
+      <tr><td>Singpass</td><td>新加坡身份核验</td><td>拿到 STP 后使用。</td></tr>
+      <tr><td>hi!App</td><td>Singtel 电话卡注册/充值</td><td>买 Singtel prepaid 时常用。</td></tr>
+      <tr><td>Outlook</td><td>NUS 邮箱</td><td>随时看项目邮件。</td></tr>
+      <tr><td>Zoom</td><td>线上课/监考</td><td>Programming 等课程可能用到。</td></tr>
+      <tr><td>Airbnb</td><td>旅行住宿</td><td>Oxford/英国/周边旅行可用。</td></tr>
+      <tr><td>DBS Digibank</td><td>本地银行卡</td><td>如办理 DBS，可用。</td></tr>
+      <tr><td>SimplyGo / Ezlink</td><td>交通卡充值管理</td><td>交通和部分洗衣支付。</td></tr>
+      <tr><td>eatingo</td><td>餐厅订座折扣</td><td>UTown 附近部分餐厅可能有折扣，属于隐藏小技巧。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section id="health" class="section searchable">
+    <h2>10. 健康、天气与心态：热、潮、冷气，一天体验三个季节</h2>
+    <p class="section-intro">室外像蒸笼，室内像冷库，中间夹着一个试图体面生活的你。防晒、防蚊、睡眠和清淡饮食，不是养生玄学，是续航管理。</p>
+    <h3>湿热不是背景板，是主角之一</h3>
+    <div class="grid three">
+      <div class="card"><h4>天气</h4><p>5 月和 6 月上旬相对更适合出去走。6 月中下旬到 7 月上旬可能非常热、非常潮。新加坡常见的是一天内下 1–2 小时暴雨，然后继续晴热。</p></div>
+      <div class="card"><h4>身体反应</h4><p>有人会起疹子、长痘、浮肿、没精神。对湿热、油腻饮食和冷热切换敏感的人，要提前准备防晒、防蚊、皮肤药和清淡饮食方案。</p></div>
+      <div class="card"><h4>空调</h4><p>室外湿热，室内空调很足。薄外套、防晒服、小夏凉被都很有用。上课冷到穿小外套不奇怪。</p></div>
+    </div>
+    <h3>海外生活与社交边界</h3>
+    <div class="callout experience"><b>真实但克制地说</b>新加坡安全、便利、资源好，但海外生活不是纯旅游。你会遇到不同背景、不同价值观的人。多数交流是开阔的，也可能遇到让你不舒服的互动。保持礼貌，保持边界，必要时退出，不必强迫自己融入每一个圈子。</div>
+    <p>参加 local 体育活动、seminar、Telegram 搭子群、徒步、桌游、行业活动，能打开视野。主包英语还行，又对非大众目的地有一点不必要但顽固的兴趣，所以探索半径会比普通攻略更大。正常同学完全可以只参考安全、签证、交通部分，不必跟着挑战冷门地图。</p>
+    <h3>校园资源：一定要用起来</h3>
+    <ul>
+      <li>UTown 附近有健身房、露天泳池、自习室、食堂、便利超市。</li>
+      <li>健身房需要运动着装，不要穿牛仔裤或拖鞋；带运动毛巾。健身房提供消毒湿巾，体验很好（甚至会让人短暂相信公共卫生是文明的尽头）。</li>
+      <li>可用 uNivUS e-card 扫码认证。</li>
+      <li>卫生间附近有饮水机，带水杯比买天价水更理智（上一届体感主要是冰水和凉水，今年有没有热水看现场，别把希望寄托给未知温度）。</li>
+      <li>NUS 自习室明亮宽敞，值得体验。</li>
+      <li>NUS 内的博物馆、恐龙馆也可以安排。</li>
+      <li><b>注意看讲座邮件和公告。</b>这不是单纯提醒你去听讲座——很多学术讲座、seminar 或学院活动会有相当丰盛的自助餐/茶歇。去的时候最好带上姓名牌（也可以不带），穿得稍微正式一点（也可以不正式），自信地进去（不可以不自信）、礼貌地交流（也可以不交流）、体面地吃饭（也可以不体面）。学术资源和免费餐食，有时会同时出现。</li>
+    </ul>
+
+    <div class="grid two">
+      <div class="card"><h4>湿热天气出门三件套</h4><ul><li><b>水杯：</b>不是装饰，是生命维持系统。</li><li><b>防晒：</b>不要相信“我就走十分钟”。新加坡的十分钟会认真工作。</li><li><b>薄外套：</b>室外像蒸笼，室内像冷库。你不是矫情，你是在适应热带资本主义空调文明。</li></ul></div>
+      <div class="card"><h4>讲座自助餐礼仪</h4><ul><li>先看清活动是否开放、是否需要报名、是否有 dress code。</li><li>带姓名牌会显得你不是误入饭局，而是有组织、有身份、有学术追求地接近餐台。</li><li>可以和人简单寒暄几句，不会也没事；微笑、点头、拿盘子，三步已经够撑过很多社交场景。</li><li>拿食物适量多次，不要一次把盘子堆成小型填海工程。我们追求的是体面补能，不是震撼全场（这个仁者见仁，反正最后都狂吃）。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="singapore-fun" class="section searchable">
+    <h2>11. 新加坡内游玩：别只在宿舍和食堂之间往返</h2>
+    <p class="section-intro">新加坡不大，但如果你完全不出门，它也可以大到只剩下 UTown、教室和 Fine Food。每周抽一天出去，体验会完全不一样。</p>
+    <p>新加坡面积不大。如果每周刻意抽一天出去，基本能把主要地方玩得比较完整。</p>
+    <div class="grid three">
+      <div class="card"><h3>城市与校园</h3><ul><li>NUS 博物馆、恐龙馆。</li><li>SMU、NTU 校园参观。</li><li>NTU 可从 Pioneer 换校车。</li><li>很多收费景点凭 NUS 学生身份可能有减免或免费。</li></ul></div>
+      <div class="card"><h3>自然与户外</h3><ul><li>麦里芝水库值得去。</li><li>植物园方向可结合 NUS BTC 校区。</li><li>暴雨频繁，带伞、拖鞋或洞洞鞋。</li><li>防晒和补水比拍照姿势更重要。</li></ul></div>
+      <div class="card"><h3>城市体验</h3><ul><li>国庆彩排烟花很震撼，强烈推荐。</li><li>新加坡楼宇常用 6 位邮政编码定位，很多时候比地址更准。</li><li>麦当劳小杯可乐也可能比国内普通杯大，不要低估份量。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="travel" class="section searchable">
+    <h2>12. 出境旅行与非大众目的地：主包们英语还行，于是地图开始不正常（直到我说我要办签证，他们才发现我是大陆人）</h2>
+    <p class="section-intro">普通路线当然好，但如果你对文莱、澳洲北领地、爱尔兰、台湾、印尼这些路线产生了不必要但顽固的兴趣，请先查签证，再查航班，最后再查自己的胆量。</p>
+    <div class="callout warning"><b>旅行总原则</b>学期内出国玩，上一届经验是需要找指定 NUS 班长/负责人报备（另一个方法是把班长和负责人也带上）。东南亚其他国家通常没有新加坡那么安全（记得把班长和负责人带回来）。任何签证、电子入境卡、免签、落地签、停留天数都必须出发前重新查官方信息。</div>
+    <p>这部分作者偏探索型：主包英语还行，也喜欢非大众景点。因此下面会比普通 NUS 攻略更“野”一点。请按自己的经验、预算、体力、安全感和证件组合选择，不要为了打卡冷门而给自己制造麻烦。</p>
+
+    <div class="grid two">
+      <div class="card"><h3>出国玩前的四件套</h3><ul><li><b>护照：</b>有效期、空白页、是否在签证中心手里。</li><li><b>签证/电子入境卡：</b>不要靠“我以为”。边检通常不欣赏想象力。</li><li><b>返程票和住宿：</b>很多边检问题都围绕这两件事展开。</li><li><b>保险和现金：</b>新加坡安全不代表周边每个地方都同级别省心。</li></ul></div>
+      <div class="card"><h3>报备建议</h3><ul><li>学期内出境旅行，如果项目要求向班长或负责人报备，就按要求报。别等别人发现你在另一个国家发朋友圈。</li><li>建议报备信息包括：目的地、出入境日期、航班/交通、同行人、住宿地址、紧急联系方式。</li><li>这不是限制自由，是让有人在你真的联系不上时知道从哪里开始找。自由很重要，被找到也很重要。</li></ul></div>
+    </div>
+    <div class="destination">
+      <div class="dest-card"><h3>澳大利亚北领地 <span class="tag red">高规划难度</span></h3><p class="one">适合喜欢荒野、自然景观、长距离行程的人；不适合第一次出境、完全不做攻略、依赖公共交通的人。</p><ul><li>大陆护照赴澳旅游通常需办理 Visitor visa subclass 600，具体停留期以签证批准信为准。</li><li>Darwin、Kakadu、Litchfield、Uluru、Alice Springs 距离极大。</li><li>租车、保险、补给、水、手机信号、防晒、夜间驾驶、野生动物、鳄鱼警示都要提前做攻略。</li><li>不要把“澳洲很发达”理解成“北领地随便走都方便”。</li></ul></div>
+      <div class="dest-card"><h3>文莱 <span class="tag green">小众安静</span></h3><p class="one">适合看清真寺、水村、安静城市秩序感；不适合追求夜生活和密集景点的人。</p><ul><li>官方信息显示，中国普通护照可在指定口岸免签停留不超过 14 天，但出发前仍需核验。</li><li>公共交通弱，可能依赖打车/包车。</li><li>宗教礼仪、着装、周五礼拜时间、酒精限制要尊重。</li><li>它不是“热闹好玩”的地方，但安静本身就是体验。</li></ul></div>
+      <div class="dest-card"><h3>中国台湾 <span class="tag red">证件链复杂</span></h3><p class="one">台湾不是普通第三国旅行。大陆护照、新加坡 Student Pass、第三国签证，不能自动替代大陆端和台湾端所需文件。</p><ul><li>通常涉及大陆居民往来台湾通行证、相应签注、台湾侧入出境许可等。</li><li>旅居海外/港澳大陆居民有特定申请路径，但资格、停留期、材料需按移民署页面核验。</li><li>2025 年 10 月起台湾网络入国登记表制度有新要求，是否适用要核验。</li><li>务必同时看大陆出境端和台湾入境端。</li></ul></div>
+      <div class="dest-card"><h3>印尼 <span class="tag yellow">热门但别轻敌</span></h3><p class="one">Bali、Bintan、Batam、Jakarta 体验差别极大。看似近，不等于没有手续。</p><ul><li>官方 eVisa/eVOA 信息显示，Visitor Visa 可用于旅游等目的，通常单次入境 30 天。</li><li>All Indonesia 在线到达卡已要求入境旅客在线填写。</li><li>注意酒店登记、现金、打车软件、海关申报、骑摩托风险。</li><li>Bintan/Batam 适合从新加坡短途，Bali 更像完整旅行。</li></ul></div>
+      <div class="dest-card"><h3>英国签证入境爱尔兰 <span class="tag red">最容易误解</span></h3><p class="one">有英国签证不等于任何路线都能去爱尔兰。</p><ul><li>Short-Stay Visa Waiver Programme 通常要求先凭合格英国短期签证合法进入英国，再从英国前往爱尔兰。</li><li>BIVS 需要签证上有 “BIVS” 标记；是否标注由签证官决定。</li><li>不要默认可以从新加坡直飞爱尔兰。</li><li>路线、签证类型、入境顺序都要逐项核验。</li></ul></div>
+      <div class="dest-card"><h3>马来西亚 <span class="tag green">周末友好</span></h3><p class="one">从新加坡去 Johor Bahru 很方便，但口岸排队和交通时间可能比景点本身更消耗精力。</p><ul><li>中国公民签证便利政策和 MDAC 要以马来西亚移民局官网为准。</li><li>陆路口岸排队、返程时间、护照章、交通方式要提前规划。</li><li>不要把它当成“深圳到广州”。</li></ul></div>
+      <div class="dest-card"><h3>泰国 <span class="tag green">第一次东南亚友好</span></h3><p class="one">曼谷、清迈、普吉、甲米都适合第一次东南亚旅行，但不要放松安全意识。</p><ul><li>中泰互免普通护照签证协定已生效，单次停留和 180 天累计停留有限制。</li><li>TDAC 对非泰国籍旅客入境有在线提交要求。</li><li>边境地区、电诈相关地区、夜间娱乐场景需谨慎。</li></ul></div>
+      <div class="dest-card"><h3>越南 <span class="tag yellow">要办 eVisa</span></h3><p class="one">越南不是说走就走免签。胡志明、河内、岘港、会安、芽庄路线都可考虑。</p><ul><li>官方 eVisa 最长 90 天，可单次或多次入境。</li><li>姓名、护照号、日期、口岸要仔细核对。</li><li>尽量使用官方 eVisa 网站，不要随便用第三方。</li></ul></div>
+      <div class="dest-card"><h3>柬埔寨 <span class="tag yellow">吴哥窟值得，但需谨慎</span></h3><p class="one">适合吴哥窟和历史遗迹，不适合完全无攻略独行。</p><ul><li>官方 eVisa 是常见路径；2026 年拟试点中国游客短期免签的新闻需出发前用官方渠道核验。</li><li>现金、交通、安全、医疗条件都要比新加坡谨慎。</li><li>不要把“景点成熟”理解成“全程省心”。</li></ul></div>
+      <div class="dest-card"><h3>老挝 <span class="tag yellow">慢旅行</span></h3><p class="one">适合琅勃拉邦、万象、万荣、自然景观和慢节奏，不适合追求高效率城市旅行的人。</p><ul><li>老挝 eVisa 官方信息显示，eVisa stay permit 为 30 天，approval letter 通常 60 天有效。</li><li>公共交通和医疗条件相对弱，行程不要排太满。</li><li>打印 approval letter，准备现金和备份网络。</li></ul></div>
+      <div class="dest-card"><h3>英国 / Oxford <span class="tag blue">体验强</span></h3><p class="one">如果选上 Oxford 课程，英国签证、住宿、机票要早规划。伦敦会惩罚所有不预约的人。</p><ul><li>Oxford：Christ Church、Ashmolean、Bodleian Library、St Mary’s Church、Botanic Garden、叹息桥。</li><li>London：大英博物馆、国家美术馆、自然历史博物馆、V&A、大本钟、威斯敏斯特、伦敦塔桥、七姐妹白崖。</li><li>唐人街注意小偷。歌剧魅影适合作为晚间体验。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="policy" class="section searchable">
+    <h2>13. 签证与入境政策核验表：笑可以笑，签证不能笑着乱填（非大陆护照持有者以下可酌情略过）</h2>
+    <p class="section-intro">这一章负责把气氛拉回现实。签证、入境卡、停留天数、转机规则和身份组合都不是玄学，也不能靠“小红书说可以”通关。</p>
+    <div class="callout warning"><b>高风险声明</b>本表按 2026-05-12 左右可检索到的官方或高可信来源整理。任何出发前，都必须重新核验官方信息。个人经验、当时政策、当前政策不能混为一谈。</div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>地区/事项</th><th>当前可写入的谨慎表述</th><th>必须核验</th><th>分类</th></tr></thead>
+      <tbody>
+        <tr><td>新加坡 SGAC</td><td>抵达前 3 天内提交；不是签证；官方渠道免费。</td><td>ICA 官方 SGAC 页面。</td><td><span class="tag blue">官方规则</span></td></tr>
+        <tr><td>NUS Student’s Pass</td><td>NUS 通过 SOLAR 注册，学生提交 eForm 16，获批后下载 IPA，抵达后按预约完成 formalities。</td><td>NUS Registrar / ICA / 项目邮件。</td><td><span class="tag blue">官方流程</span></td></tr>
+        <tr><td>澳大利亚</td><td>大陆护照赴澳旅游通常考虑 Visitor visa subclass 600，停留期以签证批准信为准。</td><td>澳大利亚 Home Affairs。</td><td><span class="tag red">需申请签证</span></td></tr>
+        <tr><td>文莱</td><td>官方页面显示中国普通护照可免签入境不超过 14 天，需护照有效期至少 6 个月。</td><td>文莱 MFA / 航司。</td><td><span class="tag green">免签但需核验</span></td></tr>
+        <tr><td>中国台湾</td><td>大陆居民赴台证件链复杂，通常涉及大陆居民往来台湾通行证、签注、台湾侧入出境许可等。</td><td>大陆出入境管理 + 台湾移民署。</td><td><span class="tag red">双端核验</span></td></tr>
+        <tr><td>印尼</td><td>eVisa/eVOA 官方页面显示 Visitor Visa 常见为 30 天单次入境；All Indonesia 到达卡需在线填写。</td><td>印尼 eVisa / All Indonesia。</td><td><span class="tag yellow">电子签/到达卡</span></td></tr>
+        <tr><td>英国签证入境爱尔兰</td><td>仅特定英国短期签证路径和入境顺序适用；BIVS 需签证标注。</td><td>Irish Immigration。</td><td><span class="tag red">条件复杂</span></td></tr>
+        <tr><td>马来西亚</td><td>签证便利政策与 MDAC 需按马来西亚移民局核验。</td><td>Malaysia Immigration / MYVISA。</td><td><span class="tag yellow">政策变化快</span></td></tr>
+        <tr><td>泰国</td><td>中泰互免普通护照签证协定已生效；非泰籍旅客需 TDAC。</td><td>泰国使馆 / TDAC 官方站。</td><td><span class="tag green">免签+到达卡</span></td></tr>
+        <tr><td>越南</td><td>官方 eVisa 最长 90 天，可单次或多次入境。</td><td>越南 eVisa 官方站。</td><td><span class="tag yellow">eVisa</span></td></tr>
+        <tr><td>柬埔寨</td><td>官方 eVisa 是常见路径；2026 年中国游客试点免签新闻需官方复核。</td><td>柬埔寨 eVisa / 使馆 / 航司。</td><td><span class="tag yellow">待核验</span></td></tr>
+        <tr><td>老挝</td><td>官方 eVisa：停留许可 30 天，approval letter 通常 60 天有效。</td><td>老挝 eVisa 官方站。</td><td><span class="tag yellow">eVisa</span></td></tr>
+      </tbody>
+    </table></div>
+    <h3>官方核验链接</h3>
+    <ul class="source-list">
+      <li>Singapore ICA — SG Arrival Card: <a href="https://www.ica.gov.sg/enter-transit-depart/entering-singapore/sg-arrival-card" target="_blank" rel="noopener">ica.gov.sg SGAC</a></li>
+      <li>NUS Registrar — Administrative Matters / Student’s Pass: <a href="https://www.nus.edu.sg/registrar/academic-activities/registration/administrative-matters" target="_blank" rel="noopener">nus.edu.sg registrar</a></li>
+      <li>Australia Home Affairs — Visitor visa subclass 600: <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas" target="_blank" rel="noopener">homeaffairs.gov.au subclass 600</a></li>
+      <li>Brunei MFA — China passport visa policy: <a href="https://www.mfa.gov.bn/china-beijing/SitePages/consularservices.aspx" target="_blank" rel="noopener">mfa.gov.bn</a></li>
+      <li>Taiwan Immigration — Mainland residents overseas/HK/Macau application: <a href="https://www.immigration.gov.tw/5385/7244/7250/7257/7266/36084/" target="_blank" rel="noopener">immigration.gov.tw</a></li>
+      <li>Indonesia eVisa: <a href="https://evisa.imigrasi.go.id/front/info/evoa" target="_blank" rel="noopener">evisa.imigrasi.go.id</a>; All Indonesia arrival card: <a href="https://allindonesia.imigrasi.go.id/" target="_blank" rel="noopener">allindonesia.imigrasi.go.id</a></li>
+      <li>Ireland Short-Stay Visa Waiver Programme: <a href="https://www.irishimmigration.ie/coming-to-visit-ireland/short-stay-visa-waiver-programme/" target="_blank" rel="noopener">irishimmigration.ie</a>; BIVS: <a href="https://www.irishimmigration.ie/coming-to-visit-ireland/british-irish-visa-scheme/" target="_blank" rel="noopener">BIVS official</a></li>
+      <li>Malaysia Immigration / MYVISA: <a href="https://www.imi.gov.my/index.php/en/main-services/entry-requirement-into-malaysia-en/" target="_blank" rel="noopener">imi.gov.my entry requirements</a></li>
+      <li>Thailand TDAC: <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">tdac.immigration.go.th</a>; Thai Embassy China visa exemption statement: <a href="https://thaiembbeij.org/th/news/signing-of-the-agreement-between-the-government-of-the-kingdom-of-thailand-and-the-government-of-the-peoples-republic-of-china-on-mutual-visa-exemption-for-holders-of-ordinary-passports-and-p/" target="_blank" rel="noopener">Thai Embassy Beijing</a></li>
+      <li>Vietnam eVisa: <a href="https://evisa.gov.vn/" target="_blank" rel="noopener">evisa.gov.vn</a></li>
+      <li>Laos eVisa FAQ: <a href="https://laoevisa.gov.la/faq" target="_blank" rel="noopener">laoevisa.gov.la</a></li>
+    </ul>
+  </section>
+
+  <section id="oxford" class="section searchable">
+    <h2>14. Oxford / 英国附录：伦敦会惩罚所有不预约的人</h2>
+    <p class="section-intro">英国很好玩，前提是你先预约、先查交通、先看钱包。伦敦不是不能随缘，是随缘的成本通常比较高。</p>
+    <div class="grid two">
+      <div class="card"><h3>Oxford 选修准备</h3><ul><li>如果选上 Oxford 选修，尽快办理英国签证。</li><li>M3 期末、五一假期、护照占用会叠加不确定性。</li><li>英国选修课邮件可能只发给班长，班长要及时转发。</li><li>Oxford 住宿可找 Airbnb，也可体验校内住宿；校内近但设施可能老旧。</li><li>机票较贵，建议与同学同行。</li></ul></div>
+      <div class="card"><h3>伦敦与牛津游玩原则</h3><ul><li>伦敦高度依赖预约，尤其是热门博物馆、剧院、景点。</li><li>免费不等于不用预约。</li><li>七姐妹白崖很推荐，但要早起、查火车、保证手机有电。</li><li>唐人街注意小偷。</li><li>英国交通和住宿价格较高，预算要提前做。</li></ul></div>
+    </div>
+    <h3>推荐点位</h3>
+    <div class="grid two">
+      <div class="card"><h4>伦敦</h4><p>大本钟、威斯敏斯特教堂、伦敦眼、国家美术馆、大英博物馆、自然历史博物馆、V&A、帝国理工、海德公园/摄政公园/圣詹姆士公园、白金汉宫、伦敦塔桥、唐人街、歌剧魅影、七姐妹白崖。</p></div>
+      <div class="card"><h4>牛津</h4><p>Christ Church、Ashmolean Museum、Bodleian Library、St Mary’s Church 登顶、Oxford Botanic Garden、Oxford University Press、叹息桥、高街特价礼品店。</p></div>
+    </div>
+  </section>
+
+  <section id="faq" class="section searchable">
+    <h2>15. FAQ：把大家最想问又不好意思问的先写了</h2>
+    <p class="section-intro">有些问题看起来很小，比如“要不要带小锅”“第一周能不能不去”。但真正到了当地，小问题往往决定你是优雅生活，还是深夜对着泡面思考人类文明。</p>
+    <details><summary>第一周可以不去吗？</summary><p>上一届有人因为宿舍开放时间和课程开始时间错开，选择晚到或缺席早期 orientation。但今年必须以项目邮件和老师批准为准。不要把“上一届可行”当成“今年默认可行”。</p></details>
+    <details><summary>这个项目是不是纯玩？</summary><p>不是纯玩，也不是高压求生。基础好的同学会轻松一些；不学就不会的同学仍建议听课和考前复习。更好的状态是：基本学业不掉线，同时把新加坡和周边探索起来。</p></details>
+    <details><summary>会不会挂？</summary><p>不能写成保证。上一届体感是整体通过压力不大，但课程要求、老师、考核比例每年可能变化。稳妥做法是至少跟住 quiz、pre、cheat sheet 和考前一周复习。</p></details>
+    <details><summary>要不要住校？</summary><p>能住 UTown 或项目统一校内住宿就建议住。贵，但位置、设施、同学互助、生活便利度都很难由校外租房替代。</p></details>
+    <details><summary>宿舍保洁会不会进房间？</summary><p>会。上一届经验是每周一次保洁，可能上午来；如果你还在睡觉，保洁发现后通常会离开，然后这一周可能就不再来了。想要房间持续像人类居住空间，请不要把保洁时间全部睡过去。</p></details>
+    <details><summary>Fine Food 和 Flavour 怎么选？</summary><p>两边混着吃比较现实。Fine Food 上一届支持刷卡和现金；Flavour 更依赖现金或本地银行卡扫码。Flavor 和 Techno 的水果性价比相对高，FairPrice 旁 1 新币豆乳冰淇淋也值得试。</p></details>
+    <details><summary>Grab、Gojek、TADA 哪个便宜？</summary><p>Grab 通常最贵但最稳；Gojek 和 TADA 有时便宜一点。新加坡打车整体比国内贵很多，机场大行李可以打，日常能校车/公交就别天天打，不然钱包会比你先毕业。</p></details>
+    <details><summary>要不要带小锅？</summary><p>建议带一个小而安全的煮锅/一体锅，但要遵守住宿规定。晚上饿、食堂腻、想吃清淡或家乡味时，它的价值会迅速上升。</p></details>
+    <details><summary>要不要办新加坡本地银行卡？</summary><p>看停留时间和支付需求。DBS 等本地卡很省心，但现在扫码支付和国际卡覆盖也在变化。不要只依赖一种支付方式，至少准备国际卡 + 现金 + 可用本地/移动支付方案。</p></details>
+    <details><summary>新加坡电话卡怎么买？</summary><p>可机场 Cheers 买 Singtel prepaid，也可淘宝提前买并机场取，或考虑 eSIM。需要新加坡号码处理部分身份/生活事项。买卡前确认套餐时长、是否含通话、是否可续、在哪里取卡。</p></details>
+    <details><summary>华为/荣耀手机能用吗？</summary><p>新机型不一定有问题，但部分 2019–2022 年左右机型可能难以安装海外 App。出发前测试 Google Play、Google Maps、Grab、Citymapper、uNivUS。不要落地后才发现 App 装不了。</p></details>
+    <details><summary>SGAC 是签证吗？</summary><p>不是。SG Arrival Card 是入境前电子申报，不是签证。需要签证的人仍需另办签证。官方提交免费。</p></details>
+    <details><summary>IPA 和 STP 是什么关系？</summary><p>简单说，IPA 是 Student’s Pass 申请获批后的原则批准文件和入境/后续办理依据；Student’s Pass 是抵达后按流程完成 formalities 后取得的学生准证身份。具体以 ICA/NUS 说明为准。</p></details>
+    <details><summary>打车贵吗？</summary><p>贵，但从机场到学校拿大行李时值得考虑。两人一车较合适，四人大箱子可能装不下。平时能公交/地铁/校车就不要全靠打车。</p></details>
+    <details><summary>新加坡吃饭贵吗？</summary><p>体感比国内贵不少，尤其便利店、水、沙拉、新鲜蔬菜、打印和小电器。食堂相对可控，但长期油腻饮食会影响身体状态。</p></details>
+    <details><summary>可以去周边国家玩吗？</summary><p>可以规划，但要报备、查签证、查电子入境卡、准备返程票和住宿。东南亚其他国家不等于新加坡，安全、交通、医疗和英语环境都要重新评估。</p></details>
+    <details><summary>在新加坡期间适合办第三国签证吗？</summary><p>有机会，但不保证。优势是材料场景清楚、排队可能较少；风险是护照被收走、审理时间不确定、预约难、影响后续旅行。尤其英国、澳洲、美国、加拿大、新西兰、台湾相关证件，都要提前排时间。</p></details>
+    <details><summary>英国签证可以直接去爱尔兰吗？</summary><p>不能想当然。Short-Stay Visa Waiver Programme 通常要求先持合格英国短期签证入境英国，再从英国前往爱尔兰；BIVS 还要求签证上有 BIVS 标记。具体路线和签证类型必须按 Irish Immigration 官方说明核验。</p></details>
+
+    <details><summary>Fine Food 早餐 set 里的半熟蛋液正常吗？</summary><p>正常概率很高。第一次看到可能会有点懵：它像早餐，又像鸡蛋正在进行自我介绍。能接受就吃，不能接受就换面包牛奶路线。不要和鸡蛋硬刚，早餐应该服务你，不是考验你。</p></details>
+    <details><summary>讲座自助餐真的可以去吗？</summary><p>看邮件和活动说明。如果是开放给学生的 seminar、workshop 或学院活动，就可以报名/参加。建议带姓名牌，穿得稍微正式一点，自信但不夸张。你不是“蹭饭”，你是在进行学术社交，顺便让胃也参与国际化。</p></details>
+    <details><summary>保洁来的时候我还在睡怎么办？</summary><p>最理想答案是：不要发生。现实答案是：可能那一周就错过保洁了。建议保洁日前别睡得太放飞，或者提前 WhatsApp 沟通需求。房间可以乱，但不要乱到保洁进来都需要先做心理建设。</p></details>
+    <details><summary>第一次坐公交最容易错在哪里？</summary><p>不招手、不按铃、不下车刷卡、坐过站。新加坡公交很守规矩，守到它不会自动理解你的内心戏。提前看站、提前按铃、上下车刷卡，能省很多命运教育。</p></details>
+    <details><summary>遇到不舒服的社交或歧视怎么办？</summary><p>先保护自己，不争一时输赢。能退出就退出，能留证据就留证据，必要时找同学、项目老师、学校支持系统或官方渠道。海外生活不要求你融入所有圈子。</p></details>
+  </section>
+
+  <section id="closing" class="section searchable">
+    <h2>16. 最后：愿你回来不是只晒黑，而是真的长见识</h2>
+    <p class="section-intro">如果两个月之后，你不仅知道哪里能打印、哪里能吃饭、哪里能坐车，还更知道自己适合怎样生活，那这趟就很值。</p>
+    <div class="muted-box">
+      <p>去 NUS 的两个月，最珍贵的可能不是某一门课、某一个景点，甚至不是某一次旅行，而是你终于短暂地离开熟悉环境，看到自己在另一套系统里如何生活。</p>
+      <p>你会发现，有些事情比想象中简单：上课、考试、办卡、坐车、买饭，走几遍就会了。也会发现，有些事情比想象中复杂：签证、身份、文化差异、湿热天气、睡眠、饮食、社交边界。</p>
+      <p>不用把它过成朋友圈大片，也不用把它过成苦行僧训练。带着好奇心出去，带着判断力选择，带着边界感生活。该认真时认真，该放空时放空。能多走走就多走走，不舒服就回来休息。这个项目最好的状态，大概就是：你顺利完成它，也确实被它稍微改变了一点。</p>
+      <p>这份指北不是某一届的私人回忆录，而是一份可以被每年更新的活文档。课程、住宿、电话卡、支付、签证、入境和旅行政策都会变；如果你发现变化，请不要只在心里骂上一届不靠谱，请顺手更新它。</p>
+      <p>最后的最后，本文档希望帮到大家；如果真的信息有变更，就麻烦踩过坑的你帮我维护了，hahahahahaha。</p>
+    </div>
+    <p class="small">版本说明：政策信息按 2026-05-12 前后官方信息做过基础核验，但仍须出发前重新检查。</p>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">PKU–NUS 指北 · 非官方经验整理 · 愿你少踩坑，多吃饭，顺利活成 NUS 限定版自己</div>
+</footer>
+
+<script>
+  // Persist checklist state
+  document.querySelectorAll('.check input[type="checkbox"]').forEach((box) => {
+    const key = 'nus-guide-' + box.id;
+    box.checked = localStorage.getItem(key) === '1';
+    box.addEventListener('change', () => localStorage.setItem(key, box.checked ? '1' : '0'));
+  });
+  // Search filter
+  const searchBox = document.getElementById('searchBox');
+  if (searchBox) {
+    searchBox.addEventListener('input', () => {
+      const q = searchBox.value.trim().toLowerCase();
+      document.querySelectorAll('.searchable').forEach(sec => {
+        sec.style.display = !q || sec.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  }
+</script>
+</body>
+</html>
