@@ -1,20 +1,16 @@
 {{ define "main" }}
-  <article class="downloads-page">
+  <article class="downloads-page" aria-label="资料与指南">
     <section class="downloads-intro">
       <div class="downloads-intro-inner">
-        {{ if .Content }}
-          <div class="downloads-lead nested-copy-line-height nested-links">
-            {{ .Content }}
-          </div>
+        {{ with .Content }}
+          <div class="downloads-lead nested-copy-line-height nested-links">{{ . }}</div>
         {{ end }}
-
         {{ with .Params.download_groups }}
-          <nav class="downloads-jump" aria-label="下载分区导航">
-            {{ range . }}
-              {{ $id := .title | default "" | urlize }}
-              {{ if $id }}
-                <a class="downloads-jump-link" href="#{{ $id }}">{{ .title }}</a>
-              {{ end }}
+          <nav class="downloads-jump" aria-label="资料分类">
+            {{ range $index, $group := . }}
+              {{ $id := printf "group-%d" $index }}
+              {{ $title := .title | default "" }}
+              <a class="downloads-jump-link" href="#{{ $id }}">{{ $title }}</a>
             {{ end }}
           </nav>
         {{ end }}
@@ -22,39 +18,69 @@
     </section>
 
     {{ with .Params.download_groups }}
-      <section class="downloads-groups">
-        {{ range . }}
+      <div class="downloads-groups">
+        {{ range $index, $group := . }}
           {{ $groupTitle := .title | default "" }}
-          {{ $id := $groupTitle | urlize }}
-          <section id="{{ $id }}" class="downloads-group">
+          <section id="group-{{ $index }}" class="downloads-group">
             <header class="downloads-group-head">
-              <div class="downloads-group-titles">
-                <h2 class="downloads-group-title">{{ $groupTitle }}</h2>
-                {{ with .description }}
-                  <p class="downloads-group-desc">{{ . }}</p>
+              <h2 class="downloads-group-title">{{ $groupTitle }}</h2>
+              {{ with .description }}<p class="downloads-group-desc">{{ . }}</p>{{ end }}
+            </header>
+
+            {{ with .items }}
+              <div class="resource-grid">
+                {{ range . }}
+                  {{ $name := .name | default .title | default "未命名内容" }}
+                  {{ $url := .url | default "" }}
+                  {{ $action := .action | default "阅读" }}
+                  {{ $external := or (.external | default false) (.download | default false) }}
+                  {{ if $url }}
+                    <a class="resource-card" href="{{ $url | safeURL }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>
+                      <span class="resource-card-body">
+                        <span class="resource-card-title">{{ $name }}</span>
+                        {{ with .description }}<span class="resource-card-description">{{ . }}</span>{{ end }}
+                        {{ with .kind }}<span class="resource-card-kind">{{ . }}</span>{{ end }}
+                      </span>
+                      <span class="resource-card-action">{{ $action }} <span aria-hidden="true">→</span></span>
+                    </a>
+                  {{ else }}
+                    <div class="resource-card resource-card--placeholder" aria-disabled="true">
+                      <span class="resource-card-body">
+                        <span class="resource-card-title">{{ $name }}</span>
+                        {{ with .description }}<span class="resource-card-description">{{ . }}</span>{{ end }}
+                        <span class="resource-card-kind">{{ .kind | default "待完善" }}</span>
+                      </span>
+                    </div>
+                  {{ end }}
                 {{ end }}
               </div>
-              {{ with .items }}
-                <span class="downloads-group-count">{{ len . }} 个文件</span>
-              {{ end }}
-            </header>
+            {{ end }}
 
             {{ with .subgroups }}
               <div class="downloads-subgroups">
                 {{ range . }}
                   <section class="downloads-subgroup">
                     <h3 class="downloads-subgroup-title">{{ .title }}</h3>
-                    <div class="course-grid">
+                    <div class="resource-grid resource-grid--courses">
                       {{ range .items }}
                         {{ $name := .name | default .title | default "未命名课程" }}
                         {{ $url := .url | default "" }}
                         {{ if $url }}
-                          <a class="course-card" href="{{ $url | relURL }}">
-                            <span class="course-card-title">{{ $name }}</span>
+                          <a class="resource-card" href="{{ $url | relURL }}">
+                            <span class="resource-card-body">
+                              <span class="resource-card-title">{{ $name }}</span>
+                              {{ with .description }}<span class="resource-card-description">{{ . }}</span>{{ end }}
+                              {{ with .kind }}<span class="resource-card-kind">{{ . }}</span>{{ end }}
+                            </span>
+                            <span class="resource-card-action">阅读 <span aria-hidden="true">→</span></span>
                           </a>
                         {{ else }}
-                          <div class="course-card course-card--placeholder" aria-disabled="true">
-                            <span class="course-card-title">{{ $name }}</span>
+                          <div class="resource-card resource-card--placeholder" aria-disabled="true">
+                            <span class="resource-card-body">
+                              <span class="resource-card-title">{{ $name }}</span>
+                              {{ with .description }}<span class="resource-card-description">{{ . }}</span>{{ end }}
+                              <span class="resource-card-kind">{{ .kind | default "待完善" }}</span>
+                            </span>
                           </div>
                         {{ end }}
                       {{ end }}
@@ -63,68 +89,9 @@
                 {{ end }}
               </div>
             {{ end }}
-
-            {{ with .items }}
-              <div class="downloads-grid">
-              {{ range . }}
-                {{ $name := .name | default .title | default "未命名文件" }}
-                {{ $url := .url | default "" }}
-                {{ $kind := .kind | default .type | default "" }}
-                {{ $action := .action | default "下载" }}
-                {{ $meta := slice }}
-                {{ with .size }}{{ $meta = $meta | append (printf "%v" .) }}{{ end }}
-                {{ with .updated }}{{ $meta = $meta | append (printf "%v" .) }}{{ end }}
-
-                {{ if $url }}
-                  <a class="download-card" href="{{ $url }}" target="_blank" rel="noopener">
-                    <div class="download-card-icon" aria-hidden="true">
-                      {{ if $kind }}{{ $kind }}{{ else }}FILE{{ end }}
-                    </div>
-                    <div class="download-card-main">
-                      <div class="download-card-title">{{ $name }}</div>
-                      <div class="download-card-meta">
-                        {{ if $kind }}<span class="download-badge">{{ $kind }}</span>{{ end }}
-                        {{ range $meta }}<span class="download-meta">{{ . }}</span>{{ end }}
-                      </div>
-                      {{ with .hint }}
-                        <div class="download-card-hint">{{ . }}</div>
-                      {{ end }}
-                    </div>
-                    <div class="download-card-cta">{{ $action }}</div>
-                  </a>
-                {{ else }}
-                  <div class="download-card download-card--placeholder" aria-disabled="true">
-                    <div class="download-card-icon" aria-hidden="true">
-                      {{ if $kind }}{{ $kind }}{{ else }}FILE{{ end }}
-                    </div>
-                    <div class="download-card-main">
-                      <div class="download-card-title">{{ $name }}</div>
-                      <div class="download-card-meta">
-                        {{ if $kind }}<span class="download-badge">{{ $kind }}</span>{{ end }}
-                        <span class="download-meta">待填写链接</span>
-                      </div>
-                      {{ with .hint }}
-                        <div class="download-card-hint">{{ . }}</div>
-                      {{ end }}
-                    </div>
-                    <div class="download-card-cta">待填</div>
-                  </div>
-                {{ end }}
-              {{ end }}
-              </div>
-            {{ end }}
           </section>
         {{ end }}
-      </section>
-    {{ else }}
-      <section class="downloads-empty">
-        <div class="downloads-empty-inner">
-          <h2 class="downloads-empty-title">还没有配置下载文件</h2>
-          <p class="downloads-empty-text">
-            请在 <code>site/content/downloads/_index.md</code> 的 front matter 中添加 <code>download_groups</code>。
-          </p>
-        </div>
-      </section>
+      </div>
     {{ end }}
   </article>
 {{ end }}
