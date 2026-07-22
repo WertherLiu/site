@@ -39,8 +39,34 @@
               {{ end }}
             </header>
 
-            <div class="downloads-grid">
-              {{ range .items }}
+            {{ with .subgroups }}
+              <div class="downloads-subgroups">
+                {{ range . }}
+                  <section class="downloads-subgroup">
+                    <h3 class="downloads-subgroup-title">{{ .title }}</h3>
+                    <div class="course-grid">
+                      {{ range .items }}
+                        {{ $name := .name | default .title | default "未命名课程" }}
+                        {{ $url := .url | default "" }}
+                        {{ if $url }}
+                          <a class="course-card" href="{{ $url | relURL }}">
+                            <span class="course-card-title">{{ $name }}</span>
+                          </a>
+                        {{ else }}
+                          <div class="course-card course-card--placeholder" aria-disabled="true">
+                            <span class="course-card-title">{{ $name }}</span>
+                          </div>
+                        {{ end }}
+                      {{ end }}
+                    </div>
+                  </section>
+                {{ end }}
+              </div>
+            {{ end }}
+
+            {{ with .items }}
+              <div class="downloads-grid">
+              {{ range . }}
                 {{ $name := .name | default .title | default "未命名文件" }}
                 {{ $url := .url | default "" }}
                 {{ $kind := .kind | default .type | default "" }}
@@ -85,7 +111,8 @@
                   </div>
                 {{ end }}
               {{ end }}
-            </div>
+              </div>
+            {{ end }}
           </section>
         {{ end }}
       </section>

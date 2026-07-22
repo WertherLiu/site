@@ -106,5 +106,7 @@
     <loc>http://localhost:1313/moments/</loc>
   </url><url>
     <loc>http://localhost:1313/downloads/</loc>
+  </url><url>
+    <loc>http://localhost:1313/downloads/courses/doctoral/advanced-microeconomics/</loc>
   </url>
 </urlset>

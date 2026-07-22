@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>资料下载 on 北京大学经济学会 EconS</title>
+    <title>汇丰商学院生存手册 on 北京大学经济学会 EconS</title>
     <link>http://localhost:1313/downloads/</link>
-    <description>Recent content in 资料下载 on 北京大学经济学会 EconS</description>
+    <description>Recent content in 汇丰商学院生存手册 on 北京大学经济学会 EconS</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:1313/downloads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>高级微观经济学</title>
+      <link>http://localhost:1313/downloads/courses/doctoral/advanced-microeconomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/downloads/courses/doctoral/advanced-microeconomics/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
